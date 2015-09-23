@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CardInfos xmlns:android="http://schemas.android.com/apk/res/android">
+    <Card id="n0001" class="normal" type="minion" rarity="normal" set="classic" cost="0" atk="1" hp="1"/>
+    <Card id="n0002" class="normal" type="minion" rarity="rare" set="gvg" cost="0" atk="0" hp="2"/>
+    <Card id="n0003" class="normal" type="minion" rarity="normal" set="classic" cost="1" atk="2" hp="1"/>
+</CardInfos>

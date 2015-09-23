@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Hearthstone4U</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="minion">Minion</string>
+    <string name="spell">Spell</string>
+    <string name="weapon">Weapon</string>
+
+    <string name="normal">Normal</string>
+    <string name="worrior">Worrior</string>
+    <string name="hunter">Hunter</string>
+    <string name="mage">Mage</string>
+    <string name="warlock">Warlock</string>
+    <string name="rogue">Rogue</string>
+    <string name="shaman">Shaman</string>
+    <string name="priest">Priest</string>
+    <string name="druid">Druid</string>
+    <string name="paladin">Paladin</string>
+
+    <string name="basic">Basic</string>
+    <string name="rare">Rare</string>
+    <string name="epic">Epic</string>
+    <string name="legendary">Legendary</string>
+
+    <string name="classic">Classic</string>
+    <string name="naxx">NAXX</string>
+    <string name="brm">BRM</string>
+    <string name="gvg">GVG</string>
+    <string name="tgt">TGT</string>
+
+    <string name="battlecry">Battle Cry</string>
+    <string name="stealth">Stealth</string>
+    <string name="charge">Charge</string>
+    <string name="combo">Combo</string>
+    <string name="deathrattle">Death Rattle</string>
+    <string name="divineshield">Divine Shield</string>
+    <string name="enrage">Enrage</string>
+    <string name="freeze">Freeze</string>
+    <string name="overload">Overload</string>
+    <string name="secret">Secret</string>
+    <string name="silence">Silence</string>
+    <string name="spelldamage">Spell Damage</string>
+    <string name="summon">Summon</string>
+    <string name="windfury">Wind Fury</string>
+    <string name="taunt">Taunt</string>
+    <string name="immune">Immune</string>
+    <string name="inspire">Inspire</string>
+    <string name="joust">Joust</string>
+    <string name="draw">Draw</string>
+</resources>
