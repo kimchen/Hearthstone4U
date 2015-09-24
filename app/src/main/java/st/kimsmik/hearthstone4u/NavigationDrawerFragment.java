@@ -22,6 +22,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.
  * See the <a href="https://developer.android.com/design/patterns/navigation-drawer.html#Interaction">
@@ -97,16 +100,6 @@ public class NavigationDrawerFragment extends Fragment {
                 selectItem(position);
             }
         });
-        mDrawerListView.setAdapter(new ArrayAdapter<String>(
-                getActionBar().getThemedContext(),
-                android.R.layout.simple_list_item_1,
-                android.R.id.text1,
-                new String[]{
-                        getString(R.string.title_section1),
-                        getString(R.string.title_section2),
-                        getString(R.string.title_section3),
-                }));
-        mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;
     }
 
@@ -121,6 +114,18 @@ public class NavigationDrawerFragment extends Fragment {
      * @param drawerLayout The DrawerLayout containing this fragment's UI.
      */
     public void setUp(int fragmentId, DrawerLayout drawerLayout) {
+        List<String> titles = new ArrayList<>();
+        MainActivity mAct = ((MainActivity) getActivity());
+        for(IMenuFragment imf :mAct.menuFragments){
+            titles.add(getString(imf.getTitleId()));
+        }
+        mDrawerListView.setAdapter(new ArrayAdapter<String>(
+                getActionBar().getThemedContext(),
+                android.R.layout.simple_list_item_1,
+                android.R.id.text1,
+                titles));
+        mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
+
         mFragmentContainerView = getActivity().findViewById(fragmentId);
         mDrawerLayout = drawerLayout;
 

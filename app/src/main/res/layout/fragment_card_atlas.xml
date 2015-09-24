@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity$PlaceholderFragment">
+    <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingTop="@dimen/activity_vertical_margin"-->
+    <!--android:paddingBottom="@dimen/activity_vertical_margin"-->
+
+    <RelativeLayout
+        android:id="@+id/filterLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <SearchView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchView"
+            android:searchIcon="@android:drawable/ic_search_category_default"/>
+
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/searchView"
+            android:id="@+id/costSpinner" />
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/costSpinner"
+            android:id="@+id/atkSpinner" />
+
+    </RelativeLayout>
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/filter"
+        android:id="@+id/filterSwitch"
+        android:layout_below="@id/filterLayout"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:checked="true" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ListView"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/filterSwitch"/>
+</RelativeLayout>
