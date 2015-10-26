@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/Base.Theme.AppCompat.Light">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:src="@android:drawable/ic_search_category_default" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/searchText"
+            android:hint="@string/searchHint" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search"
+            android:id="@+id/searchBtn"
+            android:layout_gravity="center"
+            android:background="#ff00a0ff"
+            android:textColor="#ffffffff" />
+
+    </LinearLayout>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+        <!--<TextView-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"-->
+            <!--android:text="@string/addFilter"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_gravity="center" />-->
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/filterTypeSpinner"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/filteContentrSpinner"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addFilterButton"
+            android:src="@drawable/add_icon"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <org.apmem.tools.layouts.FlowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/dialogLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp">
+    </org.apmem.tools.layouts.FlowLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clear"
+        android:id="@+id/clearBtn"
+        android:textColor="#ffffffff"
+        android:background="#ffff3c3c" />
+
+
+</LinearLayout>

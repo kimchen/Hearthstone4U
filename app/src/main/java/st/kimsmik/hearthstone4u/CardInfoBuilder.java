@@ -1,17 +1,16 @@
 package st.kimsmik.hearthstone4u;
 
-import java.util.EnumSet;
-import java.util.List;
-
 /**
  * Created by chenk on 2015/9/23.
  */
 public class CardInfoBuilder {
 
-    private  String id = "";
+    private String id = "";
+    private String name = "";
     private String cardClass = "";
     private String type = "";
     private String rarity = "";
+    private String race = "";
     private String set = "";
     private int cost = 0;
     private int atk = 0;
@@ -23,6 +22,11 @@ public class CardInfoBuilder {
     public CardInfoBuilder setCardId(String s){
         if(s!=null)
             this.id = s;
+        return this;
+    }
+    public CardInfoBuilder setCardName(String s){
+        if(s!=null)
+            this.name = s;
         return this;
     }
     public CardInfoBuilder setCardClass(String s){
@@ -38,6 +42,11 @@ public class CardInfoBuilder {
     public CardInfoBuilder setCardRarity(String s){
         if(s!=null)
             this.rarity = s;
+        return this;
+    }
+    public CardInfoBuilder setCardRace(String s){
+        if(s!=null)
+            this.race = s;
         return this;
     }
     public CardInfoBuilder setCardSet(String s){
@@ -65,11 +74,10 @@ public class CardInfoBuilder {
 
     public CardInfo build(){
         CardInfo info = new CardInfo();
-        if(!this.id.equals("")){
-            info.id = this.id;
-        }
+        info.id = this.id;
+        info.name = this.name;
         if(!this.cardClass.equals("")){
-            for(CardInfo.CARD_CALSS temp : CardInfo.CARD_CALSS.values()){
+            for(CardInfo.CARD_CLASS temp : CardInfo.CARD_CLASS.values()){
                 if(this.cardClass.equals(temp.getName())){
                     info.cardClass = temp;
                     break;
@@ -92,6 +100,14 @@ public class CardInfoBuilder {
                 }
             }
         }
+        if(!this.race.equals("")){
+            for(CardInfo.CARD_RACE temp : CardInfo.CARD_RACE.values()){
+                if(this.race.equals(temp.getName())){
+                    info.race = temp;
+                    break;
+                }
+            }
+        }
         if(!this.set.equals("")){
             for(CardInfo.CARD_SET temp : CardInfo.CARD_SET.values()){
                 if(this.set.equals(temp.getName())){
@@ -108,7 +124,7 @@ public class CardInfoBuilder {
             String[] atts = this.attributes.split(",");
             for(String att : atts){
                 for(CardInfo.CARD_ATTRIBUTE temp : CardInfo.CARD_ATTRIBUTE.values()) {
-                    if (this.set.equals(temp.getName())) {
+                    if (att.equals(temp.getName())) {
                         info.attributes.add(temp);
                         break;
                     }

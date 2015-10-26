@@ -13,6 +13,7 @@ import java.util.List;
  * Created by chenk on 2015/9/23.
  */
 public class CardManager {
+
     private static CardManager mIns = null;
     private CardManager(){}
     public static CardManager ins(){
@@ -31,9 +32,13 @@ public class CardManager {
                 if(parser.getEventType() == XmlResourceParser.START_TAG){
                     if(parser.getName().equals("Card")){
                         String id = parser.getAttributeValue(null,"id");
+                        String name = "";
+                        if(id != null)
+                            name = Utility.getResStringByName(c, id);
                         String cardClass = parser.getAttributeValue(null,"class");
                         String type = parser.getAttributeValue(null, "type");
                         String rarity = parser.getAttributeValue(null, "rarity");
+                        String race = parser.getAttributeValue(null, "race");
                         String set = parser.getAttributeValue(null, "set");
                         int cost = parser.getAttributeIntValue(null, "cost", 0);
                         int atk = parser.getAttributeIntValue(null,"atk",0);
@@ -41,8 +46,8 @@ public class CardManager {
                         String attributes = parser.getAttributeValue(null, "attributes");
 
                         CardInfoBuilder builder = new CardInfoBuilder();
-                        builder.setCardId(id).setCardClass(cardClass).setCardType(type).setCardRarity(rarity).setCardSet(set)
-                                .setCardCost(cost).setCardAtk(atk).setCardHp(hp).setCardAttributes(attributes);
+                        builder.setCardId(id).setCardName(name).setCardClass(cardClass).setCardType(type).setCardRarity(rarity).setCardSet(set)
+                                .setCardRace(race).setCardCost(cost).setCardAtk(atk).setCardHp(hp).setCardAttributes(attributes);
                         CardInfo info = builder.build();
                         cardList.add(info);
                     }
@@ -59,4 +64,5 @@ public class CardManager {
     public List<CardInfo> getAllCards(){
         return this.cardList;
     }
+
 }

@@ -33,7 +33,9 @@ public class MainActivity extends ActionBarActivity
         setContentView(R.layout.activity_main);
 
         CardManager.ins().initCards(this);
+        UserData.ins().init(this);
         menuFragments.add(new CardAtlasFragment());
+        menuFragments.add(new CustomDeckFragment());
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
 

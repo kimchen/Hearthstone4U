@@ -1,6 +1,720 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CardInfos xmlns:android="http://schemas.android.com/apk/res/android">
-    <Card id="n0001" class="normal" type="minion" rarity="normal" set="classic" cost="0" atk="1" hp="1"/>
-    <Card id="n0002" class="normal" type="minion" rarity="rare" set="gvg" cost="0" atk="0" hp="2"/>
-    <Card id="n0003" class="normal" type="minion" rarity="normal" set="classic" cost="1" atk="2" hp="1"/>
+    <Card id="w0001" cost="0" atk="0" hp="0" type="spell" class="warrior" rarity="common" race="none" set="classic"/>
+    <Card id="w0002" cost="1" atk="1" hp="3" type="minion" class="warrior" rarity="common" race="machine" set="gvg" attributes="enrage"/>
+    <Card id="w0003" cost="1" atk="0" hp="0" type="spell" class="warrior" rarity="common" race="none" set="basic" attributes="aoe"/>
+    <Card id="w0004" cost="1" atk="0" hp="0" type="spell" class="warrior" rarity="rare" race="none" set="classic"/>
+    <Card id="w0005" cost="1" atk="0" hp="0" type="spell" class="warrior" rarity="epic" race="none" set="classic"/>
+    <Card id="w0006" cost="1" atk="0" hp="0" type="spell" class="warrior" rarity="free" race="none" set="basic"/>
+    <Card id="w0007" cost="2" atk="3" hp="2" type="minion" class="warrior" rarity="rare" race="none" set="tgt" attributes="battlecry,taunt"/>
+    <Card id="w0008" cost="2" atk="2" hp="2" type="minion" class="warrior" rarity="common" race="none" set="classic" attributes="battlecry"/>
+    <Card id="w0009" cost="2" atk="1" hp="4" type="minion" class="warrior" rarity="rare" race="none" set="classic"/>
+    <Card id="w0010" cost="2" atk="2" hp="3" type="minion" class="warrior" rarity="rare" race="none" set="tgt" attributes="battlecry,charge"/>
+    <Card id="w0011" cost="2" atk="0" hp="0" type="spell" class="warrior" rarity="common" race="none" set="classic" attributes="draw"/>
+    <Card id="w0012" cost="2" atk="0" hp="0" type="spell" class="warrior" rarity="rare" race="none" set="brm" attributes="aoe"/>
+    <Card id="w0013" cost="2" atk="0" hp="0" type="spell" class="warrior" rarity="common" race="none" set="classic"/>
+    <Card id="w0014" cost="2" atk="0" hp="0" type="spell" class="warrior" rarity="free" race="none" set="basic"/>
+    <Card id="w0015" cost="2" atk="0" hp="0" type="spell" class="warrior" rarity="rare" race="none" set="classic" attributes="immune,draw"/>
+    <Card id="w0016" cost="2" atk="0" hp="0" type="spell" class="warrior" rarity="common" race="none" set="basic"/>
+    <Card id="w0017" cost="2" atk="0" hp="0" type="spell" class="warrior" rarity="common" race="none" set="tgt" attributes="taunt"/>
+    <Card id="w0018" cost="2" atk="0" hp="0" type="spell" class="warrior" rarity="common" race="none" set="classic" attributes="draw"/>
+    <Card id="w0019" cost="2" atk="3" hp="2" type="weapon" class="warrior" rarity="free" race="none" set="basic"/>
+    <Card id="w0020" cost="3" atk="2" hp="3" type="minion" class="warrior" rarity="free" race="none" set="basic" attributes="charge"/>
+    <Card id="w0021" cost="3" atk="3" hp="3" type="minion" class="warrior" rarity="common" race="none" set="tgt" attributes="inspire"/>
+    <Card id="w0022" cost="3" atk="2" hp="4" type="minion" class="warrior" rarity="rare" race="none" set="classic"/>
+    <Card id="w0023" cost="3" atk="0" hp="0" type="spell" class="warrior" rarity="common" race="none" set="basic" attributes="draw"/>
+    <Card id="w0024" cost="3" atk="0" hp="0" type="spell" class="warrior" rarity="free" race="none" set="basic" attributes="charge"/>
+    <Card id="w0025" cost="3" atk="0" hp="0" type="spell" class="warrior" rarity="epic" race="none" set="gvg" attributes="aoe"/>
+    <Card id="w0026" cost="3" atk="0" hp="0" type="spell" class="warrior" rarity="common" race="none" set="tgt"/>
+    <Card id="w0027" cost="3" atk="4" hp="2" type="weapon" class="warrior" rarity="common" race="none" set="gvg"/>
+    <Card id="w0028" cost="3" atk="3" hp="2" type="weapon" class="warrior" rarity="rare" race="none" set="tgt" attributes="battlecry,taunt"/>
+    <Card id="w0029" cost="4" atk="2" hp="5" type="minion" class="warrior" rarity="rare" race="machine" set="gvg" attributes="battlecry"/>
+    <Card id="w0030" cost="4" atk="5" hp="3" type="minion" class="warrior" rarity="epic" race="none" set="tgt" attributes="aoe"/>
+    <Card id="w0031" cost="4" atk="4" hp="3" type="minion" class="warrior" rarity="common" race="none" set="basic" attributes="charge"/>
+    <Card id="w0032" cost="4" atk="2" hp="5" type="minion" class="warrior" rarity="common" race="none" set="brm"/>
+    <Card id="w0033" cost="4" atk="3" hp="3" type="minion" class="warrior" rarity="common" race="none" set="classic" attributes="battlecry"/>
+    <Card id="w0034" cost="4" atk="0" hp="0" type="spell" class="warrior" rarity="rare" race="none" set="classic"/>
+    <Card id="w0035" cost="4" atk="4" hp="2" type="weapon" class="warrior" rarity="common" race="none" set="naxx" attributes="deathrattle,aoe"/>
+    <Card id="w0036" cost="5" atk="5" hp="5" type="minion" class="warrior" rarity="rare" race="machine" set="gvg"/>
+    <Card id="w0037" cost="5" atk="0" hp="0" type="spell" class="warrior" rarity="epic" race="none" set="classic" attributes="aoe"/>
+    <Card id="w0038" cost="5" atk="5" hp="2" type="weapon" class="warrior" rarity="common" race="none" set="basic"/>
+    <Card id="w0039" cost="6" atk="5" hp="5" type="minion" class="warrior" rarity="rare" race="none" set="gvg" attributes="battlecry"/>
+    <Card id="w0040" cost="6" atk="6" hp="7" type="minion" class="warrior" rarity="epic" race="none" set="tgt"/>
+    <Card id="w0041" cost="6" atk="6" hp="5" type="minion" class="warrior" rarity="legendary" race="machine" set="gvg" attributes="battlecry"/>
+    <Card id="w0042" cost="7" atk="0" hp="0" type="spell" class="warrior" rarity="epic" race="none" set="gvg"/>
+    <Card id="w0043" cost="7" atk="7" hp="1" type="weapon" class="warrior" rarity="epic" race="none" set="classic"/>
+    <Card id="w0044" cost="8" atk="4" hp="9" type="minion" class="warrior" rarity="legendary" race="none" set="classic" attributes="charge,enrage"/>
+    <Card id="w0045" cost="10" atk="7" hp="7" type="minion" class="warrior" rarity="legendary" race="none" set="tgt" attributes="battlecry,summon,draw"/>
+
+    <Card id="s0001" cost="0" atk="0" hp="0" type="spell" class="shaman" rarity="common" race="none" set="basic"/>
+    <Card id="s0002" cost="0" atk="0" hp="0" type="spell" class="shaman" rarity="free" race="none" set="basic" attributes="taunt,heal"/>
+    <Card id="s0003" cost="1" atk="3" hp="1" type="minion" class="shaman" rarity="common" race="none" set="classic" attributes="overload,windfury"/>
+    <Card id="s0004" cost="1" atk="0" hp="0" type="spell" class="shaman" rarity="free" race="none" set="basic"/>
+    <Card id="s0005" cost="1" atk="0" hp="0" type="spell" class="shaman" rarity="common" race="none" set="classic" attributes="overload"/>
+    <Card id="s0006" cost="1" atk="0" hp="0" type="spell" class="shaman" rarity="free" race="none" set="basic" attributes="freeze"/>
+    <Card id="s0007" cost="1" atk="0" hp="0" type="spell" class="shaman" rarity="common" race="none" set="classic" attributes="overload"/>
+    <Card id="s0008" cost="1" atk="0" hp="0" type="spell" class="shaman" rarity="common" race="none" set="classic" attributes="silence"/>
+    <Card id="s0009" cost="2" atk="3" hp="2" type="minion" class="shaman" rarity="common" race="machine" set="gvg" attributes="windfury"/>
+    <Card id="s0010" cost="2" atk="0" hp="3" type="minion" class="shaman" rarity="rare" race="totem" set="gvg" attributes="heal"/>
+    <Card id="s0011" cost="2" atk="3" hp="4" type="minion" class="shaman" rarity="common" race="totem" set="tgt" attributes="overload"/>
+    <Card id="s0012" cost="2" atk="0" hp="3" type="minion" class="shaman" rarity="common" race="totem" set="basic"/>
+    <Card id="s0013" cost="2" atk="0" hp="0" type="spell" class="shaman" rarity="free" race="none" set="basic" attributes="windfury"/>
+    <Card id="s0014" cost="2" atk="0" hp="0" type="spell" class="shaman" rarity="common" race="none" set="naxx"/>
+    <Card id="s0015" cost="2" atk="0" hp="0" type="spell" class="shaman" rarity="rare" race="none" set="brm" attributes="overload"/>
+    <Card id="s0016" cost="2" atk="0" hp="0" type="spell" class="shaman" rarity="common" race="none" set="gvg" attributes="overload"/>
+    <Card id="s0017" cost="2" atk="0" hp="0" type="spell" class="shaman" rarity="rare" race="none" set="classic" attributes="deathrattle,summon"/>
+    <Card id="s0018" cost="2" atk="0" hp="0" type="spell" class="shaman" rarity="common" race="none" set="tgt" attributes="overload,draw"/>
+    <Card id="s0019" cost="2" atk="2" hp="3" type="weapon" class="shaman" rarity="common" race="none" set="classic" attributes="overload"/>
+    <Card id="s0020" cost="3" atk="2" hp="4" type="minion" class="shaman" rarity="common" race="none" set="classic" attributes="overload"/>
+    <Card id="s0021" cost="3" atk="3" hp="2" type="minion" class="shaman" rarity="common" race="none" set="tgt" attributes="battlecry,summon"/>
+    <Card id="s0022" cost="3" atk="0" hp="3" type="minion" class="shaman" rarity="rare" race="totem" set="classic" attributes="draw"/>
+    <Card id="s0023" cost="3" atk="0" hp="0" type="spell" class="shaman" rarity="rare" race="none" set="classic" attributes="overload,aoe"/>
+    <Card id="s0024" cost="3" atk="0" hp="0" type="spell" class="shaman" rarity="rare" race="none" set="classic" attributes="overload"/>
+    <Card id="s0025" cost="3" atk="0" hp="0" type="spell" class="shaman" rarity="free" race="none" set="basic" attributes="taunt"/>
+    <Card id="s0026" cost="3" atk="0" hp="0" type="spell" class="shaman" rarity="rare" race="none" set="tgt" attributes="joust,heal"/>
+    <Card id="s0027" cost="3" atk="0" hp="0" type="spell" class="shaman" rarity="rare" race="none" set="classic" attributes="overload,summon,taunt"/>
+    <Card id="s0028" cost="3" atk="0" hp="0" type="spell" class="shaman" rarity="epic" race="none" set="classic" attributes="draw"/>
+    <Card id="s0029" cost="3" atk="0" hp="0" type="spell" class="shaman" rarity="epic" race="none" set="tgt" attributes="overload,aoe"/>
+    <Card id="s0030" cost="3" atk="3" hp="2" type="weapon" class="shaman" rarity="rare" race="none" set="gvg" attributes="deathrattle"/>
+    <Card id="s0031" cost="4" atk="3" hp="3" type="minion" class="shaman" rarity="common" race="none" set="basic" attributes="battlecry,windfury"/>
+    <Card id="s0032" cost="4" atk="2" hp="5" type="minion" class="shaman" rarity="epic" race="murloc" set="gvg" attributes="overload,draw"/>
+    <Card id="s0033" cost="4" atk="3" hp="6" type="minion" class="shaman" rarity="common" race="none" set="brm" attributes="battlecry,overload"/>
+    <Card id="s0034" cost="4" atk="5" hp="4" type="minion" class="shaman" rarity="rare" race="none" set="gvg" attributes="overload,windfury"/>
+    <Card id="s0035" cost="4" atk="4" hp="4" type="minion" class="shaman" rarity="rare" race="none" set="tgt" attributes="battlecry"/>
+    <Card id="s0036" cost="4" atk="0" hp="0" type="spell" class="shaman" rarity="epic" race="none" set="gvg" attributes="summon"/>
+    <Card id="s0037" cost="4" atk="2" hp="4" type="weapon" class="shaman" rarity="epic" race="none" set="tgt" attributes="deathrattle"/>
+    <Card id="s0038" cost="5" atk="3" hp="6" type="minion" class="shaman" rarity="rare" race="none" set="tgt" attributes="inspire"/>
+    <Card id="s0039" cost="5" atk="7" hp="8" type="minion" class="shaman" rarity="epic" race="none" set="classic" attributes="overload,taunt"/>
+    <Card id="s0040" cost="5" atk="0" hp="0" type="spell" class="shaman" rarity="common" race="none" set="basic"/>
+    <Card id="s0041" cost="5" atk="2" hp="8" type="weapon" class="shaman" rarity="epic" race="none" set="classic" attributes="overload,windfury"/>
+    <Card id="s0042" cost="6" atk="4" hp="4" type="minion" class="shaman" rarity="legendary" race="none" set="tgt" attributes="battlecry"/>
+    <Card id="s0043" cost="6" atk="6" hp="5" type="minion" class="shaman" rarity="common" race="none" set="basic" attributes="battlecry"/>
+    <Card id="s0044" cost="7" atk="7" hp="7" type="minion" class="shaman" rarity="legendary" race="none" set="gvg" attributes="battlecry,overload,draw"/>
+    <Card id="s0045" cost="8" atk="3" hp="5" type="minion" class="shaman" rarity="legendary" race="none" set="classic" attributes="charge,divineshield,windfury,taunt"/>
+
+    <Card id="r0001" cost="0" atk="0" hp="0" type="spell" class="rogue" rarity="common" race="none" set="classic"/>
+    <Card id="r0002" cost="0" atk="0" hp="0" type="spell" class="rogue" rarity="epic" race="none" set="classic"/>
+    <Card id="r0003" cost="0" atk="0" hp="0" type="spell" class="rogue" rarity="free" race="none" set="basic"/>
+    <Card id="r0004" cost="1" atk="2" hp="1" type="minion" class="rogue" rarity="common" race="pirate" set="tgt"/>
+    <Card id="r0005" cost="1" atk="0" hp="0" type="spell" class="rogue" rarity="free" race="none" set="basic"/>
+    <Card id="r0006" cost="1" atk="0" hp="0" type="spell" class="rogue" rarity="free" race="none" set="basic"/>
+    <Card id="r0007" cost="1" atk="0" hp="0" type="spell" class="rogue" rarity="common" race="none" set="classic" attributes="stealth"/>
+    <Card id="r0008" cost="1" atk="0" hp="0" type="spell" class="rogue" rarity="common" race="none" set="classic" attributes="combo"/>
+    <Card id="r0009" cost="2" atk="3" hp="2" type="minion" class="rogue" rarity="common" race="none" set="tgt" attributes="combo"/>
+    <Card id="r0010" cost="2" atk="1" hp="1" type="minion" class="rogue" rarity="epic" race="none" set="classic" attributes="stealth"/>
+    <Card id="r0011" cost="2" atk="4" hp="1" type="minion" class="rogue" rarity="rare" race="pirate" set="gvg" attributes="stealth"/>
+    <Card id="r0012" cost="2" atk="3" hp="2" type="minion" class="rogue" rarity="common" race="machine" set="gvg" attributes="battlecry"/>
+    <Card id="r0013" cost="2" atk="2" hp="2" type="minion" class="rogue" rarity="common" race="none" set="classic" attributes="combo,summon"/>
+    <Card id="r0014" cost="2" atk="2" hp="2" type="minion" class="rogue" rarity="rare" race="none" set="tgt"/>
+    <Card id="r0015" cost="2" atk="0" hp="0" type="spell" class="rogue" rarity="common" race="none" set="basic" attributes="draw"/>
+    <Card id="r0016" cost="2" atk="0" hp="0" type="spell" class="rogue" rarity="free" race="none" set="basic"/>
+    <Card id="r0017" cost="2" atk="0" hp="0" type="spell" class="rogue" rarity="common" race="none" set="brm"/>
+    <Card id="r0018" cost="2" atk="0" hp="0" type="spell" class="rogue" rarity="common" race="none" set="classic" attributes="combo"/>
+    <Card id="r0019" cost="2" atk="0" hp="0" type="spell" class="rogue" rarity="rare" race="none" set="classic" attributes="aoe"/>
+    <Card id="r0020" cost="2" atk="0" hp="0" type="spell" class="rogue" rarity="common" race="none" set="classic"/>
+    <Card id="r0021" cost="3" atk="3" hp="3" type="minion" class="rogue" rarity="rare" race="none" set="classic" attributes="combo"/>
+    <Card id="r0022" cost="3" atk="4" hp="3" type="minion" class="rogue" rarity="rare" race="none" set="tgt" attributes="battlecry"/>
+    <Card id="r0023" cost="3" atk="2" hp="2" type="minion" class="rogue" rarity="rare" race="machine" set="gvg"/>
+    <Card id="r0024" cost="3" atk="2" hp="2" type="minion" class="rogue" rarity="legendary" race="none" set="classic" attributes="combo"/>
+    <Card id="r0025" cost="3" atk="0" hp="0" type="spell" class="rogue" rarity="rare" race="none" set="classic" attributes="combo"/>
+    <Card id="r0026" cost="3" atk="0" hp="0" type="spell" class="rogue" rarity="common" race="none" set="basic" attributes="draw,aoe"/>
+    <Card id="r0027" cost="3" atk="0" hp="0" type="spell" class="rogue" rarity="rare" race="none" set="tgt" attributes="draw"/>
+    <Card id="r0028" cost="3" atk="0" hp="0" type="spell" class="rogue" rarity="epic" race="none" set="tgt" attributes="summon"/>
+    <Card id="r0029" cost="3" atk="2" hp="2" type="weapon" class="rogue" rarity="rare" race="none" set="classic" attributes="battlecry,combo"/>
+    <Card id="r0030" cost="3" atk="1" hp="3" type="weapon" class="rogue" rarity="epic" race="none" set="gvg"/>
+    <Card id="r0031" cost="4" atk="4" hp="4" type="minion" class="rogue" rarity="rare" race="none" set="classic" attributes="battlecry,stealth"/>
+    <Card id="r0032" cost="4" atk="5" hp="5" type="minion" class="rogue" rarity="common" race="none" set="naxx" attributes="deathrattle"/>
+    <Card id="r0033" cost="4" atk="0" hp="0" type="spell" class="rogue" rarity="common" race="none" set="gvg" attributes="combo"/>
+    <Card id="r0034" cost="4" atk="0" hp="0" type="spell" class="rogue" rarity="epic" race="none" set="gvg" attributes="combo"/>
+    <Card id="r0035" cost="4" atk="1" hp="3" type="weapon" class="rogue" rarity="epic" race="none" set="tgt"/>
+    <Card id="r0036" cost="5" atk="3" hp="7" type="minion" class="rogue" rarity="common" race="none" set="tgt" attributes="combo"/>
+    <Card id="r0037" cost="5" atk="6" hp="6" type="minion" class="rogue" rarity="rare" race="none" set="gvg" attributes="stealth"/>
+    <Card id="r0038" cost="5" atk="4" hp="3" type="minion" class="rogue" rarity="rare" race="none" set="brm" attributes="battlecry,aoe"/>
+    <Card id="r0039" cost="5" atk="0" hp="0" type="spell" class="rogue" rarity="free" race="none" set="basic"/>
+    <Card id="r0040" cost="5" atk="3" hp="4" type="weapon" class="rogue" rarity="common" race="none" set="basic"/>
+    <Card id="r0041" cost="6" atk="5" hp="8" type="minion" class="rogue" rarity="legendary" race="none" set="gvg"/>
+    <Card id="r0042" cost="6" atk="5" hp="3" type="minion" class="rogue" rarity="epic" race="none" set="classic" attributes="combo"/>
+    <Card id="r0043" cost="6" atk="0" hp="0" type="spell" class="rogue" rarity="common" race="none" set="basic"/>
+    <Card id="r0044" cost="7" atk="0" hp="0" type="spell" class="rogue" rarity="common" race="none" set="basic" attributes="draw"/>
+    <Card id="r0045" cost="9" atk="8" hp="4" type="minion" class="rogue" rarity="legendary" race="none" set="tgt" attributes="deathrattle,summon"/>
+
+    <Card id="p0001" cost="1" atk="0" hp="0" type="spell" class="paladin" rarity="common" race="none" set="classic" attributes="secret"/>
+    <Card id="p0002" cost="1" atk="0" hp="0" type="spell" class="paladin" rarity="common" race="none" set="classic" attributes="secret"/>
+    <Card id="p0003" cost="1" atk="0" hp="0" type="spell" class="paladin" rarity="common" race="none" set="classic" attributes="secret,summon"/>
+    <Card id="p0004" cost="1" atk="0" hp="0" type="spell" class="paladin" rarity="common" race="none" set="basic"/>
+    <Card id="p0005" cost="1" atk="0" hp="0" type="spell" class="paladin" rarity="free" race="none" set="basic" attributes="divineshield"/>
+    <Card id="p0006" cost="1" atk="0" hp="0" type="spell" class="paladin" rarity="common" race="none" set="classic" attributes="secret"/>
+    <Card id="p0007" cost="1" atk="0" hp="0" type="spell" class="paladin" rarity="rare" race="none" set="tgt" attributes="secret"/>
+    <Card id="p0008" cost="1" atk="0" hp="0" type="spell" class="paladin" rarity="common" race="none" set="classic" attributes="draw"/>
+    <Card id="p0009" cost="1" atk="0" hp="0" type="spell" class="paladin" rarity="free" race="none" set="basic"/>
+    <Card id="p0010" cost="1" atk="0" hp="0" type="spell" class="paladin" rarity="common" race="none" set="naxx" attributes="secret"/>
+    <Card id="p0011" cost="1" atk="1" hp="4" type="weapon" class="paladin" rarity="free" race="none" set="basic"/>
+    <Card id="p0012" cost="2" atk="2" hp="2" type="minion" class="paladin" rarity="common" race="machine" set="gvg" attributes="divineshield"/>
+    <Card id="p0013" cost="2" atk="2" hp="2" type="minion" class="paladin" rarity="common" race="none" set="classic" attributes="battlecry,divineshield"/>
+    <Card id="p0014" cost="2" atk="0" hp="0" type="spell" class="paladin" rarity="common" race="none" set="gvg" attributes="heal"/>
+    <Card id="p0015" cost="2" atk="0" hp="0" type="spell" class="paladin" rarity="free" race="none" set="basic" attributes="heal"/>
+    <Card id="p0016" cost="2" atk="0" hp="0" type="spell" class="paladin" rarity="rare" race="none" set="classic" attributes="aoe"/>
+    <Card id="p0017" cost="2" atk="2" hp="2" type="weapon" class="paladin" rarity="rare" race="none" set="tgt" attributes="battlecry,joust"/>
+    <Card id="p0018" cost="3" atk="2" hp="4" type="minion" class="paladin" rarity="common" race="none" set="tgt"/>
+    <Card id="p0019" cost="3" atk="4" hp="3" type="minion" class="paladin" rarity="rare" race="none" set="gvg" attributes="battlecry,deathrattle,aoe"/>
+    <Card id="p0020" cost="3" atk="3" hp="3" type="minion" class="paladin" rarity="rare" race="none" set="classic" attributes="battlecry"/>
+    <Card id="p0021" cost="3" atk="0" hp="0" type="spell" class="paladin" rarity="common" race="none" set="tgt" attributes="divineshield"/>
+    <Card id="p0022" cost="3" atk="0" hp="0" type="spell" class="paladin" rarity="rare" race="none" set="gvg" attributes="summon"/>
+    <Card id="p0023" cost="3" atk="0" hp="0" type="spell" class="paladin" rarity="rare" race="none" set="classic" attributes="draw"/>
+    <Card id="p0024" cost="3" atk="1" hp="5" type="weapon" class="paladin" rarity="epic" race="none" set="classic" attributes="summon"/>
+    <Card id="p0025" cost="3" atk="2" hp="3" type="weapon" class="paladin" rarity="epic" race="none" set="gvg" attributes="battlecry,divineshield,taunt"/>
+    <Card id="p0026" cost="4" atk="3" hp="4" type="minion" class="paladin" rarity="common" race="murloc" set="tgt" attributes="summon,inspire"/>
+    <Card id="p0027" cost="4" atk="0" hp="0" type="spell" class="paladin" rarity="free" race="none" set="basic" attributes="draw"/>
+    <Card id="p0028" cost="4" atk="0" hp="0" type="spell" class="paladin" rarity="common" race="none" set="basic" attributes="aoe"/>
+    <Card id="p0029" cost="4" atk="0" hp="0" type="spell" class="paladin" rarity="common" race="none" set="basic"/>
+    <Card id="p0030" cost="4" atk="4" hp="2" type="weapon" class="paladin" rarity="common" race="none" set="basic" attributes="heal"/>
+    <Card id="p0031" cost="5" atk="5" hp="5" type="minion" class="paladin" rarity="rare" race="none" set="tgt" attributes="battlecry,joust,heal"/>
+    <Card id="p0032" cost="5" atk="2" hp="5" type="minion" class="paladin" rarity="epic" race="none" set="gvg" attributes="battlecry"/>
+    <Card id="p0033" cost="5" atk="5" hp="5" type="minion" class="paladin" rarity="rare" race="dragon" set="brm" attributes="battlecry"/>
+    <Card id="p0034" cost="5" atk="6" hp="3" type="minion" class="paladin" rarity="rare" race="machine" set="gvg" attributes="divineshield,summon"/>
+    <Card id="p0035" cost="5" atk="1" hp="7" type="minion" class="paladin" rarity="legendary" race="none" set="gvg"/>
+    <Card id="p0036" cost="5" atk="0" hp="0" type="spell" class="paladin" rarity="common" race="none" set="brm" attributes="draw"/>
+    <Card id="p0037" cost="5" atk="0" hp="0" type="spell" class="paladin" rarity="rare" race="none" set="classic" attributes="draw"/>
+    <Card id="p0038" cost="5" atk="0" hp="0" type="spell" class="paladin" rarity="rare" race="none" set="classic"/>
+    <Card id="p0039" cost="6" atk="6" hp="6" type="minion" class="paladin" rarity="epic" race="none" set="tgt" attributes="battlecry,secret"/>
+    <Card id="p0040" cost="6" atk="0" hp="0" type="spell" class="paladin" rarity="epic" race="none" set="tgt" attributes="aoe"/>
+    <Card id="p0041" cost="6" atk="0" hp="0" type="spell" class="paladin" rarity="epic" race="none" set="classic"/>
+    <Card id="p0042" cost="7" atk="5" hp="6" type="minion" class="paladin" rarity="common" race="none" set="basic" attributes="battlecry,heal"/>
+    <Card id="p0043" cost="7" atk="3" hp="7" type="minion" class="paladin" rarity="legendary" race="none" set="tgt" attributes="battlecry,aoe"/>
+    <Card id="p0044" cost="8" atk="6" hp="6" type="minion" class="paladin" rarity="legendary" race="none" set="classic" attributes="deathrattle,divineshield,taunt"/>
+    <Card id="p0045" cost="8" atk="0" hp="0" type="spell" class="paladin" rarity="epic" race="none" set="classic" attributes="draw,heal"/>
+
+    <Card id="h0001" cost="0" atk="0" hp="0" type="spell" class="hunter" rarity="common" race="none" set="basic"/>
+    <Card id="h0002" cost="1" atk="1" hp="1" type="minion" class="hunter" rarity="common" race="beast" set="naxx" attributes="deathrattle,draw"/>
+    <Card id="h0003" cost="1" atk="1" hp="1" type="minion" class="hunter" rarity="free" race="beast" set="basic"/>
+    <Card id="h0004" cost="1" atk="2" hp="1" type="minion" class="hunter" rarity="common" race="none" set="tgt" attributes="inspire"/>
+    <Card id="h0005" cost="1" atk="0" hp="0" type="spell" class="hunter" rarity="free" race="none" set="basic" attributes="draw"/>
+    <Card id="h0006" cost="1" atk="0" hp="0" type="spell" class="hunter" rarity="epic" race="none" set="classic" attributes="immune"/>
+    <Card id="h0007" cost="1" atk="0" hp="0" type="spell" class="hunter" rarity="free" race="none" set="basic"/>
+    <Card id="h0008" cost="2" atk="2" hp="3" type="minion" class="hunter" rarity="epic" race="none" set="gvg"/>
+    <Card id="h0009" cost="2" atk="2" hp="2" type="minion" class="hunter" rarity="common" race="beast" set="classic"/>
+    <Card id="h0010" cost="2" atk="3" hp="2" type="minion" class="hunter" rarity="common" race="beast" set="tgt" attributes="battlecry,joust,draw"/>
+    <Card id="h0011" cost="2" atk="0" hp="0" type="spell" class="hunter" rarity="common" race="none" set="classic" attributes="secret"/>
+    <Card id="h0012" cost="2" atk="0" hp="0" type="spell" class="hunter" rarity="epic" race="none" set="classic" attributes="secret,summon"/>
+    <Card id="h0013" cost="2" atk="0" hp="0" type="spell" class="hunter" rarity="common" race="none" set="brm" attributes="draw"/>
+    <Card id="h0014" cost="2" atk="0" hp="0" type="spell" class="hunter" rarity="rare" race="none" set="classic" attributes="secret"/>
+    <Card id="h0015" cost="2" atk="0" hp="0" type="spell" class="hunter" rarity="epic" race="none" set="tgt" attributes="draw"/>
+    <Card id="h0016" cost="2" atk="0" hp="0" type="spell" class="hunter" rarity="common" race="none" set="classic" attributes="secret"/>
+    <Card id="h0017" cost="2" atk="0" hp="0" type="spell" class="hunter" rarity="rare" race="none" set="classic" attributes="stealth,secret,draw"/>
+    <Card id="h0018" cost="2" atk="0" hp="0" type="spell" class="hunter" rarity="epic" race="none" set="gvg" attributes="deathrattle"/>
+    <Card id="h0019" cost="2" atk="0" hp="0" type="spell" class="hunter" rarity="common" race="none" set="classic" attributes="secret,aoe"/>
+    <Card id="h0020" cost="2" atk="0" hp="0" type="spell" class="hunter" rarity="rare" race="none" set="gvg" attributes="draw"/>
+    <Card id="h0021" cost="2" atk="0" hp="0" type="spell" class="hunter" rarity="common" race="none" set="tgt" attributes="secret,summon,taunt"/>
+    <Card id="h0022" cost="2" atk="2" hp="2" type="weapon" class="hunter" rarity="common" race="none" set="gvg" attributes="battlecry"/>
+    <Card id="h0023" cost="3" atk="4" hp="2" type="minion" class="hunter" rarity="epic" race="none" set="tgt" attributes="battlecry,immune"/>
+    <Card id="h0024" cost="3" atk="3" hp="3" type="minion" class="hunter" rarity="rare" race="machine" set="gvg" attributes="battlecry"/>
+    <Card id="h0025" cost="3" atk="4" hp="2" type="minion" class="hunter" rarity="legendary" race="beast" set="tgt" attributes="aoe"/>
+    <Card id="h0026" cost="3" atk="0" hp="0" type="spell" class="hunter" rarity="common" race="none" set="classic" attributes="charge,summon"/>
+    <Card id="h0027" cost="3" atk="0" hp="0" type="spell" class="hunter" rarity="rare" race="none" set="tgt" attributes="aoe"/>
+    <Card id="h0028" cost="3" atk="0" hp="0" type="spell" class="hunter" rarity="common" race="none" set="basic"/>
+    <Card id="h0029" cost="3" atk="0" hp="0" type="spell" class="hunter" rarity="common" race="none" set="classic"/>
+    <Card id="h0030" cost="3" atk="0" hp="0" type="spell" class="hunter" rarity="common" race="none" set="basic" attributes="summon"/>
+    <Card id="h0031" cost="3" atk="3" hp="2" type="weapon" class="hunter" rarity="rare" race="none" set="classic" attributes="secret"/>
+    <Card id="h0032" cost="4" atk="4" hp="3" type="minion" class="hunter" rarity="free" race="none" set="basic" attributes="battlecry,taunt"/>
+    <Card id="h0033" cost="4" atk="4" hp="4" type="minion" class="hunter" rarity="rare" race="beast" set="brm" attributes="battlecry"/>
+    <Card id="h0034" cost="4" atk="0" hp="0" type="spell" class="hunter" rarity="free" race="none" set="basic"/>
+    <Card id="h0035" cost="5" atk="2" hp="5" type="minion" class="hunter" rarity="common" race="beast" set="basic" attributes="charge"/>
+    <Card id="h0036" cost="5" atk="3" hp="2" type="minion" class="hunter" rarity="common" race="beast" set="basic" attributes="summon,draw"/>
+    <Card id="h0037" cost="5" atk="3" hp="3" type="minion" class="hunter" rarity="rare" race="none" set="tgt" attributes="battlecry,summon"/>
+    <Card id="h0038" cost="5" atk="2" hp="6" type="minion" class="hunter" rarity="rare" race="beast" set="gvg" attributes="battlecry,taunt"/>
+    <Card id="h0039" cost="5" atk="0" hp="0" type="spell" class="hunter" rarity="rare" race="none" set="classic" attributes="aoe"/>
+    <Card id="h0040" cost="5" atk="0" hp="0" type="spell" class="hunter" rarity="common" race="none" set="gvg"/>
+    <Card id="h0041" cost="6" atk="6" hp="5" type="minion" class="hunter" rarity="rare" race="beast" set="classic" attributes="deathrattle,summon"/>
+    <Card id="h0042" cost="6" atk="0" hp="0" type="spell" class="hunter" rarity="rare" race="none" set="tgt" attributes="summon"/>
+    <Card id="h0043" cost="7" atk="6" hp="9" type="minion" class="hunter" rarity="legendary" race="beast" set="gvg"/>
+    <Card id="h0044" cost="7" atk="4" hp="2" type="minion" class="hunter" rarity="legendary" race="beast" set="tgt"/>
+    <Card id="h0045" cost="7" atk="5" hp="2" type="weapon" class="hunter" rarity="epic" race="none" set="classic" attributes="immune"/>
+    <Card id="h0046" cost="9" atk="8" hp="8" type="minion" class="hunter" rarity="legendary" race="beast" set="classic" attributes="charge"/>
+
+    <Card id="d0001" cost="0" atk="0" hp="0" type="spell" class="druid" rarity="common" race="none" set="basic"/>
+    <Card id="d0002" cost="0" atk="0" hp="0" type="spell" class="druid" rarity="free" race="none" set="basic"/>
+    <Card id="d0003" cost="1" atk="0" hp="0" type="spell" class="druid" rarity="rare" race="none" set="classic"/>
+    <Card id="d0004" cost="1" atk="0" hp="0" type="spell" class="druid" rarity="common" race="none" set="classic"/>
+    <Card id="d0005" cost="1" atk="0" hp="0" type="spell" class="druid" rarity="common" race="none" set="tgt" attributes="summon"/>
+    <Card id="d0006" cost="1" atk="0" hp="0" type="spell" class="druid" rarity="free" race="none" set="basic"/>
+    <Card id="d0007" cost="2" atk="2" hp="1" type="minion" class="druid" rarity="common" race="none" set="tgt" attributes="stealth,charge"/>
+    <Card id="d0008" cost="2" atk="2" hp="3" type="minion" class="druid" rarity="rare" race="none" set="tgt" attributes="battlecry,deathrattle"/>
+    <Card id="d0009" cost="2" atk="2" hp="2" type="minion" class="druid" rarity="common" race="machine" set="gvg" attributes="taunt"/>
+    <Card id="d0010" cost="2" atk="0" hp="0" type="spell" class="druid" rarity="common" race="none" set="classic" attributes="draw"/>
+    <Card id="d0011" cost="2" atk="0" hp="0" type="spell" class="druid" rarity="free" race="none" set="basic"/>
+    <Card id="d0012" cost="2" atk="0" hp="0" type="spell" class="druid" rarity="common" race="none" set="classic" attributes="summon"/>
+    <Card id="d0013" cost="2" atk="0" hp="0" type="spell" class="druid" rarity="free" race="none" set="basic" attributes="taunt"/>
+    <Card id="d0014" cost="3" atk="2" hp="4" type="minion" class="druid" rarity="rare" race="none" set="gvg" attributes="draw"/>
+    <Card id="d0015" cost="3" atk="2" hp="2" type="minion" class="druid" rarity="common" race="none" set="brm"/>
+    <Card id="d0016" cost="3" atk="0" hp="0" type="spell" class="druid" rarity="common" race="none" set="basic"/>
+    <Card id="d0017" cost="3" atk="0" hp="0" type="spell" class="druid" rarity="epic" race="none" set="tgt"/>
+    <Card id="d0018" cost="3" atk="0" hp="0" type="spell" class="druid" rarity="common" race="none" set="classic" attributes="taunt"/>
+    <Card id="d0019" cost="3" atk="0" hp="0" type="spell" class="druid" rarity="free" race="none" set="basic" attributes="heal"/>
+    <Card id="d0020" cost="4" atk="4" hp="4" type="minion" class="druid" rarity="common" race="none" set="tgt" attributes="battlecry"/>
+    <Card id="d0021" cost="4" atk="5" hp="4" type="minion" class="druid" rarity="rare" race="beast" set="tgt" attributes="inspire"/>
+    <Card id="d0022" cost="4" atk="2" hp="4" type="minion" class="druid" rarity="rare" race="none" set="classic" attributes="silence"/>
+    <Card id="d0023" cost="4" atk="0" hp="0" type="spell" class="druid" rarity="common" race="none" set="basic" attributes="aoe"/>
+    <Card id="d0024" cost="4" atk="0" hp="0" type="spell" class="druid" rarity="common" race="none" set="classic" attributes="deathrattle,summon"/>
+    <Card id="d0025" cost="4" atk="0" hp="0" type="spell" class="druid" rarity="common" race="none" set="naxx" attributes="summon,aoe"/>
+    <Card id="d0026" cost="4" atk="0" hp="0" type="spell" class="druid" rarity="rare" race="none" set="classic"/>
+    <Card id="d0027" cost="4" atk="0" hp="0" type="spell" class="druid" rarity="epic" race="none" set="tgt"/>
+    <Card id="d0028" cost="5" atk="4" hp="4" type="minion" class="druid" rarity="common" race="none" set="gvg" attributes="battlecry"/>
+    <Card id="d0029" cost="5" atk="4" hp="4" type="minion" class="druid" rarity="common" race="none" set="classic" attributes="charge,taunt"/>
+    <Card id="d0030" cost="5" atk="0" hp="0" type="spell" class="druid" rarity="rare" race="none" set="classic" attributes="aoe"/>
+    <Card id="d0031" cost="5" atk="0" hp="0" type="spell" class="druid" rarity="rare" race="none" set="classic" attributes="draw"/>
+    <Card id="d0032" cost="6" atk="7" hp="6" type="minion" class="druid" rarity="rare" race="machine" set="gvg" attributes="draw"/>
+    <Card id="d0033" cost="6" atk="0" hp="0" type="spell" class="druid" rarity="common" race="none" set="basic" attributes="draw"/>
+    <Card id="d0034" cost="6" atk="0" hp="0" type="spell" class="druid" rarity="rare" race="none" set="gvg"/>
+    <Card id="d0035" cost="6" atk="0" hp="0" type="spell" class="druid" rarity="epic" race="none" set="classic" attributes="charge,summon"/>
+    <Card id="d0036" cost="6" atk="0" hp="0" type="spell" class="druid" rarity="epic" race="none" set="gvg" attributes="summon,taunt"/>
+    <Card id="d0037" cost="7" atk="9" hp="7" type="minion" class="druid" rarity="legendary" race="beast" set="gvg" attributes="deathrattle"/>
+    <Card id="d0038" cost="7" atk="6" hp="6" type="minion" class="druid" rarity="rare" race="none" set="tgt"/>
+    <Card id="d0039" cost="7" atk="5" hp="5" type="minion" class="druid" rarity="epic" race="none" set="classic" attributes="taunt"/>
+    <Card id="d0040" cost="7" atk="5" hp="5" type="minion" class="druid" rarity="epic" race="none" set="classic" attributes="draw,heal"/>
+    <Card id="d0041" cost="8" atk="8" hp="8" type="minion" class="druid" rarity="common" race="none" set="basic" attributes="taunt"/>
+    <Card id="d0042" cost="9" atk="7" hp="8" type="minion" class="druid" rarity="rare" race="none" set="brm" attributes="taunt"/>
+    <Card id="d0043" cost="9" atk="5" hp="8" type="minion" class="druid" rarity="legendary" race="none" set="classic" attributes="summon,taunt"/>
+    <Card id="d0044" cost="9" atk="5" hp="5" type="minion" class="druid" rarity="legendary" race="none" set="tgt"/>
+    <Card id="d0045" cost="9" atk="0" hp="0" type="spell" class="druid" rarity="epic" race="none" set="gvg" attributes="aoe,heal"/>
+
+    <Card id="wl0001" cost="0" atk="0" hp="0" type="spell" class="warlock" rarity="common" race="none" set="basic" attributes="heal"/>
+    <Card id="wl0002" cost="1" atk="1" hp="3" type="minion" class="warlock" rarity="free" race="none" set="basic" attributes="taunt"/>
+    <Card id="wl0003" cost="1" atk="3" hp="2" type="minion" class="warlock" rarity="common" race="demon" set="classic" attributes="battlecry"/>
+    <Card id="wl0004" cost="1" atk="0" hp="1" type="minion" class="warlock" rarity="common" race="demon" set="classic" attributes="stealth"/>
+    <Card id="wl0005" cost="1" atk="0" hp="0" type="spell" class="warlock" rarity="common" race="none" set="basic"/>
+    <Card id="wl0006" cost="1" atk="0" hp="0" type="spell" class="warlock" rarity="common" race="none" set="classic"/>
+    <Card id="wl0007" cost="1" atk="0" hp="0" type="spell" class="warlock" rarity="common" race="none" set="basic" attributes="draw"/>
+    <Card id="wl0008" cost="1" atk="0" hp="0" type="spell" class="warlock" rarity="common" race="none" set="basic"/>
+    <Card id="wl0009" cost="2" atk="4" hp="3" type="minion" class="warlock" rarity="common" race="demon" set="tgt"/>
+    <Card id="wl0010" cost="2" atk="3" hp="2" type="minion" class="warlock" rarity="rare" race="demon" set="tgt"/>
+    <Card id="wl0011" cost="2" atk="4" hp="3" type="minion" class="warlock" rarity="free" race="demon" set="basic" attributes="battlecry"/>
+    <Card id="wl0012" cost="2" atk="1" hp="4" type="minion" class="warlock" rarity="rare" race="demon" set="gvg" attributes="heal"/>
+    <Card id="wl0013" cost="2" atk="0" hp="0" type="spell" class="warlock" rarity="common" race="none" set="tgt"/>
+    <Card id="wl0014" cost="2" atk="0" hp="0" type="spell" class="warlock" rarity="common" race="none" set="classic"/>
+    <Card id="wl0015" cost="2" atk="0" hp="0" type="spell" class="warlock" rarity="common" race="none" set="gvg"/>
+    <Card id="wl0016" cost="3" atk="3" hp="3" type="minion" class="warlock" rarity="rare" race="demon" set="classic" attributes="battlecry"/>
+    <Card id="wl0017" cost="3" atk="2" hp="4" type="minion" class="warlock" rarity="common" race="demon" set="brm" attributes="summon"/>
+    <Card id="wl0018" cost="3" atk="3" hp="5" type="minion" class="warlock" rarity="rare" race="demon" set="classic" attributes="battlecry,taunt"/>
+    <Card id="wl0019" cost="3" atk="0" hp="0" type="spell" class="warlock" rarity="free" race="none" set="basic"/>
+    <Card id="wl0020" cost="3" atk="0" hp="0" type="spell" class="warlock" rarity="common" race="none" set="classic" attributes="draw"/>
+    <Card id="wl0021" cost="3" atk="0" hp="0" type="spell" class="warlock" rarity="free" race="none" set="basic" attributes="heal"/>
+    <Card id="wl0022" cost="3" atk="0" hp="0" type="spell" class="warlock" rarity="rare" race="none" set="brm" attributes="aoe"/>
+    <Card id="wl0023" cost="4" atk="3" hp="4" type="minion" class="warlock" rarity="common" race="demon" set="naxx" attributes="deathrattle"/>
+    <Card id="wl0024" cost="4" atk="0" hp="4" type="minion" class="warlock" rarity="common" race="none" set="classic"/>
+    <Card id="wl0025" cost="4" atk="5" hp="6" type="minion" class="warlock" rarity="epic" race="demon" set="classic" attributes="battlecry"/>
+    <Card id="wl0026" cost="4" atk="3" hp="5" type="minion" class="warlock" rarity="rare" race="machine" set="gvg"/>
+    <Card id="wl0027" cost="4" atk="1" hp="1" type="minion" class="warlock" rarity="epic" race="demon" set="tgt" attributes="deathrattle,summon"/>
+    <Card id="wl0028" cost="4" atk="0" hp="0" type="spell" class="warlock" rarity="rare" race="none" set="classic" attributes="aoe"/>
+    <Card id="wl0029" cost="4" atk="0" hp="0" type="spell" class="warlock" rarity="rare" race="none" set="gvg" attributes="summon"/>
+    <Card id="wl0030" cost="4" atk="0" hp="0" type="spell" class="warlock" rarity="free" race="none" set="basic" attributes="aoe"/>
+    <Card id="wl0031" cost="4" atk="0" hp="0" type="spell" class="warlock" rarity="rare" race="none" set="tgt"/>
+    <Card id="wl0032" cost="5" atk="4" hp="4" type="minion" class="warlock" rarity="common" race="demon" set="gvg"/>
+    <Card id="wl0033" cost="5" atk="5" hp="7" type="minion" class="warlock" rarity="rare" race="demon" set="classic" attributes="battlecry,charge"/>
+    <Card id="wl0034" cost="5" atk="0" hp="0" type="spell" class="warlock" rarity="epic" race="none" set="gvg"/>
+    <Card id="wl0035" cost="5" atk="0" hp="0" type="spell" class="warlock" rarity="epic" race="none" set="classic" attributes="summon"/>
+    <Card id="wl0036" cost="6" atk="4" hp="4" type="minion" class="warlock" rarity="legendary" race="none" set="tgt"/>
+    <Card id="wl0037" cost="6" atk="5" hp="4" type="minion" class="warlock" rarity="rare" race="demon" set="tgt" attributes="inspire"/>
+    <Card id="wl0038" cost="6" atk="6" hp="6" type="minion" class="warlock" rarity="common" race="demon" set="basic" attributes="battlecry,aoe"/>
+    <Card id="wl0039" cost="6" atk="9" hp="9" type="minion" class="warlock" rarity="epic" race="machine" set="gvg"/>
+    <Card id="wl0040" cost="6" atk="0" hp="0" type="spell" class="warlock" rarity="rare" race="none" set="classic" attributes="heal"/>
+    <Card id="wl0041" cost="6" atk="0" hp="0" type="spell" class="warlock" rarity="epic" race="none" set="tgt"/>
+    <Card id="wl0042" cost="7" atk="6" hp="8" type="minion" class="warlock" rarity="common" race="demon" set="tgt"/>
+    <Card id="wl0043" cost="8" atk="0" hp="0" type="spell" class="warlock" rarity="epic" race="none" set="classic" attributes="aoe"/>
+    <Card id="wl0044" cost="9" atk="9" hp="7" type="minion" class="warlock" rarity="legendary" race="demon" set="gvg" attributes="immune"/>
+    <Card id="wl0045" cost="9" atk="3" hp="15" type="minion" class="warlock" rarity="legendary" race="demon" set="classic" attributes="battlecry"/>
+
+    <Card id="m0001" cost="1" atk="1" hp="3" type="minion" class="mage" rarity="common" race="none" set="classic"/>
+    <Card id="m0002" cost="1" atk="0" hp="0" type="spell" class="mage" rarity="common" race="none" set="basic" attributes="summon,taunt"/>
+    <Card id="m0003" cost="1" atk="0" hp="0" type="spell" class="mage" rarity="common" race="none" set="classic" attributes="freeze"/>
+    <Card id="m0004" cost="1" atk="0" hp="0" type="spell" class="mage" rarity="free" race="none" set="basic"/>
+    <Card id="m0005" cost="1" atk="0" hp="0" type="spell" class="mage" rarity="epic" race="none" set="tgt" attributes="spelldamage"/>
+    <Card id="m0006" cost="2" atk="3" hp="2" type="minion" class="mage" rarity="common" race="none" set="classic"/>
+    <Card id="m0007" cost="2" atk="2" hp="3" type="minion" class="mage" rarity="common" race="machine" set="gvg" attributes="freeze"/>
+    <Card id="m0008" cost="2" atk="3" hp="2" type="minion" class="mage" rarity="rare" race="none" set="tgt"/>
+    <Card id="m0009" cost="2" atk="0" hp="0" type="spell" class="mage" rarity="rare" race="none" set="gvg" attributes="draw"/>
+    <Card id="m0010" cost="2" atk="0" hp="0" type="spell" class="mage" rarity="common" race="none" set="basic" attributes="freeze"/>
+    <Card id="m0011" cost="2" atk="0" hp="0" type="spell" class="mage" rarity="common" race="none" set="gvg"/>
+    <Card id="m0012" cost="2" atk="0" hp="0" type="spell" class="mage" rarity="free" race="none" set="basic" attributes="aoe"/>
+    <Card id="m0013" cost="3" atk="3" hp="4" type="minion" class="mage" rarity="common" race="none" set="tgt" attributes="battlecry,draw"/>
+    <Card id="m0014" cost="3" atk="3" hp="3" type="minion" class="mage" rarity="rare" race="machine" set="gvg" attributes="spelldamage"/>
+    <Card id="m0015" cost="3" atk="4" hp="3" type="minion" class="mage" rarity="rare" race="none" set="classic" attributes="battlecry,secret"/>
+    <Card id="m0016" cost="3" atk="2" hp="4" type="minion" class="mage" rarity="rare" race="none" set="brm"/>
+    <Card id="m0017" cost="3" atk="0" hp="0" type="spell" class="mage" rarity="rare" race="none" set="classic" attributes="secret"/>
+    <Card id="m0018" cost="3" atk="0" hp="0" type="spell" class="mage" rarity="epic" race="none" set="classic" attributes="secret,summon"/>
+    <Card id="m0019" cost="3" atk="0" hp="0" type="spell" class="mage" rarity="rare" race="none" set="tgt" attributes="charge"/>
+    <Card id="m0020" cost="3" atk="0" hp="0" type="spell" class="mage" rarity="common" race="none" set="classic" attributes="secret,summon"/>
+    <Card id="m0021" cost="3" atk="0" hp="0" type="spell" class="mage" rarity="epic" race="none" set="classic" attributes="secret,immune"/>
+    <Card id="m0022" cost="3" atk="0" hp="0" type="spell" class="mage" rarity="common" race="none" set="classic" attributes="secret"/>
+    <Card id="m0023" cost="3" atk="0" hp="0" type="spell" class="mage" rarity="common" race="none" set="basic" attributes="freeze,aoe"/>
+    <Card id="m0024" cost="3" atk="0" hp="0" type="spell" class="mage" rarity="rare" race="none" set="tgt" attributes="secret,summon"/>
+    <Card id="m0025" cost="3" atk="0" hp="0" type="spell" class="mage" rarity="common" race="none" set="naxx" attributes="secret"/>
+    <Card id="m0026" cost="3" atk="0" hp="0" type="spell" class="mage" rarity="rare" race="none" set="classic" attributes="secret"/>
+    <Card id="m0027" cost="3" atk="0" hp="0" type="spell" class="mage" rarity="free" race="none" set="basic" attributes="draw"/>
+    <Card id="m0028" cost="4" atk="2" hp="5" type="minion" class="mage" rarity="epic" race="none" set="gvg"/>
+    <Card id="m0029" cost="4" atk="3" hp="6" type="minion" class="mage" rarity="common" race="none" set="basic" attributes="freeze"/>
+    <Card id="m0030" cost="4" atk="5" hp="4" type="minion" class="mage" rarity="rare" race="none" set="gvg" attributes="battlecry"/>
+    <Card id="m0031" cost="4" atk="3" hp="3" type="minion" class="mage" rarity="rare" race="none" set="classic" attributes="secret"/>
+    <Card id="m0032" cost="4" atk="3" hp="5" type="minion" class="mage" rarity="common" race="none" set="tgt" attributes="spelldamage,inspire"/>
+    <Card id="m0033" cost="4" atk="0" hp="0" type="spell" class="mage" rarity="free" race="none" set="basic"/>
+    <Card id="m0034" cost="4" atk="0" hp="0" type="spell" class="mage" rarity="free" race="none" set="basic"/>
+    <Card id="m0035" cost="4" atk="0" hp="0" type="spell" class="mage" rarity="epic" race="none" set="gvg" attributes="draw"/>
+    <Card id="m0036" cost="4" atk="0" hp="0" type="spell" class="mage" rarity="common" race="none" set="classic" attributes="freeze,aoe"/>
+    <Card id="m0037" cost="5" atk="0" hp="0" type="spell" class="mage" rarity="common" race="none" set="tgt"/>
+    <Card id="m0038" cost="5" atk="0" hp="0" type="spell" class="mage" rarity="common" race="none" set="brm"/>
+    <Card id="m0039" cost="6" atk="6" hp="6" type="minion" class="mage" rarity="epic" race="dragon" set="tgt"/>
+    <Card id="m0040" cost="6" atk="0" hp="0" type="spell" class="mage" rarity="rare" race="none" set="classic" attributes="freeze,aoe"/>
+    <Card id="m0041" cost="7" atk="7" hp="7" type="minion" class="mage" rarity="legendary" race="machine" set="gvg" attributes="aoe"/>
+    <Card id="m0042" cost="7" atk="5" hp="7" type="minion" class="mage" rarity="legendary" race="none" set="classic" attributes="draw"/>
+    <Card id="m0043" cost="7" atk="0" hp="0" type="spell" class="mage" rarity="common" race="none" set="basic" attributes="aoe"/>
+    <Card id="m0044" cost="8" atk="7" hp="7" type="minion" class="mage" rarity="legendary" race="none" set="tgt" attributes="deathrattle,draw"/>
+    <Card id="m0045" cost="10" atk="0" hp="0" type="spell" class="mage" rarity="epic" race="none" set="classic"/>
+
+    <Card id="pr0001" cost="0" atk="0" hp="0" type="spell" class="priest" rarity="common" race="none" set="classic" attributes="silence"/>
+    <Card id="pr0002" cost="0" atk="0" hp="0" type="spell" class="priest" rarity="common" race="none" set="classic" attributes="aoe,heal"/>
+    <Card id="pr0003" cost="1" atk="2" hp="1" type="minion" class="priest" rarity="common" race="dragon" set="brm" attributes="battlecry"/>
+    <Card id="pr0004" cost="1" atk="2" hp="1" type="minion" class="priest" rarity="epic" race="none" set="gvg" attributes="battlecry"/>
+    <Card id="pr0005" cost="1" atk="1" hp="3" type="minion" class="priest" rarity="free" race="none" set="basic" attributes="draw"/>
+    <Card id="pr0006" cost="1" atk="0" hp="0" type="spell" class="priest" rarity="free" race="none" set="basic" attributes="draw"/>
+    <Card id="pr0007" cost="1" atk="0" hp="0" type="spell" class="priest" rarity="common" race="none" set="tgt" attributes="heal"/>
+    <Card id="pr0008" cost="1" atk="0" hp="0" type="spell" class="priest" rarity="common" race="none" set="basic" attributes="draw"/>
+    <Card id="pr0009" cost="1" atk="0" hp="0" type="spell" class="priest" rarity="rare" race="none" set="gvg" attributes="summon,heal"/>
+    <Card id="pr0010" cost="1" atk="0" hp="0" type="spell" class="priest" rarity="common" race="none" set="classic"/>
+    <Card id="pr0011" cost="1" atk="0" hp="0" type="spell" class="priest" rarity="free" race="none" set="basic"/>
+    <Card id="pr0012" cost="1" atk="0" hp="0" type="spell" class="priest" rarity="common" race="none" set="tgt" attributes="heal"/>
+    <Card id="pr0013" cost="2" atk="1" hp="4" type="minion" class="priest" rarity="rare" race="none" set="tgt" attributes="battlecry,taunt"/>
+    <Card id="pr0014" cost="2" atk="3" hp="2" type="minion" class="priest" rarity="common" race="none" set="gvg" attributes="battlecry"/>
+    <Card id="pr0015" cost="2" atk="2" hp="3" type="minion" class="priest" rarity="rare" race="machine" set="gvg"/>
+    <Card id="pr0016" cost="2" atk="0" hp="5" type="minion" class="priest" rarity="rare" race="none" set="classic" attributes="heal"/>
+    <Card id="pr0017" cost="2" atk="0" hp="0" type="spell" class="priest" rarity="free" race="none" set="basic"/>
+    <Card id="pr0018" cost="2" atk="0" hp="0" type="spell" class="priest" rarity="rare" race="none" set="brm" attributes="summon"/>
+    <Card id="pr0019" cost="2" atk="0" hp="0" type="spell" class="priest" rarity="free" race="none" set="basic"/>
+    <Card id="pr0020" cost="2" atk="0" hp="0" type="spell" class="priest" rarity="common" race="none" set="basic"/>
+    <Card id="pr0021" cost="2" atk="0" hp="0" type="spell" class="priest" rarity="rare" race="none" set="tgt" attributes="draw"/>
+    <Card id="pr0022" cost="2" atk="0" hp="0" type="spell" class="priest" rarity="epic" race="none" set="tgt" attributes="aoe"/>
+    <Card id="pr0023" cost="3" atk="3" hp="3" type="minion" class="priest" rarity="epic" race="none" set="tgt"/>
+    <Card id="pr0024" cost="3" atk="3" hp="4" type="minion" class="priest" rarity="common" race="none" set="naxx" attributes="deathrattle"/>
+    <Card id="pr0025" cost="3" atk="0" hp="0" type="spell" class="priest" rarity="common" race="none" set="gvg" attributes="spelldamage"/>
+    <Card id="pr0026" cost="3" atk="0" hp="0" type="spell" class="priest" rarity="common" race="none" set="classic" attributes="draw"/>
+    <Card id="pr0027" cost="3" atk="0" hp="0" type="spell" class="priest" rarity="epic" race="none" set="classic"/>
+    <Card id="pr0028" cost="3" atk="0" hp="0" type="spell" class="priest" rarity="common" race="none" set="basic"/>
+    <Card id="pr0029" cost="4" atk="5" hp="4" type="minion" class="priest" rarity="rare" race="none" set="tgt" attributes="inspire"/>
+    <Card id="pr0030" cost="4" atk="0" hp="5" type="minion" class="priest" rarity="common" race="none" set="classic"/>
+    <Card id="pr0031" cost="4" atk="3" hp="5" type="minion" class="priest" rarity="common" race="none" set="tgt"/>
+    <Card id="pr0032" cost="4" atk="3" hp="5" type="minion" class="priest" rarity="rare" race="none" set="classic"/>
+    <Card id="pr0033" cost="4" atk="0" hp="0" type="spell" class="priest" rarity="rare" race="none" set="classic"/>
+    <Card id="pr0034" cost="4" atk="0" hp="0" type="spell" class="priest" rarity="epic" race="none" set="classic" attributes="summon"/>
+    <Card id="pr0035" cost="4" atk="0" hp="0" type="spell" class="priest" rarity="rare" race="none" set="classic" attributes="silence,draw,aoe"/>
+    <Card id="pr0036" cost="5" atk="6" hp="2" type="minion" class="priest" rarity="legendary" race="none" set="gvg" attributes="battlecry"/>
+    <Card id="pr0037" cost="5" atk="5" hp="5" type="minion" class="priest" rarity="rare" race="machine" set="gvg" attributes="battlecry"/>
+    <Card id="pr0038" cost="5" atk="0" hp="0" type="spell" class="priest" rarity="common" race="none" set="basic" attributes="aoe,heal"/>
+    <Card id="pr0039" cost="6" atk="6" hp="6" type="minion" class="priest" rarity="common" race="none" set="classic" attributes="battlecry"/>
+    <Card id="pr0040" cost="6" atk="4" hp="5" type="minion" class="priest" rarity="epic" race="none" set="classic" attributes="battlecry"/>
+    <Card id="pr0041" cost="6" atk="0" hp="0" type="spell" class="priest" rarity="epic" race="none" set="gvg" attributes="aoe"/>
+    <Card id="pr0042" cost="6" atk="0" hp="0" type="spell" class="priest" rarity="rare" race="none" set="classic" attributes="heal"/>
+    <Card id="pr0043" cost="7" atk="7" hp="7" type="minion" class="priest" rarity="legendary" race="none" set="classic"/>
+    <Card id="pr0044" cost="7" atk="5" hp="4" type="minion" class="priest" rarity="legendary" race="none" set="tgt" attributes="summon,inspire"/>
+    <Card id="pr0045" cost="10" atk="0" hp="0" type="spell" class="priest" rarity="common" race="none" set="basic"/>
+
+    <Card id="n0001" cost="1" atk="2" hp="1" type="minion" class="normal" rarity="free" race="none" set="basic" attributes="battlecry,heal"/>
+    <Card id="n0002" cost="1" atk="1" hp="1" type="minion" class="normal" rarity="free" race="beast" set="basic" attributes="charge"/>
+    <Card id="n0003" cost="1" atk="2" hp="1" type="minion" class="normal" rarity="free" race="murloc" set="basic"/>
+    <Card id="n0004" cost="1" atk="1" hp="1" type="minion" class="normal" rarity="common" race="murloc" set="basic"/>
+    <Card id="n0005" cost="1" atk="1" hp="2" type="minion" class="normal" rarity="common" race="none" set="basic" attributes="taunt"/>
+    <Card id="n0006" cost="1" atk="1" hp="1" type="minion" class="normal" rarity="common" race="none" set="basic" attributes="battlecry"/>
+    <Card id="n0007" cost="2" atk="2" hp="3" type="minion" class="normal" rarity="free" race="beast" set="basic"/>
+    <Card id="n0008" cost="2" atk="1" hp="1" type="minion" class="normal" rarity="free" race="none" set="basic" attributes="battlecry,draw"/>
+    <Card id="n0009" cost="2" atk="2" hp="1" type="minion" class="normal" rarity="common" race="murloc" set="basic" attributes="battlecry,summon"/>
+    <Card id="n0010" cost="2" atk="2" hp="2" type="minion" class="normal" rarity="common" race="none" set="basic" attributes="spelldamage"/>
+    <Card id="n0011" cost="2" atk="2" hp="2" type="minion" class="normal" rarity="common" race="none" set="basic" attributes="taunt"/>
+    <Card id="n0012" cost="2" atk="2" hp="1" type="minion" class="normal" rarity="common" race="murloc" set="basic" attributes="charge"/>
+    <Card id="n0013" cost="2" atk="3" hp="2" type="minion" class="normal" rarity="free" race="beast" set="basic"/>
+    <Card id="n0014" cost="2" atk="3" hp="2" type="minion" class="normal" rarity="common" race="none" set="basic" attributes="battlecry"/>
+    <Card id="n0015" cost="3" atk="3" hp="1" type="minion" class="normal" rarity="free" race="none" set="basic" attributes="charge"/>
+    <Card id="n0016" cost="3" atk="1" hp="4" type="minion" class="normal" rarity="common" race="beast" set="basic" attributes="taunt"/>
+    <Card id="n0017" cost="3" atk="3" hp="2" type="minion" class="normal" rarity="common" race="none" set="basic" attributes="battlecry"/>
+    <Card id="n0018" cost="3" atk="2" hp="3" type="minion" class="normal" rarity="common" race="none" set="basic" attributes="battlecry,summon"/>
+    <Card id="n0019" cost="3" atk="2" hp="2" type="minion" class="normal" rarity="free" race="none" set="basic"/>
+    <Card id="n0020" cost="3" atk="5" hp="1" type="minion" class="normal" rarity="free" race="none" set="basic"/>
+    <Card id="n0021" cost="3" atk="3" hp="3" type="minion" class="normal" rarity="common" race="beast" set="basic" attributes="taunt"/>
+    <Card id="n0022" cost="3" atk="2" hp="2" type="minion" class="normal" rarity="common" race="none" set="basic" attributes="battlecry"/>
+    <Card id="n0023" cost="3" atk="1" hp="4" type="minion" class="normal" rarity="common" race="none" set="basic" attributes="spelldamage"/>
+    <Card id="n0024" cost="4" atk="2" hp="5" type="minion" class="normal" rarity="common" race="none" set="basic" attributes="charge"/>
+    <Card id="n0025" cost="4" atk="3" hp="5" type="minion" class="normal" rarity="free" race="none" set="basic" attributes="taunt"/>
+    <Card id="n0026" cost="4" atk="4" hp="4" type="minion" class="normal" rarity="common" race="none" set="basic" attributes="spelldamage"/>
+    <Card id="n0027" cost="4" atk="2" hp="7" type="minion" class="normal" rarity="free" race="beast" set="basic"/>
+    <Card id="n0028" cost="4" atk="2" hp="4" type="minion" class="normal" rarity="common" race="none" set="basic" attributes="battlecry,draw"/>
+    <Card id="n0029" cost="4" atk="2" hp="4" type="minion" class="normal" rarity="common" race="none" set="basic" attributes="battlecry,summon"/>
+    <Card id="n0030" cost="4" atk="4" hp="5" type="minion" class="normal" rarity="common" race="none" set="basic"/>
+    <Card id="n0031" cost="5" atk="4" hp="2" type="minion" class="normal" rarity="common" race="none" set="basic" attributes="battlecry"/>
+    <Card id="n0032" cost="5" atk="4" hp="4" type="minion" class="normal" rarity="free" race="none" set="basic" attributes="battlecry"/>
+    <Card id="n0033" cost="5" atk="2" hp="7" type="minion" class="normal" rarity="common" race="none" set="basic"/>
+    <Card id="n0034" cost="5" atk="4" hp="4" type="minion" class="normal" rarity="common" race="none" set="basic" attributes="battlecry"/>
+    <Card id="n0035" cost="5" atk="4" hp="5" type="minion" class="normal" rarity="common" race="none" set="basic" attributes="battlecry,heal"/>
+    <Card id="n0036" cost="5" atk="5" hp="4" type="minion" class="normal" rarity="common" race="none" set="basic" attributes="taunt"/>
+    <Card id="n0037" cost="6" atk="5" hp="2" type="minion" class="normal" rarity="free" race="none" set="basic" attributes="charge"/>
+    <Card id="n0038" cost="6" atk="6" hp="5" type="minion" class="normal" rarity="common" race="none" set="basic" attributes="taunt"/>
+    <Card id="n0039" cost="6" atk="6" hp="7" type="minion" class="normal" rarity="free" race="none" set="basic"/>
+    <Card id="n0040" cost="6" atk="4" hp="7" type="minion" class="normal" rarity="common" race="none" set="basic" attributes="spelldamage"/>
+    <Card id="n0041" cost="7" atk="7" hp="7" type="minion" class="normal" rarity="common" race="none" set="basic"/>
+    <Card id="n0042" cost="7" atk="6" hp="6" type="minion" class="normal" rarity="common" race="none" set="basic"/>
+    <Card id="n0043" cost="7" atk="9" hp="5" type="minion" class="normal" rarity="common" race="beast" set="basic"/>
+    <Card id="n0044" cost="0" atk="1" hp="1" type="minion" class="normal" rarity="common" race="none" set="classic"/>
+    <Card id="n0045" cost="1" atk="2" hp="1" type="minion" class="normal" rarity="rare" race="none" set="classic"/>
+    <Card id="n0046" cost="1" atk="1" hp="1" type="minion" class="normal" rarity="common" race="beast" set="classic" attributes="windfury"/>
+    <Card id="n0047" cost="1" atk="2" hp="1" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="stealth"/>
+    <Card id="n0048" cost="1" atk="2" hp="1" type="minion" class="normal" rarity="common" race="pirate" set="classic" attributes="charge"/>
+    <Card id="n0049" cost="1" atk="0" hp="4" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="taunt"/>
+    <Card id="n0050" cost="1" atk="1" hp="2" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="secret"/>
+    <Card id="n0051" cost="1" atk="1" hp="2" type="minion" class="normal" rarity="rare" race="murloc" set="classic"/>
+    <Card id="n0052" cost="1" atk="1" hp="2" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="heal"/>
+    <Card id="n0053" cost="1" atk="2" hp="1" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="deathrattle"/>
+    <Card id="n0054" cost="1" atk="1" hp="2" type="minion" class="normal" rarity="epic" race="beast" set="classic" attributes="battlecry"/>
+    <Card id="n0055" cost="1" atk="1" hp="2" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="battlecry"/>
+    <Card id="n0056" cost="1" atk="1" hp="1" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="divineshield"/>
+    <Card id="n0057" cost="1" atk="1" hp="1" type="minion" class="normal" rarity="rare" race="beast" set="classic" attributes="enrage"/>
+    <Card id="n0058" cost="1" atk="2" hp="1" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="battlecry"/>
+    <Card id="n0059" cost="2" atk="3" hp="2" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="battlecry"/>
+    <Card id="n0060" cost="2" atk="3" hp="2" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="aoe"/>
+    <Card id="n0061" cost="2" atk="2" hp="3" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="battlecry,taunt"/>
+    <Card id="n0062" cost="2" atk="2" hp="2" type="minion" class="normal" rarity="rare" race="none" set="classic"/>
+    <Card id="n0063" cost="2" atk="0" hp="4" type="minion" class="normal" rarity="legendary" race="none" set="classic" attributes="draw"/>
+    <Card id="n0064" cost="2" atk="4" hp="4" type="minion" class="normal" rarity="legendary" race="none" set="classic" attributes="battlecry"/>
+    <Card id="n0065" cost="2" atk="1" hp="3" type="minion" class="normal" rarity="rare" race="none" set="classic"/>
+    <Card id="n0066" cost="2" atk="2" hp="2" type="minion" class="normal" rarity="rare" race="none" set="classic"/>
+    <Card id="n0067" cost="2" atk="1" hp="3" type="minion" class="normal" rarity="rare" race="none" set="classic"/>
+    <Card id="n0068" cost="2" atk="3" hp="2" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="battlecry"/>
+    <Card id="n0069" cost="2" atk="0" hp="4" type="minion" class="normal" rarity="legendary" race="none" set="classic"/>
+    <Card id="n0070" cost="2" atk="2" hp="1" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="deathrattle,draw"/>
+    <Card id="n0071" cost="2" atk="3" hp="2" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="summon"/>
+    <Card id="n0072" cost="2" atk="2" hp="1" type="minion" class="normal" rarity="common" race="beast" set="classic" attributes="battlecry,silence"/>
+    <Card id="n0073" cost="2" atk="3" hp="2" type="minion" class="normal" rarity="common" race="dragon" set="classic"/>
+    <Card id="n0074" cost="2" atk="0" hp="7" type="minion" class="normal" rarity="epic" race="none" set="classic" attributes="aoe"/>
+    <Card id="n0075" cost="2" atk="2" hp="2" type="minion" class="normal" rarity="common" race="beast" set="classic"/>
+    <Card id="n0076" cost="2" atk="2" hp="2" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="battlecry"/>
+    <Card id="n0077" cost="2" atk="2" hp="3" type="minion" class="normal" rarity="common" race="pirate" set="classic" attributes="battlecry"/>
+    <Card id="n0078" cost="2" atk="1" hp="1" type="minion" class="normal" rarity="legendary" race="none" set="classic" attributes="deathrattle,spelldamage,draw"/>
+    <Card id="n0079" cost="2" atk="4" hp="5" type="minion" class="normal" rarity="rare" race="none" set="classic"/>
+    <Card id="n0080" cost="2" atk="2" hp="3" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="enrage"/>
+    <Card id="n0081" cost="3" atk="3" hp="3" type="minion" class="normal" rarity="legendary" race="none" set="classic" attributes="battlecry"/>
+    <Card id="n0082" cost="3" atk="2" hp="3" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="windfury"/>
+    <Card id="n0083" cost="3" atk="2" hp="3" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="enrage,taunt"/>
+    <Card id="n0084" cost="3" atk="3" hp="3" type="minion" class="normal" rarity="epic" race="pirate" set="classic"/>
+    <Card id="n0085" cost="3" atk="3" hp="1" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="divineshield"/>
+    <Card id="n0086" cost="3" atk="3" hp="3" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="enrage,windfury"/>
+    <Card id="n0087" cost="3" atk="2" hp="2" type="minion" class="normal" rarity="rare" race="none" set="classic"/>
+    <Card id="n0088" cost="3" atk="3" hp="3" type="minion" class="normal" rarity="epic" race="murloc" set="classic"/>
+    <Card id="n0089" cost="3" atk="3" hp="3" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="battlecry"/>
+    <Card id="n0090" cost="3" atk="5" hp="5" type="minion" class="normal" rarity="legendary" race="none" set="classic" attributes="battlecry"/>
+    <Card id="n0091" cost="3" atk="4" hp="2" type="minion" class="normal" rarity="common" race="beast" set="classic" attributes="stealth"/>
+    <Card id="n0092" cost="3" atk="4" hp="7" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="battlecry"/>
+    <Card id="n0093" cost="3" atk="1" hp="5" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="summon"/>
+    <Card id="n0094" cost="3" atk="2" hp="3" type="minion" class="normal" rarity="common" race="machine" set="classic" attributes="deathrattle,summon"/>
+    <Card id="n0095" cost="3" atk="2" hp="3" type="minion" class="normal" rarity="common" race="none" set="classic"/>
+    <Card id="n0096" cost="3" atk="2" hp="3" type="minion" class="normal" rarity="rare" race="beast" set="classic"/>
+    <Card id="n0097" cost="3" atk="3" hp="3" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="battlecry"/>
+    <Card id="n0098" cost="3" atk="1" hp="4" type="minion" class="normal" rarity="rare" race="machine" set="classic"/>
+    <Card id="n0086" cost="3" atk="3" hp="3" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="enrage,windfury"/>
+    <Card id="n0087" cost="3" atk="2" hp="2" type="minion" class="normal" rarity="rare" race="none" set="classic"/>
+    <Card id="n0088" cost="3" atk="3" hp="3" type="minion" class="normal" rarity="epic" race="murloc" set="classic"/>
+    <Card id="n0089" cost="3" atk="3" hp="3" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="battlecry"/>
+    <Card id="n0090" cost="3" atk="5" hp="5" type="minion" class="normal" rarity="legendary" race="none" set="classic" attributes="battlecry"/>
+    <Card id="n0091" cost="3" atk="4" hp="2" type="minion" class="normal" rarity="common" race="beast" set="classic" attributes="stealth"/>
+    <Card id="n0092" cost="3" atk="4" hp="7" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="battlecry"/>
+    <Card id="n0093" cost="3" atk="1" hp="5" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="summon"/>
+    <Card id="n0094" cost="3" atk="2" hp="3" type="minion" class="normal" rarity="common" race="machine" set="classic" attributes="deathrattle,summon"/>
+    <Card id="n0095" cost="3" atk="2" hp="3" type="minion" class="normal" rarity="common" race="none" set="classic"/>
+    <Card id="n0096" cost="3" atk="2" hp="3" type="minion" class="normal" rarity="rare" race="beast" set="classic"/>
+    <Card id="n0097" cost="3" atk="3" hp="3" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="battlecry"/>
+    <Card id="n0098" cost="3" atk="1" hp="4" type="minion" class="normal" rarity="rare" race="machine" set="classic"/>
+    <Card id="n0099" cost="3" atk="2" hp="3" type="minion" class="normal" rarity="rare" race="murloc" set="classic" attributes="battlecry"/>
+    <Card id="n0100" cost="3" atk="2" hp="2" type="minion" class="normal" rarity="rare" race="murloc" set="classic" attributes="battlecry,draw"/>
+    <Card id="n0101" cost="3" atk="3" hp="3" type="minion" class="normal" rarity="epic" race="none" set="classic" attributes="battlecry,divineshield"/>
+    <Card id="n0102" cost="3" atk="4" hp="2" type="minion" class="normal" rarity="epic" race="none" set="classic" attributes="battlecry"/>
+    <Card id="n0103" cost="3" atk="4" hp="2" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="battlecry,charge"/>
+    <Card id="n0104" cost="3" atk="0" hp="3" type="minion" class="normal" rarity="rare" race="machine" set="classic"/>
+    <Card id="n0105" cost="3" atk="1" hp="3" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="draw"/>
+    <Card id="n0106" cost="4" atk="3" hp="5" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="summon"/>
+    <Card id="n0107" cost="4" atk="4" hp="1" type="minion" class="normal" rarity="rare" race="dragon" set="classic" attributes="battlecry"/>
+    <Card id="n0108" cost="4" atk="4" hp="3" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="battlecry,silence"/>
+    <Card id="n0109" cost="4" atk="3" hp="3" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="divineshield"/>
+    <Card id="n0110" cost="4" atk="1" hp="7" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="taunt"/>
+    <Card id="n0111" cost="4" atk="3" hp="3" type="minion" class="normal" rarity="common" race="pirate" set="classic" attributes="taunt"/>
+    <Card id="n0112" cost="4" atk="2" hp="3" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="battlecry,taunt"/>
+    <Card id="n0113" cost="4" atk="4" hp="4" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="battlecry"/>
+    <Card id="n0114" cost="4" atk="4" hp="2" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="draw"/>
+    <Card id="n0115" cost="4" atk="2" hp="5" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="battlecry,spelldamage"/>
+    <Card id="n0116" cost="4" atk="5" hp="4" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="battlecry"/>
+    <Card id="n0117" cost="5" atk="7" hp="6" type="minion" class="normal" rarity="common" race="none" set="classic"/>
+    <Card id="n0118" cost="5" atk="5" hp="5" type="minion" class="normal" rarity="common" race="beast" set="classic" attributes="stealth"/>
+    <Card id="n0119" cost="5" atk="3" hp="5" type="minion" class="normal" rarity="rare" race="beast" set="classic" attributes="battlecry"/>
+    <Card id="n0120" cost="5" atk="4" hp="6" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="enrage"/>
+    <Card id="n0121" cost="5" atk="4" hp="4" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="battlecry,summon"/>
+    <Card id="n0122" cost="5" atk="6" hp="2" type="minion" class="normal" rarity="legendary" race="none" set="classic" attributes="battlecry,charge,summon"/>
+    <Card id="n0123" cost="5" atk="5" hp="4" type="minion" class="normal" rarity="legendary" race="none" set="classic" attributes="battlecry"/>
+    <Card id="n0124" cost="5" atk="3" hp="6" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="taunt"/>
+    <Card id="n0125" cost="5" atk="3" hp="3" type="minion" class="normal" rarity="epic" race="none" set="classic" attributes="battlecry"/>
+    <Card id="n0126" cost="5" atk="5" hp="4" type="minion" class="normal" rarity="legendary" race="pirate" set="classic" attributes="battlecry"/>
+    <Card id="n0127" cost="5" atk="4" hp="4" type="minion" class="normal" rarity="rare" race="dragon" set="classic" attributes="spelldamage,draw"/>
+    <Card id="n0128" cost="5" atk="4" hp="4" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="deathrattle,taunt,aoe"/>
+    <Card id="n0129" cost="6" atk="4" hp="5" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="windfury"/>
+    <Card id="n0130" cost="6" atk="4" hp="5" type="minion" class="normal" rarity="legendary" race="none" set="classic" attributes="battlecry,taunt"/>
+    <Card id="n0131" cost="6" atk="9" hp="7" type="minion" class="normal" rarity="legendary" race="beast" set="classic" attributes="deathrattle,summon"/>
+    <Card id="n0132" cost="6" atk="5" hp="5" type="minion" class="normal" rarity="legendary" race="none" set="classic" attributes="deathrattle"/>
+    <Card id="n0133" cost="6" atk="4" hp="5" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="divineshield,taunt"/>
+    <Card id="n0134" cost="6" atk="5" hp="4" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="battlecry,heal"/>
+    <Card id="n0135" cost="6" atk="7" hp="5" type="minion" class="normal" rarity="legendary" race="none" set="classic" attributes="summon"/>
+    <Card id="n0136" cost="6" atk="4" hp="4" type="minion" class="normal" rarity="legendary" race="none" set="classic" attributes="summon,taunt"/>
+    <Card id="n0137" cost="6" atk="4" hp="4" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="draw"/>
+    <Card id="n0138" cost="6" atk="5" hp="5" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="battlecry,freeze"/>
+    <Card id="n0139" cost="6" atk="4" hp="5" type="minion" class="normal" rarity="legendary" race="none" set="classic" attributes="deathrattle,summon"/>
+    <Card id="n0140" cost="6" atk="4" hp="2" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="charge,divineshield"/>
+    <Card id="n0141" cost="7" atk="7" hp="5" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="stealth"/>
+    <Card id="n0142" cost="7" atk="7" hp="5" type="minion" class="normal" rarity="legendary" race="none" set="classic" attributes="aoe"/>
+    <Card id="n0143" cost="8" atk="8" hp="8" type="minion" class="normal" rarity="legendary" race="none" set="classic"/>
+    <Card id="n0144" cost="8" atk="7" hp="7" type="minion" class="normal" rarity="legendary" race="none" set="classic"/>
+    <Card id="n0145" cost="9" atk="4" hp="12" type="minion" class="normal" rarity="legendary" race="dragon" set="classic" attributes="draw"/>
+    <Card id="n0146" cost="9" atk="8" hp="8" type="minion" class="normal" rarity="legendary" race="dragon" set="classic" attributes="battlecry,summon"/>
+    <Card id="n0147" cost="9" atk="8" hp="8" type="minion" class="normal" rarity="legendary" race="dragon" set="classic"/>
+    <Card id="n0148" cost="9" atk="4" hp="12" type="minion" class="normal" rarity="legendary" race="dragon" set="classic" attributes="spelldamage"/>
+    <Card id="n0149" cost="9" atk="8" hp="8" type="minion" class="normal" rarity="legendary" race="dragon" set="classic" attributes="battlecry"/>
+    <Card id="n0150" cost="10" atk="8" hp="8" type="minion" class="normal" rarity="epic" race="none" set="classic"/>
+    <Card id="n0151" cost="10" atk="12" hp="12" type="minion" class="normal" rarity="legendary" race="dragon" set="classic" attributes="battlecry,aoe"/>
+    <Card id="n0152" cost="12" atk="8" hp="8" type="minion" class="normal" rarity="epic" race="none" set="classic"/>
+    <Card id="n0153" cost="20" atk="8" hp="8" type="minion" class="normal" rarity="epic" race="none" set="classic"/>
+    <Card id="n0154" cost="1" atk="2" hp="3" type="minion" class="normal" rarity="common" race="none" set="naxx" attributes="deathrattle,heal"/>
+    <Card id="n0155" cost="1" atk="1" hp="2" type="minion" class="normal" rarity="common" race="none" set="naxx" attributes="deathrattle"/>
+    <Card id="n0156" cost="2" atk="1" hp="3" type="minion" class="normal" rarity="common" race="none" set="naxx" attributes="deathrattle,taunt,aoe"/>
+    <Card id="n0157" cost="2" atk="0" hp="2" type="minion" class="normal" rarity="rare" race="none" set="naxx" attributes="deathrattle,summon"/>
+    <Card id="n0158" cost="2" atk="1" hp="4" type="minion" class="normal" rarity="common" race="none" set="naxx" attributes="battlecry"/>
+    <Card id="n0159" cost="2" atk="2" hp="2" type="minion" class="normal" rarity="common" race="none" set="naxx" attributes="deathrattle,secret"/>
+    <Card id="n0160" cost="2" atk="1" hp="2" type="minion" class="normal" rarity="common" race="none" set="naxx" attributes="deathrattle,summon"/>
+    <Card id="n0161" cost="2" atk="1" hp="2" type="minion" class="normal" rarity="epic" race="none" set="naxx" attributes="battlecry,summon"/>
+    <Card id="n0162" cost="3" atk="1" hp="4" type="minion" class="normal" rarity="common" race="none" set="naxx"/>
+    <Card id="n0163" cost="3" atk="2" hp="2" type="minion" class="normal" rarity="epic" race="none" set="naxx" attributes="stealth"/>
+    <Card id="n0164" cost="3" atk="2" hp="8" type="minion" class="normal" rarity="rare" race="none" set="naxx" attributes="deathrattle,taunt"/>
+    <Card id="n0165" cost="3" atk="4" hp="4" type="minion" class="normal" rarity="common" race="none" set="naxx" attributes="deathrattle,draw"/>
+    <Card id="n0166" cost="4" atk="3" hp="5" type="minion" class="normal" rarity="rare" race="none" set="naxx" attributes="battlecry,silence"/>
+    <Card id="n0167" cost="4" atk="1" hp="7" type="minion" class="normal" rarity="legendary" race="none" set="naxx" attributes="deathrattle"/>
+    <Card id="n0168" cost="5" atk="7" hp="4" type="minion" class="normal" rarity="legendary" race="none" set="naxx" attributes="deathrattle"/>
+    <Card id="n0169" cost="5" atk="4" hp="6" type="minion" class="normal" rarity="common" race="none" set="naxx"/>
+    <Card id="n0170" cost="5" atk="3" hp="5" type="minion" class="normal" rarity="rare" race="none" set="naxx" attributes="deathrattle,summon,taunt"/>
+    <Card id="n0171" cost="5" atk="5" hp="5" type="minion" class="normal" rarity="legendary" race="none" set="naxx" attributes="battlecry"/>
+    <Card id="n0172" cost="5" atk="4" hp="7" type="minion" class="normal" rarity="legendary" race="none" set="naxx" attributes="deathrattle"/>
+    <Card id="n0173" cost="6" atk="2" hp="8" type="minion" class="normal" rarity="legendary" race="beast" set="naxx"/>
+    <Card id="n0174" cost="8" atk="6" hp="8" type="minion" class="normal" rarity="legendary" race="none" set="naxx" attributes="summon"/>
+    <Card id="n0175" cost="1" atk="0" hp="2" type="minion" class="normal" rarity="rare" race="none" set="brm" attributes="summon"/>
+    <Card id="n0176" cost="3" atk="2" hp="4" type="minion" class="normal" rarity="common" race="none" set="brm" attributes="battlecry"/>
+    <Card id="n0177" cost="4" atk="5" hp="6" type="minion" class="normal" rarity="common" race="dragon" set="brm" attributes="battlecry,summon"/>
+    <Card id="n0178" cost="4" atk="3" hp="5" type="minion" class="normal" rarity="common" race="dragon" set="brm"/>
+    <Card id="n0179" cost="5" atk="3" hp="3" type="minion" class="normal" rarity="rare" race="none" set="brm" attributes="summon"/>
+    <Card id="n0180" cost="5" atk="5" hp="4" type="minion" class="normal" rarity="common" race="none" set="brm" attributes="battlecry"/>
+    <Card id="n0181" cost="6" atk="6" hp="4" type="minion" class="normal" rarity="common" race="dragon" set="brm"/>
+    <Card id="n0182" cost="6" atk="5" hp="5" type="minion" class="normal" rarity="legendary" race="none" set="brm"/>
+    <Card id="n0183" cost="6" atk="6" hp="6" type="minion" class="normal" rarity="common" race="dragon" set="brm" attributes="battlecry"/>
+    <Card id="n0184" cost="7" atk="8" hp="4" type="minion" class="normal" rarity="legendary" race="none" set="brm" attributes="battlecry"/>
+    <Card id="n0185" cost="8" atk="6" hp="8" type="minion" class="normal" rarity="legendary" race="dragon" set="brm" attributes="draw"/>
+    <Card id="n0186" cost="9" atk="8" hp="8" type="minion" class="normal" rarity="legendary" race="dragon" set="brm" attributes="battlecry,draw"/>
+    <Card id="n0187" cost="9" atk="9" hp="7" type="minion" class="normal" rarity="legendary" race="none" set="brm" attributes="deathrattle"/>
+    <Card id="n0188" cost="0" atk="0" hp="2" type="minion" class="normal" rarity="rare" race="machine" set="gvg" attributes="taunt"/>
+    <Card id="n0189" cost="1" atk="1" hp="2" type="minion" class="normal" rarity="common" race="none" set="gvg"/>
+    <Card id="n0190" cost="1" atk="2" hp="1" type="minion" class="normal" rarity="common" race="machine" set="gvg" attributes="deathrattle,draw"/>
+    <Card id="n0191" cost="2" atk="2" hp="3" type="minion" class="normal" rarity="common" race="none" set="gvg"/>
+    <Card id="n0192" cost="2" atk="2" hp="3" type="minion" class="normal" rarity="common" race="none" set="gvg"/>
+    <Card id="n0193" cost="2" atk="3" hp="2" type="minion" class="normal" rarity="epic" race="none" set="gvg" attributes="battlecry"/>
+    <Card id="n0194" cost="2" atk="3" hp="2" type="minion" class="normal" rarity="common" race="murloc" set="gvg"/>
+    <Card id="n0195" cost="2" atk="1" hp="2" type="minion" class="normal" rarity="common" race="machine" set="gvg"/>
+    <Card id="n0196" cost="2" atk="2" hp="3" type="minion" class="normal" rarity="common" race="machine" set="gvg"/>
+    <Card id="n0197" cost="2" atk="2" hp="3" type="minion" class="normal" rarity="common" race="none" set="gvg" attributes="stealth"/>
+    <Card id="n0198" cost="2" atk="1" hp="1" type="minion" class="normal" rarity="common" race="machine" set="gvg" attributes="deathrattle,aoe"/>
+    <Card id="n0199" cost="2" atk="1" hp="2" type="minion" class="normal" rarity="common" race="machine" set="gvg" attributes="divineshield,taunt"/>
+    <Card id="n0200" cost="3" atk="3" hp="3" type="minion" class="normal" rarity="common" race="none" set="gvg" attributes="battlecry,draw"/>
+    <Card id="n0201" cost="3" atk="3" hp="4" type="minion" class="normal" rarity="common" race="machine" set="gvg"/>
+    <Card id="n0202" cost="3" atk="4" hp="4" type="minion" class="normal" rarity="common" race="none" set="gvg"/>
+    <Card id="n0203" cost="3" atk="2" hp="3" type="minion" class="normal" rarity="rare" race="none" set="gvg" attributes="battlecry,deathrattle,taunt"/>
+    <Card id="n0204" cost="3" atk="2" hp="4" type="minion" class="normal" rarity="rare" race="none" set="gvg" attributes="secret,heal"/>
+    <Card id="n0205" cost="3" atk="2" hp="3" type="minion" class="normal" rarity="epic" race="none" set="gvg"/>
+    <Card id="n0206" cost="3" atk="2" hp="4" type="minion" class="normal" rarity="rare" race="none" set="gvg"/>
+    <Card id="n0207" cost="3" atk="3" hp="2" type="minion" class="normal" rarity="rare" race="none" set="gvg" attributes="battlecry,draw"/>
+    <Card id="n0208" cost="3" atk="1" hp="4" type="minion" class="normal" rarity="common" race="none" set="gvg" attributes="charge,taunt"/>
+    <Card id="n0209" cost="3" atk="1" hp="4" type="minion" class="normal" rarity="common" race="machine" set="gvg" attributes="windfury"/>
+    <Card id="n0210" cost="4" atk="4" hp="3" type="minion" class="normal" rarity="common" race="machine" set="gvg" attributes="deathrattle,summon"/>
+    <Card id="n0211" cost="4" atk="4" hp="1" type="minion" class="normal" rarity="epic" race="none" set="gvg" attributes="stealth,spelldamage"/>
+    <Card id="n0212" cost="4" atk="4" hp="5" type="minion" class="normal" rarity="common" race="machine" set="gvg" attributes="deathrattle,draw"/>
+    <Card id="n0213" cost="4" atk="5" hp="4" type="minion" class="normal" rarity="common" race="beast" set="gvg"/>
+    <Card id="n0214" cost="4" atk="4" hp="3" type="minion" class="normal" rarity="rare" race="none" set="gvg" attributes="battlecry,secret"/>
+    <Card id="n0215" cost="4" atk="1" hp="4" type="minion" class="normal" rarity="rare" race="machine" set="gvg" attributes="draw"/>
+    <Card id="n0216" cost="4" atk="3" hp="2" type="minion" class="normal" rarity="epic" race="machine" set="gvg" attributes="battlecry,divineshield,windfury,taunt"/>
+    <Card id="n0217" cost="4" atk="3" hp="5" type="minion" class="normal" rarity="common" race="none" set="gvg"/>
+    <Card id="n0218" cost="4" atk="2" hp="5" type="minion" class="normal" rarity="rare" race="machine" set="gvg" attributes="taunt"/>
+    <Card id="n0219" cost="5" atk="7" hp="4" type="minion" class="normal" rarity="common" race="pirate" set="gvg"/>
+    <Card id="n0220" cost="5" atk="4" hp="5" type="minion" class="normal" rarity="legendary" race="machine" set="gvg"/>
+    <Card id="n0221" cost="5" atk="5" hp="4" type="minion" class="normal" rarity="rare" race="none" set="gvg" attributes="battlecry"/>
+    <Card id="n0222" cost="5" atk="1" hp="5" type="minion" class="normal" rarity="epic" race="machine" set="gvg"/>
+    <Card id="n0223" cost="5" atk="6" hp="3" type="minion" class="normal" rarity="legendary" race="none" set="gvg" attributes="battlecry"/>
+    <Card id="n0224" cost="5" atk="8" hp="8" type="minion" class="normal" rarity="epic" race="machine" set="gvg"/>
+    <Card id="n0225" cost="5" atk="3" hp="3" type="minion" class="normal" rarity="rare" race="none" set="gvg" attributes="battlecry"/>
+    <Card id="n0226" cost="5" atk="3" hp="4" type="minion" class="normal" rarity="legendary" race="machine" set="gvg" attributes="battlecry"/>
+    <Card id="n0227" cost="5" atk="3" hp="3" type="minion" class="normal" rarity="common" race="machine" set="gvg" attributes="battlecry,heal"/>
+    <Card id="n0228" cost="6" atk="5" hp="7" type="minion" class="normal" rarity="legendary" race="none" set="gvg" attributes="battlecry,deathrattle,draw"/>
+    <Card id="n0229" cost="6" atk="6" hp="4" type="minion" class="normal" rarity="epic" race="machine" set="gvg" attributes="deathrattle,summon"/>
+    <Card id="n0230" cost="6" atk="7" hp="6" type="minion" class="normal" rarity="legendary" race="none" set="gvg"/>
+    <Card id="n0231" cost="6" atk="3" hp="6" type="minion" class="normal" rarity="legendary" race="none" set="gvg" attributes="draw"/>
+    <Card id="n0232" cost="7" atk="6" hp="6" type="minion" class="normal" rarity="legendary" race="none" set="gvg" attributes="summon"/>
+    <Card id="n0233" cost="7" atk="7" hp="7" type="minion" class="normal" rarity="legendary" race="none" set="gvg" attributes="battlecry,summon"/>
+    <Card id="n0234" cost="8" atk="5" hp="7" type="minion" class="normal" rarity="legendary" race="machine" set="gvg" attributes="deathrattle,summon"/>
+    <Card id="n0235" cost="8" atk="7" hp="7" type="minion" class="normal" rarity="common" race="machine" set="gvg" attributes="divineshield"/>
+    <Card id="n0236" cost="8" atk="6" hp="9" type="minion" class="normal" rarity="legendary" race="machine" set="gvg" attributes="aoe"/>
+    <Card id="n0237" cost="9" atk="9" hp="7" type="minion" class="normal" rarity="legendary" race="machine" set="gvg" attributes="summon"/>
+    <Card id="n0238" cost="12" atk="8" hp="8" type="minion" class="normal" rarity="epic" race="machine" set="gvg"/>
+    <Card id="n0239" cost="1" atk="2" hp="1" type="minion" class="normal" rarity="common" race="none" set="tgt" attributes="taunt"/>
+    <Card id="n0240" cost="1" atk="1" hp="2" type="minion" class="normal" rarity="common" race="none" set="tgt" attributes="inspire"/>
+    <Card id="n0241" cost="1" atk="2" hp="4" type="minion" class="normal" rarity="rare" race="none" set="tgt" attributes="battlecry"/>
+    <Card id="n0242" cost="1" atk="1" hp="2" type="minion" class="normal" rarity="common" race="none" set="tgt" attributes="battlecry,joust"/>
+    <Card id="n0243" cost="2" atk="1" hp="2" type="minion" class="normal" rarity="common" race="none" set="tgt" attributes="battlecry"/>
+    <Card id="n0244" cost="2" atk="2" hp="3" type="minion" class="normal" rarity="epic" race="none" set="tgt"/>
+    <Card id="n0245" cost="2" atk="2" hp="3" type="minion" class="normal" rarity="common" race="none" set="tgt" attributes="battlecry"/>
+    <Card id="n0246" cost="2" atk="3" hp="2" type="minion" class="normal" rarity="common" race="none" set="tgt" attributes="inspire"/>
+    <Card id="n0247" cost="2" atk="2" hp="4" type="minion" class="normal" rarity="rare" race="none" set="tgt" attributes="inspire"/>
+    <Card id="n0248" cost="3" atk="3" hp="3" type="minion" class="normal" rarity="common" race="none" set="tgt" attributes="summon,inspire"/>
+    <Card id="n0249" cost="3" atk="2" hp="2" type="minion" class="normal" rarity="common" race="none" set="tgt" attributes="stealth,divineshield"/>
+    <Card id="n0250" cost="3" atk="4" hp="3" type="minion" class="normal" rarity="rare" race="none" set="tgt" attributes="battlecry"/>
+    <Card id="n0251" cost="3" atk="4" hp="2" type="minion" class="normal" rarity="epic" race="none" set="tgt" attributes="battlecry,spelldamage"/>
+    <Card id="n0252" cost="3" atk="4" hp="3" type="minion" class="normal" rarity="rare" race="none" set="tgt" attributes="battlecry,silence"/>
+    <Card id="n0253" cost="3" atk="5" hp="2" type="minion" class="normal" rarity="common" race="none" set="tgt"/>
+    <Card id="n0254" cost="3" atk="3" hp="4" type="minion" class="normal" rarity="legendary" race="none" set="tgt" attributes="divineshield"/>
+    <Card id="n0255" cost="3" atk="2" hp="2" type="minion" class="normal" rarity="rare" race="none" set="tgt" attributes="battlecry"/>
+    <Card id="n0256" cost="3" atk="3" hp="4" type="minion" class="normal" rarity="legendary" race="none" set="tgt"/>
+    <Card id="n0257" cost="3" atk="3" hp="3" type="minion" class="normal" rarity="common" race="none" set="tgt" attributes="windfury,inspire"/>
+    <Card id="n0258" cost="3" atk="2" hp="5" type="minion" class="normal" rarity="rare" race="none" set="tgt" attributes="inspire"/>
+    <Card id="n0259" cost="3" atk="2" hp="1" type="minion" class="normal" rarity="common" race="none" set="tgt" attributes="charge,divineshield"/>
+    <Card id="n0260" cost="4" atk="2" hp="6" type="minion" class="normal" rarity="epic" race="dragon" set="tgt" attributes="battlecry,taunt"/>
+    <Card id="n0261" cost="4" atk="1" hp="8" type="minion" class="normal" rarity="common" race="none" set="tgt" attributes="inspire,heal"/>
+    <Card id="n0262" cost="4" atk="3" hp="5" type="minion" class="normal" rarity="common" race="none" set="tgt" attributes="battlecry,heal"/>
+    <Card id="n0263" cost="4" atk="2" hp="6" type="minion" class="normal" rarity="common" race="none" set="tgt"/>
+    <Card id="n0264" cost="4" atk="4" hp="4" type="minion" class="normal" rarity="legendary" race="none" set="tgt" attributes="battlecry"/>
+    <Card id="n0265" cost="4" atk="2" hp="6" type="minion" class="normal" rarity="common" race="none" set="tgt" attributes="spelldamage"/>
+    <Card id="n0266" cost="4" atk="5" hp="4" type="minion" class="normal" rarity="common" race="none" set="tgt" attributes="taunt"/>
+    <Card id="n0267" cost="4" atk="4" hp="4" type="minion" class="normal" rarity="epic" race="none" set="tgt" attributes="battlecry"/>
+    <Card id="n0268" cost="4" atk="5" hp="3" type="minion" class="normal" rarity="rare" race="beast" set="tgt" attributes="battlecry,charge,joust"/>
+    <Card id="n0269" cost="5" atk="5" hp="4" type="minion" class="normal" rarity="epic" race="none" set="tgt" attributes="inspire,draw"/>
+    <Card id="n0270" cost="5" atk="5" hp="6" type="minion" class="normal" rarity="common" race="none" set="tgt"/>
+    <Card id="n0271" cost="5" atk="4" hp="5" type="minion" class="normal" rarity="legendary" race="none" set="tgt" attributes="inspire,draw"/>
+    <Card id="n0272" cost="5" atk="4" hp="3" type="minion" class="normal" rarity="common" race="beast" set="tgt" attributes="inspire"/>
+    <Card id="n0273" cost="5" atk="4" hp="4" type="minion" class="normal" rarity="common" race="none" set="tgt" attributes="inspire"/>
+    <Card id="n0274" cost="5" atk="5" hp="5" type="minion" class="normal" rarity="common" race="machine" set="tgt" attributes="battlecry"/>
+    <Card id="n0275" cost="6" atk="7" hp="4" type="minion" class="normal" rarity="legendary" race="none" set="tgt" attributes="deathrattle,joust"/>
+    <Card id="n0276" cost="6" atk="6" hp="5" type="minion" class="normal" rarity="epic" race="none" set="tgt" attributes="battlecry"/>
+    <Card id="n0277" cost="6" atk="8" hp="5" type="minion" class="normal" rarity="rare" race="none" set="tgt"/>
+    <Card id="n0278" cost="6" atk="5" hp="6" type="minion" class="normal" rarity="rare" race="none" set="tgt" attributes="battlecry,divineshield,taunt,joust"/>
+    <Card id="n0279" cost="6" atk="3" hp="5" type="minion" class="normal" rarity="epic" race="none" set="tgt" attributes="summon,inspire"/>
+    <Card id="n0280" cost="6" atk="6" hp="3" type="minion" class="normal" rarity="legendary" race="none" set="tgt" attributes="battlecry"/>
+    <Card id="n0281" cost="6" atk="5" hp="5" type="minion" class="normal" rarity="epic" race="none" set="tgt" attributes="battlecry,draw"/>
+    <Card id="n0282" cost="6" atk="3" hp="9" type="minion" class="normal" rarity="legendary" race="none" set="tgt"/>
+    <Card id="n0283" cost="7" atk="4" hp="6" type="minion" class="normal" rarity="legendary" race="pirate" set="tgt" attributes="charge"/>
+    <Card id="n0284" cost="7" atk="6" hp="6" type="minion" class="normal" rarity="legendary" race="dragon" set="tgt" attributes="deathrattle,taunt,aoe"/>
+    <Card id="n0285" cost="7" atk="5" hp="9" type="minion" class="normal" rarity="common" race="beast" set="tgt"/>
+    <Card id="n0286" cost="9" atk="9" hp="7" type="minion" class="normal" rarity="common" race="none" set="tgt" attributes="battlecry"/>
+    <Card id="n0287" cost="9" atk="10" hp="10" type="minion" class="normal" rarity="legendary" race="none" set="tgt" attributes="charge"/>
+    <Card id="n0288" cost="10" atk="8" hp="8" type="minion" class="normal" rarity="epic" race="none" set="tgt"/>
+
 </CardInfos>

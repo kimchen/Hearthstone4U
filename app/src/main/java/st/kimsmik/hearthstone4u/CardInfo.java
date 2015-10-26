@@ -1,7 +1,6 @@
 package st.kimsmik.hearthstone4u;
 
 import android.graphics.Color;
-import android.support.v4.graphics.ColorUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,19 +21,20 @@ public class CardInfo {
             return this.name;
         }
     }
-    public enum CARD_CALSS{
+    public enum CARD_CLASS {
         NORMAL("normal"),
-        WORRIOR("worrior"),
-        HUNTER("hunter"),
-        MAGE("mage"),
-        WARLOCK("warlock"),
-        ROGUE("rogue"),
+        WARRIOR("warrior"),
         SHAMAN("shaman"),
-        PRIEST("priest"),
+        ROGUE("rogue"),
+        PALADIN("paladin"),
+        HUNTER("hunter"),
         DRUID("druid"),
-        PALADIN("paladin");
+        WARLOCK("warlock"),
+        MAGE("mage"),
+        PRIEST("priest");
+
         private String name="";
-        CARD_CALSS(String n){
+        CARD_CLASS(String n){
             this.name = n;
         }
         public String getName(){
@@ -42,13 +42,30 @@ public class CardInfo {
         }
     }
     public enum CARD_RARITY{
-        BASIC("basic"),
-        NORMAL("normal"),
+        FREE("free"),
+        COMMON("common"),
         RARE("rare"),
         EPIC("epic"),
         LEGENDARY("legendary");
         private String name="";
         CARD_RARITY(String n){
+            this.name = n;
+        }
+        public String getName(){
+            return this.name;
+        }
+    }
+    public enum CARD_RACE{
+        NONE("none"),
+        DRAGON("dragon"),
+        Murloc("murloc"),
+        BEAST("beast"),
+        PIRATE("pirate"),
+        DEMON("demon"),
+        TOTEM("totem"),
+        MACHINE("machine");
+        private String name="";
+        CARD_RACE(String n){
             this.name = n;
         }
         public String getName(){
@@ -89,7 +106,9 @@ public class CardInfo {
         IMMUNE("immune"),
         INSPIRE("inspire"),
         JOUST("joust"),
-        DRAW("draw");
+        DRAW("draw"),
+        AOE("aoe"),
+        HEAL("heal");
         private String name="";
         CARD_ATTRIBUTE(String n){
             this.name = n;
@@ -100,9 +119,11 @@ public class CardInfo {
     }
 
     public String id ="";
-    public CARD_CALSS cardClass = CARD_CALSS.NORMAL;
+    public String name ="";
+    public CARD_CLASS cardClass = CARD_CLASS.NORMAL;
     public CARD_TYPE type = CARD_TYPE.MINION;
-    public CARD_RARITY rarity = CARD_RARITY.BASIC;
+    public CARD_RARITY rarity = CARD_RARITY.FREE;
+    public CARD_RACE race = CARD_RACE.NONE;
     public CARD_SET set = CARD_SET.BASIC;
     public int cost = 0;
     public int atk = 0;
@@ -110,14 +131,14 @@ public class CardInfo {
     public List<CARD_ATTRIBUTE> attributes = new ArrayList<>();
 
     public int getRarityColor(){
-        if(rarity == CARD_RARITY.BASIC)
+        if(rarity == CARD_RARITY.FREE)
             return Color.GRAY;
-        if(rarity == CARD_RARITY.NORMAL)
-            return Color.BLACK;
+        if(rarity == CARD_RARITY.COMMON)
+            return Color.GREEN;
         if(rarity == CARD_RARITY.RARE)
             return Color.BLUE;
         if(rarity == CARD_RARITY.EPIC)
-            return  Color.parseColor("#FFDE00F");
+            return  Color.parseColor("FF00FF");
         if(rarity == CARD_RARITY.LEGENDARY)
             return Color.parseColor("#FF7F00");
         return Color.BLACK;

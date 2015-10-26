@@ -48,6 +48,7 @@ public class CardListAdapter extends BaseAdapter {
                     (TextView)convertView.findViewById(R.id.nameView),
                     (TextView)convertView.findViewById(R.id.rarityView),
                     (TextView)convertView.findViewById(R.id.typeView),
+                    (TextView)convertView.findViewById(R.id.raceView),
                     (TextView)convertView.findViewById(R.id.setView),
                     (TextView)convertView.findViewById(R.id.attributeView));
             convertView.setTag(lc);
@@ -56,10 +57,11 @@ public class CardListAdapter extends BaseAdapter {
         }
 
         CardInfo info = mList.get(position);
-        lc.name.setText(Utility.getResStringByName(context, info.id));
+        lc.name.setText(info.name);
         lc.img.setImageDrawable(Utility.getResDrawableByName(context, info.id));
         lc.rarity.setText(Utility.getResStringByName(context, info.rarity.getName()));
         lc.rarity.setTextColor(info.getRarityColor());
+        lc.race.setText(Utility.getResStringByName(context, info.race.getName()));
         lc.type.setText(Utility.getResStringByName(context, info.type.getName()));
         lc.set.setText(Utility.getResStringByName(context, info.set.getName()));
         lc.set.setTextColor(info.getSetColor());
@@ -67,7 +69,7 @@ public class CardListAdapter extends BaseAdapter {
         String attributes = "";
         for(CardInfo.CARD_ATTRIBUTE attribute : info.attributes )
         {
-            attributes+= "[" + Utility.getResStringByName(context, attribute.name()) + "]";
+            attributes+= "[" + Utility.getResStringByName(context, attribute.getName()) + "]";
         }
         lc.attribute.setText(attributes);
 
@@ -79,13 +81,15 @@ public class CardListAdapter extends BaseAdapter {
         public TextView name = null;
         public TextView rarity = null;
         public TextView type = null;
+        public TextView race = null;
         public TextView set = null;
         public TextView attribute = null;
-        public LayoutComponent(ImageView imgV,TextView nameV,TextView rarityV,TextView typeV,TextView setV,TextView attributeV){
+        public LayoutComponent(ImageView imgV,TextView nameV,TextView rarityV,TextView typeV,TextView raceView,TextView setV,TextView attributeV){
             this.name = nameV;
             this.img = imgV;
             this.rarity = rarityV;
             this.type = typeV;
+            this.race = raceView;
             this.set = setV;
             this.attribute = attributeV;
         }

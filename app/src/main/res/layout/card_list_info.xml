@@ -4,13 +4,12 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:layout_width="80dp"
-        android:layout_height="108dp"
+        android:layout_width="60dp"
+        android:layout_height="80dp"
         android:id="@+id/imageView"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:src="@drawable/n0002"
         android:scaleType="fitXY" />
 
     <TextView
@@ -39,12 +38,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/taunt"
+        android:id="@+id/attributeView"
+        android:layout_below="@id/rarityView"
+        android:layout_toRightOf="@id/imageView"
+        android:layout_marginLeft="10dp"
+        android:textColor="#FF0000"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/minion"
         android:id="@+id/typeView"
         android:layout_below="@id/nameView"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="10dp"
-        android:textColor="#ffff3c00"/>
+        android:layout_toRightOf="@id/rarityView"
+        android:layout_marginLeft="10dp"
+        android:textColor="#ff8000ff"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/beast"
+        android:id="@+id/raceView"
+        android:layout_below="@id/nameView"
+        android:layout_toRightOf="@id/typeView"
+        android:layout_marginLeft="10dp"
+        android:textColor="#FF0000"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -57,14 +77,5 @@
         android:layout_marginRight="10dp"
         android:textColor="#000000"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/taunt"
-        android:id="@+id/attributeView"
-        android:layout_below="@id/rarityView"
-        android:layout_toRightOf="@id/imageView"
-        android:layout_marginLeft="10dp"
-        android:textColor="#000000"/>
+
 </RelativeLayout>
