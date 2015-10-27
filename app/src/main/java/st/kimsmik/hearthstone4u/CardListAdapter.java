@@ -43,7 +43,7 @@ public class CardListAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutComponent lc = null;
         if(convertView == null){
-            convertView = mInflater.inflate(R.layout.card_list_info, null);
+            convertView = mInflater.inflate(R.layout.layout_card_list_info, null);
             lc = new LayoutComponent((ImageView)convertView.findViewById(R.id.imageView),
                     (TextView)convertView.findViewById(R.id.nameView),
                     (TextView)convertView.findViewById(R.id.rarityView),

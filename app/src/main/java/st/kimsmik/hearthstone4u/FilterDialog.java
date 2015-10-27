@@ -1,11 +1,9 @@
 package st.kimsmik.hearthstone4u;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -14,14 +12,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import org.apmem.tools.layouts.FlowLayout;
 
-import java.security.KeyStore;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -66,7 +62,7 @@ public class FilterDialog extends Dialog {
     public FilterDialog(Context context) {
         super(context);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.layout_filter_dialog);
+        setContentView(R.layout.dialog_layout_filter);
 
         dialogLayout = (FlowLayout)findViewById(R.id.dialogLayout);
 

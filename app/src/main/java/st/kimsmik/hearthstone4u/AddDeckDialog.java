@@ -20,7 +20,7 @@ public class AddDeckDialog extends Dialog {
     public AddDeckDialog(Context context) {
         super(context);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.layout_add_deck_dialog);
+        setContentView(R.layout.dialog_add_deck);
 
         nameText = (EditText)findViewById(R.id.editText);
         for(int i=0; i<classBtns.length; i++){

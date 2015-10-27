@@ -138,7 +138,7 @@ public class CardInfo {
         if(rarity == CARD_RARITY.RARE)
             return Color.BLUE;
         if(rarity == CARD_RARITY.EPIC)
-            return  Color.parseColor("FF00FF");
+            return  Color.parseColor("#FF00FF");
         if(rarity == CARD_RARITY.LEGENDARY)
             return Color.parseColor("#FF7F00");
         return Color.BLACK;
