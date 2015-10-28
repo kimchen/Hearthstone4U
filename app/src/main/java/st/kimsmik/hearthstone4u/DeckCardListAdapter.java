@@ -12,15 +12,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Kim on 2015/9/28.
+ * Created by chenk on 2015/10/28.
  */
-public class DeckListAdapter extends BaseAdapter {
+public class DeckCardListAdapter extends BaseAdapter {
     private Context context = null;
     private LayoutInflater mInflater = null;
-    List<CustomeDeck> mList = new ArrayList<>();
+    private List<DeckCardInfo> mList = new ArrayList<>();
     private View.OnClickListener deleteListener = null;
 
-    public DeckListAdapter(Context c, List<CustomeDeck> list){
+    public DeckCardListAdapter(Context c, List<DeckCardInfo> list){
         context = c;
         mInflater = LayoutInflater.from(c);
         mList = list;
@@ -48,40 +48,39 @@ public class DeckListAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutComponent lc = null;
         if(convertView == null){
-            convertView = mInflater.inflate(R.layout.layout_deck_list_info, null);
-            lc = new LayoutComponent((ImageView)convertView.findViewById(R.id.imageView),
-                    (TextView)convertView.findViewById(R.id.nameView),
-                    (TextView)convertView.findViewById(R.id.numberView),
-                    (ImageView)convertView.findViewById(R.id.cancelBtn));
+            convertView = mInflater.inflate(R.layout.layout_deck_card_list, null);
+            lc = new LayoutComponent((TextView)convertView.findViewById(R.id.nameView),
+                    (TextView)convertView.findViewById(R.id.costView),
+                    (TextView)convertView.findViewById(R.id.numView),
+                    (ImageView)convertView.findViewById(R.id.deleteBtn));
             convertView.setTag(lc);
         }else{
             lc = (LayoutComponent)convertView.getTag();
         }
 
-        CustomeDeck info = mList.get(position);
-        lc.name.setText(info.name);
-        lc.img.setImageDrawable(Utility.getResDrawableByName(context, info.deckClass.getName()));
-        int number = 0;
-        for(DeckCardInfo deckCardInfo : info.cardList){
-            number += deckCardInfo.num;
+        DeckCardInfo deckCardInfo = mList.get(position);
+        CardInfo cardInfo = CardManager.ins().getCardById(deckCardInfo.id);
+        if(cardInfo!=null){
+            lc.name.setText(cardInfo.name);
+            lc.cost.setText(cardInfo.cost);
         }
-        lc.number.setText("(" + number + "/30)");
-        lc.deleteView.setTag(info.name);
+        lc.num.setText(deckCardInfo.num);
+        lc.deleteView.setTag(deckCardInfo.id);
         lc.deleteView.setOnClickListener(deleteListener);
-
         return convertView;
     }
 
     class LayoutComponent{
-        public ImageView img = null;
         public TextView name = null;
-        public TextView number = null;
+        public TextView cost = null;
+        public TextView num = null;
         public ImageView deleteView = null;
-        public LayoutComponent(ImageView imgV,TextView nameV,TextView numberV,ImageView deleteV){
+        public LayoutComponent(TextView nameV,TextView costV,TextView numV,ImageView deleteV){
             this.name = nameV;
-            this.img = imgV;
-            this.number = numberV;
+            this.cost = costV;
+            this.num = numV;
             this.deleteView = deleteV;
         }
     }
 }
+

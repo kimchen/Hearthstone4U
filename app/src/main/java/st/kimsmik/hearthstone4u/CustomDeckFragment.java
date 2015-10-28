@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -23,6 +24,9 @@ import java.util.List;
 public class CustomDeckFragment extends Fragment implements IMenuFragment {
 
     ListView listView = null;
+    Button addDeckBtn = null;
+    List<CustomeDeck> nowDeckList = null;
+
     public CustomDeckFragment(){}
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -30,9 +34,36 @@ public class CustomDeckFragment extends Fragment implements IMenuFragment {
 
         View rootView = inflater.inflate(R.layout.fragment_custom_deck, container, false);
         listView = (ListView)rootView.findViewById(R.id.ListView);
-        showList();
+        addDeckBtn = (Button)rootView.findViewById(R.id.addDeckBtn);
+        showDeckList();
 
-        Button addDeckBtn = (Button)rootView.findViewById(R.id.addDeckBtn);
+        return rootView;
+    }
+    private void showDeckList(){
+        nowDeckList = CustomDeckManager.ins().getList();
+        DeckListAdapter dla = new DeckListAdapter(getActivity(),nowDeckList);
+        dla.setOnDeleteDeckListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String deckName = (String)v.getTag();
+                if(deckName == null || deckName.equals(""))
+                    return;
+                CustomDeckManager.ins().deleteDeck(deckName);
+                showDeckList();
+            }
+        });
+
+        listView.setAdapter(dla);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position >= nowDeckList.size())
+                    return;
+                CustomeDeck deck = nowDeckList.get(position);
+                showDeckCardList(deck);
+            }
+        });
+        addDeckBtn.setText(R.string.add_deck);
         addDeckBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,30 +72,49 @@ public class CustomDeckFragment extends Fragment implements IMenuFragment {
                 addDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
                     @Override
                     public void onDismiss(DialogInterface dialog) {
-                        AddDeckDialog addDialog = (AddDeckDialog)dialog;
-                        if(addDialog.result){
-                            showList();
+                        AddDeckDialog addDialog = (AddDeckDialog) dialog;
+                        if (addDialog.result) {
+                            showDeckList();
                         }
                     }
                 });
             }
         });
-        return rootView;
     }
-    private void showList(){
-        List<CustomeDeck> deckList = CustomDeckManager.ins().getList();
-        DeckListAdapter dla = new DeckListAdapter(getActivity(),deckList);
-        dla.setOnDeleteDeckListener(new View.OnClickListener() {
+    private void showDeckCardList(final CustomeDeck deck){
+        if(deck == null)
+            return;
+        DeckCardListAdapter dcla = new DeckCardListAdapter(getActivity(),deck.cardList);
+        dcla.setOnDeleteDeckListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String deckName = (String)v.getTag();
-                if(deckName == null || deckName.equals(""))
+                String cardId = (String)v.getTag();
+                if(cardId == null || cardId.equals(""))
                     return;
-                CustomDeckManager.ins().deleteDeck(deckName);
-                showList();
+                if(deck.deleteCard(cardId)){
+                    CustomDeckManager.ins().saveDeck(deck);
+                    showDeckCardList(deck);
+                }
             }
         });
-        listView.setAdapter(dla);
+
+        listView.setAdapter(dcla);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position >= deck.cardList.size())
+                    return;
+                DeckCardInfo info = deck.cardList.get(position);
+
+            }
+        });
+        addDeckBtn.setText(R.string.add_card);
+        addDeckBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //ToDo
+            }
+        });
     }
     @Override
     public int getTitleId() {

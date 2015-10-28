@@ -7,6 +7,7 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.List;
 
 /**
@@ -22,8 +23,8 @@ public class CardManager {
         }
         return mIns;
     }
-
-    private List<CardInfo> cardList = new ArrayList<>();
+    private Hashtable<String,CardInfo> cardList = new Hashtable<>();
+    //private List<CardInfo> cardList = new ArrayList<>();
 
     public void initCards(Context c){
         XmlResourceParser parser = c.getResources().getXml(R.xml.card_info);
@@ -49,7 +50,7 @@ public class CardManager {
                         builder.setCardId(id).setCardName(name).setCardClass(cardClass).setCardType(type).setCardRarity(rarity).setCardSet(set)
                                 .setCardRace(race).setCardCost(cost).setCardAtk(atk).setCardHp(hp).setCardAttributes(attributes);
                         CardInfo info = builder.build();
-                        cardList.add(info);
+                        cardList.put(id, info);
                     }
                 }
                 parser.next();
@@ -61,8 +62,14 @@ public class CardManager {
         }
     }
 
+    public CardInfo getCardById(String id){
+        if(this.cardList.size() == 0 || !this.cardList.containsKey(id))
+            return null;
+        return this.cardList.get(id);
+    }
     public List<CardInfo> getAllCards(){
-        return this.cardList;
+        List<CardInfo> resList = new ArrayList<CardInfo>(this.cardList.values());
+        return resList;
     }
 
 }

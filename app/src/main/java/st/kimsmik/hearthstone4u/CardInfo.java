@@ -134,7 +134,7 @@ public class CardInfo {
         if(rarity == CARD_RARITY.FREE)
             return Color.GRAY;
         if(rarity == CARD_RARITY.COMMON)
-            return Color.GREEN;
+            return Color.BLACK;
         if(rarity == CARD_RARITY.RARE)
             return Color.BLUE;
         if(rarity == CARD_RARITY.EPIC)

@@ -17,6 +17,7 @@
     <string name="exist_deck_name_error">Already has same name</string>
 
     <string name="add_deck">(+) Add Deck</string>
+    <string name="add_card">(+) Add Card</string>
 
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>

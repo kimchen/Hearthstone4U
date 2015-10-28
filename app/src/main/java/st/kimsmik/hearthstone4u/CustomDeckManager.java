@@ -38,11 +38,28 @@ public class CustomDeckManager {
             int classIndex = Integer.parseInt(infos[0]);
             deck.deckClass = CardInfo.CARD_CLASS.values()[classIndex];
             for(int i=1; i<infos.length; i++){
-                deck.cardIdList.add(infos[i]);
+                String[] strs = infos[i].split(";");
+                if(strs.length < 2)
+                    continue;
+                DeckCardInfo cardInfo = new DeckCardInfo();
+                cardInfo.id = strs[0];
+                cardInfo.num = Integer.parseInt(strs[1]);
+                deck.cardList.add(cardInfo);
             }
             resList.add(deck);
         }
         return resList;
+    }
+
+    public CustomeDeck getDeckByName(String name){
+        List<CustomeDeck> list = getList();
+        if(list.size() == 0)
+            return null;
+        for(CustomeDeck deck : list){
+            if(deck.name.equals(name))
+                return deck;
+        }
+        return null;
     }
 
     public boolean checkNameExisted(String name){
@@ -69,13 +86,13 @@ public class CustomDeckManager {
     public boolean saveDeck(CustomeDeck deck){
         SharedPreferences sp = UserData.ins().getData(DECK_DATA_KEY);
         Set<String> deckList = sp.getStringSet(DECK_NAME_LIST_KEY, new HashSet<String>());
-        if(deckList.contains(deck.name))
-            return false;
+        if(!deckList.contains(deck.name))
+            deckList.add(deck.name);
         String info = deck.deckClass.ordinal()+"";
-        for(String cardId : deck.cardIdList) {
-            info += "," + cardId;
+        for(DeckCardInfo cardInfo : deck.cardList) {
+            info += "," + cardInfo.id + ";" + cardInfo.num;
         }
-        deckList.add(deck.name);
+
         sp.edit().putStringSet(DECK_NAME_LIST_KEY,deckList).putString(deck.name,info).commit();
         return true;
     }

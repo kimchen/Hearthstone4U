@@ -24,26 +24,8 @@
         android:textColor="#000000"
         android:text="@string/n0001" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/normal"
-        android:id="@+id/rarityView"
-        android:layout_below="@id/nameView"
-        android:layout_toRightOf="@id/imageView"
-        android:layout_marginLeft="10dp"
-        android:textColor="#000000"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/taunt"
-        android:id="@+id/attributeView"
-        android:layout_below="@id/rarityView"
-        android:layout_toRightOf="@id/imageView"
-        android:layout_marginLeft="10dp"
-        android:textColor="#FF0000"/>
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,10 +33,19 @@
         android:text="@string/minion"
         android:id="@+id/typeView"
         android:layout_below="@id/nameView"
-        android:layout_toRightOf="@id/rarityView"
+        android:layout_toRightOf="@id/imageView"
         android:layout_marginLeft="10dp"
         android:textColor="#ff8000ff"/>
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/normal"
+        android:id="@+id/rarityView"
+        android:layout_below="@id/nameView"
+        android:layout_toRightOf="@id/typeView"
+        android:layout_marginLeft="10dp"
+        android:textColor="#000000"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -62,7 +53,7 @@
         android:text="@string/beast"
         android:id="@+id/raceView"
         android:layout_below="@id/nameView"
-        android:layout_toRightOf="@id/typeView"
+        android:layout_toRightOf="@id/rarityView"
         android:layout_marginLeft="10dp"
         android:textColor="#FF0000"/>
 
@@ -73,9 +64,18 @@
         android:text="@string/classic"
         android:id="@+id/setView"
         android:layout_alignParentRight="true"
-        android:layout_alignBottom="@id/imageView"
+        android:layout_alignBottom="@id/raceView"
         android:layout_marginRight="10dp"
         android:textColor="#000000"/>
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/taunt"
+        android:id="@+id/attributeView"
+        android:layout_below="@id/typeView"
+        android:layout_toRightOf="@id/imageView"
+        android:layout_marginLeft="10dp"
+        android:textColor="#FF0000"/>
 
 </RelativeLayout>
