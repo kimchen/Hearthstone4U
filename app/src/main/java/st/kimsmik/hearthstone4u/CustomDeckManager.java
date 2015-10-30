@@ -39,11 +39,12 @@ public class CustomDeckManager {
             deck.deckClass = CardInfo.CARD_CLASS.values()[classIndex];
             for(int i=1; i<infos.length; i++){
                 String[] strs = infos[i].split(";");
-                if(strs.length < 2)
+                if(strs.length < 3)
                     continue;
                 DeckCardInfo cardInfo = new DeckCardInfo();
                 cardInfo.id = strs[0];
-                cardInfo.num = Integer.parseInt(strs[1]);
+                cardInfo.cost = Integer.parseInt(strs[1]);
+                cardInfo.num = Integer.parseInt(strs[2]);
                 deck.cardList.add(cardInfo);
             }
             resList.add(deck);
@@ -90,7 +91,7 @@ public class CustomDeckManager {
             deckList.add(deck.name);
         String info = deck.deckClass.ordinal()+"";
         for(DeckCardInfo cardInfo : deck.cardList) {
-            info += "," + cardInfo.id + ";" + cardInfo.num;
+            info += "," + cardInfo.id + ";" + cardInfo.cost + ";" + cardInfo.num;
         }
 
         sp.edit().putStringSet(DECK_NAME_LIST_KEY,deckList).putString(deck.name,info).commit();

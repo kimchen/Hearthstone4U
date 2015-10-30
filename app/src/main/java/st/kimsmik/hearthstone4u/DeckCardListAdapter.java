@@ -62,9 +62,9 @@ public class DeckCardListAdapter extends BaseAdapter {
         CardInfo cardInfo = CardManager.ins().getCardById(deckCardInfo.id);
         if(cardInfo!=null){
             lc.name.setText(cardInfo.name);
-            lc.cost.setText(cardInfo.cost);
+            lc.cost.setText("" + cardInfo.cost);
         }
-        lc.num.setText(deckCardInfo.num);
+        lc.num.setText("" + deckCardInfo.num);
         lc.deleteView.setTag(deckCardInfo.id);
         lc.deleteView.setOnClickListener(deleteListener);
         return convertView;

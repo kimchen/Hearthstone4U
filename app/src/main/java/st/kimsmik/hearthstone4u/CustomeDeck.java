@@ -1,6 +1,8 @@
 package st.kimsmik.hearthstone4u;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -26,5 +28,51 @@ public class CustomeDeck {
             this.cardList.remove(target);
         }
         return true;
+    }
+    public int getCardNum(){
+        int number = 0;
+        for(DeckCardInfo deckCardInfo : this.cardList){
+            number += deckCardInfo.num;
+        }
+        return number;
+    }
+    public boolean addCard(CardInfo card)
+    {
+        if(card == null)
+            return false;
+        if(getCardNum() >= 30)
+            return false;
+        DeckCardInfo target = null;
+        for(DeckCardInfo cardInfo : this.cardList){
+            if(cardInfo.id.equals(card.id)){
+                target = cardInfo;
+                break;
+            }
+        }
+        if(target == null){
+            target = new DeckCardInfo();
+            target.id = card.id;
+            target.num = 1;
+            target.cost = card.cost;
+            this.cardList.add(target);
+            Collections.sort(this.cardList, new Comparator<DeckCardInfo>() {
+                @Override
+                public int compare(DeckCardInfo lhs, DeckCardInfo rhs) {
+                    return lhs.cost - rhs.cost;
+                }
+            });
+            return true;
+        }else if(target.num < 1){
+            target.num = 1;
+            return true;
+        }else if(target.num == 1){
+            if(card.rarity == CardInfo.CARD_RARITY.LEGENDARY)
+                return false;
+            target.num = 2;
+            return true;
+        }else if(target.num >= 2){
+            return false;
+        }
+        return false;
     }
 }

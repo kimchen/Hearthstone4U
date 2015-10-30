@@ -50,7 +50,7 @@ public class CardAtlasFragment extends Fragment implements IMenuFragment {
             @Override
             public void onClick(View v) {
                 if(fDialog == null)
-                    fDialog = new FilterDialog(getActivity());
+                    fDialog = new FilterDialog(getActivity(),CardManager.ins().getAllCards());
                 fDialog.setOnSearchListener(new FilterDialog.OnSearchListener() {
                     @Override
                     public void onSearch(List<CardInfo> list) {

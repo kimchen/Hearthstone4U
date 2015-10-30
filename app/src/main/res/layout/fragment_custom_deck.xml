@@ -16,4 +16,40 @@
         android:background="#ff00a0ff"
         android:textColor="#ffffffff"
         android:layout_margin="5dp" />
+    <LinearLayout android:layout_width="match_parent"
+        android:id="@+id/editDeckSet"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/save_deck"
+            android:id="@+id/saveDeckBtn"
+            android:background="#ff009502"
+            android:textColor="#ffffffff"
+            android:layout_margin="5dp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cancel_deck"
+            android:id="@+id/cancelDeckBtn"
+            android:background="#ffff0000"
+            android:textColor="#ffffffff"
+            android:layout_margin="5dp" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageClass"/>
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

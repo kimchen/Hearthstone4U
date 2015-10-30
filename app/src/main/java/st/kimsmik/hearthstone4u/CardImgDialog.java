@@ -2,6 +2,8 @@ package st.kimsmik.hearthstone4u;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.Window;
 import android.widget.ImageView;
@@ -14,6 +16,7 @@ public class CardImgDialog extends Dialog {
     public CardImgDialog(Context context) {
         super(context);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         setContentView(R.layout.dialog_card_img);
         cardImg = (ImageView)findViewById(R.id.cardImg);
     }

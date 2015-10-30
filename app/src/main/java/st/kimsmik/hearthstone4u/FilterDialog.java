@@ -59,7 +59,7 @@ public class FilterDialog extends Dialog {
         }
     }
 
-    public FilterDialog(Context context) {
+    public FilterDialog(Context context,final List<CardInfo> oriList) {
         super(context);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.dialog_layout_filter);
@@ -105,7 +105,7 @@ public class FilterDialog extends Dialog {
             @Override
             public void onClick(View v) {
                 if(FilterDialog.this.searchListener != null){
-                    List<CardInfo> cardInfoList = CardManager.ins().getAllCards();
+                    List<CardInfo> cardInfoList = oriList;
                     for(Map.Entry<FILTER_TYPE,Integer> e : filterList.entrySet()){
                         cardInfoList = findMatchedCard(cardInfoList,e.getKey(),e.getValue());
                     }

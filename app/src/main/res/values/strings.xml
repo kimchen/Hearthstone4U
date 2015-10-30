@@ -18,6 +18,15 @@
 
     <string name="add_deck">(+) Add Deck</string>
     <string name="add_card">(+) Add Card</string>
+    <string name="save_deck">Save Deck</string>
+    <string name="cancel_deck">Cancel</string>
+
+    <string name="cancel_deck_alert">End Editing without Saving?</string>
+    <string name="add_deck_card_info">Added Card:%s to the Deck</string>
+    <string name="add_deck_card_failed">Add Card Failed...</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>

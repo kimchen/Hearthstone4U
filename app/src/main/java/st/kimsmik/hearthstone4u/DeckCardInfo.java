@@ -6,4 +6,5 @@ package st.kimsmik.hearthstone4u;
 public class DeckCardInfo{
     public String id = "";
     public int num = 0;
+    public int cost = 0;
 }

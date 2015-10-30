@@ -61,11 +61,7 @@ public class DeckListAdapter extends BaseAdapter {
         CustomeDeck info = mList.get(position);
         lc.name.setText(info.name);
         lc.img.setImageDrawable(Utility.getResDrawableByName(context, info.deckClass.getName()));
-        int number = 0;
-        for(DeckCardInfo deckCardInfo : info.cardList){
-            number += deckCardInfo.num;
-        }
-        lc.number.setText("(" + number + "/30)");
+        lc.number.setText("(" + info.getCardNum() + "/30)");
         lc.deleteView.setTag(info.name);
         lc.deleteView.setOnClickListener(deleteListener);
 

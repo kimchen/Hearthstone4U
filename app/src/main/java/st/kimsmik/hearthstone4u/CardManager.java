@@ -23,7 +23,8 @@ public class CardManager {
         }
         return mIns;
     }
-    private Hashtable<String,CardInfo> cardList = new Hashtable<>();
+    private Hashtable<String,CardInfo> cardTable = new Hashtable<>();
+    private List<CardInfo>  cardList = new ArrayList<>();
     //private List<CardInfo> cardList = new ArrayList<>();
 
     public void initCards(Context c){
@@ -50,7 +51,8 @@ public class CardManager {
                         builder.setCardId(id).setCardName(name).setCardClass(cardClass).setCardType(type).setCardRarity(rarity).setCardSet(set)
                                 .setCardRace(race).setCardCost(cost).setCardAtk(atk).setCardHp(hp).setCardAttributes(attributes);
                         CardInfo info = builder.build();
-                        cardList.put(id, info);
+                        cardTable.put(id, info);
+                        cardList.add(info);
                     }
                 }
                 parser.next();
@@ -63,13 +65,20 @@ public class CardManager {
     }
 
     public CardInfo getCardById(String id){
-        if(this.cardList.size() == 0 || !this.cardList.containsKey(id))
+        if(this.cardTable.size() == 0 || !this.cardTable.containsKey(id))
             return null;
-        return this.cardList.get(id);
+        return this.cardTable.get(id);
     }
     public List<CardInfo> getAllCards(){
-        List<CardInfo> resList = new ArrayList<CardInfo>(this.cardList.values());
+        List<CardInfo> resList = new ArrayList<CardInfo>(this.cardList);
         return resList;
     }
-
+    public List<CardInfo> getCardsByClass(CardInfo.CARD_CLASS cardClass){
+        List<CardInfo> resList = new ArrayList<>();
+        for(CardInfo card : this.cardList){
+            if(card.cardClass == CardInfo.CARD_CLASS.NORMAL || card.cardClass == cardClass)
+                resList.add(card);
+        }
+        return resList;
+    }
 }
