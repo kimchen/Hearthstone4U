@@ -14,7 +14,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -33,6 +35,8 @@ public class CustomDeckFragment extends Fragment implements IMenuFragment {
     List<CustomeDeck> nowDeckList = null;
     LinearLayout editDeckSet = null;
     ImageView imageClass = null;
+    List<ProgressBar> costBars = new ArrayList<>();
+    List<TextView> costNums = new ArrayList<>();
 
     Toast toastMsg = null;
     public CustomDeckFragment(){}
@@ -47,11 +51,34 @@ public class CustomDeckFragment extends Fragment implements IMenuFragment {
         saveDeckBtn = (Button)rootView.findViewById(R.id.saveDeckBtn);
         cancelDeckBtn = (Button)rootView.findViewById(R.id.cancelDeckBtn);
         imageClass = (ImageView)rootView.findViewById(R.id.imageClass);
+
+        costBars.add((ProgressBar)rootView.findViewById(R.id.manabar0));
+        costBars.add((ProgressBar)rootView.findViewById(R.id.manabar1));
+        costBars.add((ProgressBar)rootView.findViewById(R.id.manabar2));
+        costBars.add((ProgressBar)rootView.findViewById(R.id.manabar3));
+        costBars.add((ProgressBar)rootView.findViewById(R.id.manabar4));
+        costBars.add((ProgressBar)rootView.findViewById(R.id.manabar5));
+        costBars.add((ProgressBar)rootView.findViewById(R.id.manabar6));
+        costBars.add((ProgressBar)rootView.findViewById(R.id.manabar7));
+
+        costNums.add((TextView)rootView.findViewById(R.id.manaNum0));
+        costNums.add((TextView)rootView.findViewById(R.id.manaNum1));
+        costNums.add((TextView)rootView.findViewById(R.id.manaNum2));
+        costNums.add((TextView)rootView.findViewById(R.id.manaNum3));
+        costNums.add((TextView)rootView.findViewById(R.id.manaNum4));
+        costNums.add((TextView)rootView.findViewById(R.id.manaNum5));
+        costNums.add((TextView)rootView.findViewById(R.id.manaNum6));
+        costNums.add((TextView)rootView.findViewById(R.id.manaNum7));
+
+
         showDeckList();
 
         return rootView;
     }
     private void showDeckList(){
+        MainActivity act = (MainActivity)getActivity();
+        act.setTitle(getString(R.string.custom_deck));
+
         nowDeckList = CustomDeckManager.ins().getList();
         DeckListAdapter dla = new DeckListAdapter(getActivity(),nowDeckList);
         dla.setOnDeleteDeckListener(new View.OnClickListener() {
@@ -97,14 +124,18 @@ public class CustomDeckFragment extends Fragment implements IMenuFragment {
     private void showDeckCardList(final CustomeDeck deck){
         if(deck == null)
             return;
+        int cardNum = deck.getCardNum();
+        MainActivity act = (MainActivity)getActivity();
+        act.setTitle(deck.name + "(" + cardNum + ")");
+
         DeckCardListAdapter dcla = new DeckCardListAdapter(getActivity(),deck.cardList);
         dcla.setOnDeleteDeckListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String cardId = (String)v.getTag();
-                if(cardId == null || cardId.equals(""))
+                String cardId = (String) v.getTag();
+                if (cardId == null || cardId.equals(""))
                     return;
-                if(deck.deleteCard(cardId)){
+                if (deck.deleteCard(cardId)) {
                     showDeckCardList(deck);
                 }
             }
@@ -119,7 +150,7 @@ public class CustomDeckFragment extends Fragment implements IMenuFragment {
                 DeckCardInfo info = deck.cardList.get(position);
                 CardInfo card = CardManager.ins().getCardById(info.id);
                 CardImgDialog imgDialog = new CardImgDialog(getActivity());
-                imgDialog.setImg(Utility.getResDrawableByName(getActivity(),card.id));
+                imgDialog.setImg(Utility.getResDrawableByName(getActivity(), card.id));
                 imgDialog.show();
             }
         });
@@ -127,21 +158,21 @@ public class CustomDeckFragment extends Fragment implements IMenuFragment {
         addDeckBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AddDeckCardDialog addDialog = new AddDeckCardDialog(getActivity(),deck.deckClass);
+                AddDeckCardDialog addDialog = new AddDeckCardDialog(getActivity(), deck.deckClass);
                 addDialog.SetOnAddDeckCardListener(new AddDeckCardDialog.OnAddDeckCardListener() {
                     @Override
                     public void onAddDeckCard(CardInfo card) {
-                        if(deck.addCard(card)) {
-                            String msg = String.format(getString(R.string.add_deck_card_info),card.name);
-                            if(toastMsg != null)
+                        if (deck.addCard(card)) {
+                            String msg = String.format(getString(R.string.add_deck_card_info), card.name);
+                            if (toastMsg != null)
                                 toastMsg.cancel();
                             toastMsg = Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT);
                             toastMsg.show();
                             showDeckCardList(deck);
-                        }else{
-                            if(toastMsg != null)
+                        } else {
+                            if (toastMsg != null)
                                 toastMsg.cancel();
-                            toastMsg = Toast.makeText(getActivity(),R.string.add_deck_card_failed,Toast.LENGTH_SHORT);
+                            toastMsg = Toast.makeText(getActivity(), R.string.add_deck_card_failed, Toast.LENGTH_SHORT);
                             toastMsg.show();
                         }
                     }
@@ -167,11 +198,20 @@ public class CustomDeckFragment extends Fragment implements IMenuFragment {
                     public void onClick(DialogInterface dialog, int which) {
                         showDeckList();
                     }
-                }).setNegativeButton(R.string.no,null).show();
+                }).setNegativeButton(R.string.no, null).show();
             }
         });
 
         imageClass.setImageDrawable(Utility.getResDrawableByName(getActivity(), deck.deckClass.getName()));
+
+        for(int i=0; i<=7; i++){
+            int persent = 0;
+            int costCardNum = deck.getCardNumByCost(i);
+            if(cardNum > 0)
+                persent = (costCardNum*100)/cardNum;
+            costBars.get(i).setProgress(persent);
+            costNums.get(i).setText(""+costCardNum);
+        }
     }
     @Override
     public int getTitleId() {

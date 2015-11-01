@@ -36,6 +36,17 @@ public class CustomeDeck {
         }
         return number;
     }
+    public int getCardNumByCost(int cost){
+        int number = 0;
+        for(DeckCardInfo deckCardInfo : this.cardList){
+            if(cost == 7 && deckCardInfo.cost >= 7)
+                number += deckCardInfo.num;
+            else if(deckCardInfo.cost == cost)
+                number += deckCardInfo.num;
+        }
+        return number;
+    }
+
     public boolean addCard(CardInfo card)
     {
         if(card == null)

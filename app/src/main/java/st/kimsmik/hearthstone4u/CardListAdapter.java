@@ -62,6 +62,8 @@ public class CardListAdapter extends BaseAdapter {
         lc.rarity.setText(Utility.getResStringByName(context, info.rarity.getName()));
         lc.rarity.setTextColor(info.getRarityColor());
         lc.race.setText(Utility.getResStringByName(context, info.race.getName()));
+        if(lc.race.getText().equals(""))
+            lc.race.setVisibility(View.GONE);
         lc.type.setText(Utility.getResStringByName(context, info.type.getName()));
         lc.set.setText(Utility.getResStringByName(context, info.set.getName()));
         lc.set.setTextColor(info.getSetColor());

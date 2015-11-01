@@ -31,7 +31,7 @@ public class MainActivity extends ActionBarActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        setTitle(getString(R.string.app_name));
         CardManager.ins().initCards(this);
         UserData.ins().init(this);
         menuFragments.add(new CardAtlasFragment());
@@ -89,5 +89,11 @@ public class MainActivity extends ActionBarActivity
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void setTitle(String title){
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(title);
+        mTitle = title;
     }
 }

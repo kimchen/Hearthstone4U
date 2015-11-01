@@ -26,6 +26,9 @@ public class CardAtlasFragment extends Fragment implements IMenuFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        MainActivity act = (MainActivity)getActivity();
+        act.setTitle(getString(R.string.card_atlas));
+
         View rootView = inflater.inflate(R.layout.fragment_card_atlas, container, false);
         listView = (ListView)rootView.findViewById(R.id.ListView);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
