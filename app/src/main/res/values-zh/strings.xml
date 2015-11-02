@@ -1,2 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">爐石戰記4U</string>
+
+    <string name="card_atlas">卡牌資料</string>
+    <string name="custom_deck">自訂牌組</string>
+    <string name="arena_simulator">競技場模擬</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="filter">過濾搜尋</string>
+    <string name="addFilter">新增過濾條件</string>
+    <string name="search">搜尋</string>
+    <string name="searchHint">輸入名稱</string>
+    <string name="clear">清除</string>
+    <string name="add_same_filter_error">已存在相同過濾條件</string>
+    <string name="empty_deck_name_error">請輸入牌組名稱</string>
+    <string name="exist_deck_name_error">已存在相同名稱</string>
+
+    <string name="add_deck">(+) 新增牌組</string>
+    <string name="add_card">(+) 加入卡牌</string>
+    <string name="save_deck">儲存牌組</string>
+    <string name="cancel_deck">取消</string>
+
+    <string name="cancel_deck_alert">是否放棄編輯?</string>
+    <string name="add_deck_card_info">加入卡牌:%s </string>
+    <string name="add_deck_card_failed">加入卡牌失敗...</string>
+
+    <string name="yes">是</string>
+    <string name="no">否</string>
+
+    <string name="action_example">Example action</string>
+    <string name="action_settings">設定</string>
+
+    <string name="cost">花費</string>
+    <string name="attack">攻擊</string>
+    <string name="hp">生命</string>
+
+    <string name="cardType">類型</string>
+    <string name="minion">手下</string>
+    <string name="spell">法術</string>
+    <string name="weapon">武器</string>
+
+    <string name="cardClass">職業</string>
+    <string name="normal">中立</string>
+    <string name="warrior">戰士</string>
+    <string name="hunter">獵人</string>
+    <string name="mage">法師</string>
+    <string name="warlock">術士</string>
+    <string name="rogue">盜賊</string>
+    <string name="shaman">薩滿</string>
+    <string name="priest">牧師</string>
+    <string name="druid">德魯伊</string>
+    <string name="paladin">聖騎士</string>
+
+    <string name="cardRace">種族</string>
+    <string name="none"></string>
+    <string name="dragon">龍類</string>
+    <string name="murloc">魚人</string>
+    <string name="beast">野獸</string>
+    <string name="pirate">海盜</string>
+    <string name="demon">惡魔</string>
+    <string name="totem">圖騰</string>
+    <string name="machine">機械</string>
+
+    <string name="cardRarity">稀有度</string>
+    <string name="free">免費</string>
+    <string name="common">一般</string>
+    <string name="rare">精良</string>
+    <string name="epic">史詩</string>
+    <string name="legendary">傳說</string>
+
+    <string name="cardSet">來源</string>
+    <string name="basic">基本</string>
+    <string name="classic">經典</string>
+    <string name="naxx">NAXX</string>
+    <string name="brm">BRM</string>
+    <string name="gvg">GVG</string>
+    <string name="tgt">TGT</string>
+
+    <string name="cardTalent">技能</string>
+    <string name="battlecry">戰吼</string>
+    <string name="stealth">潛行</string>
+    <string name="charge">衝鋒</string>
+    <string name="combo">連擊</string>
+    <string name="deathrattle">死聲</string>
+    <string name="divineshield">聖盾</string>
+    <string name="enrage">狂怒</string>
+    <string name="freeze">冰凍</string>
+    <string name="overload">超載</string>
+    <string name="secret">秘密</string>
+    <string name="silence">沉默</string>
+    <string name="spelldamage">法傷</string>
+    <string name="summon">召喚</string>
+    <string name="windfury">風怒</string>
+    <string name="taunt">嘲諷</string>
+    <string name="immune">免疫</string>
+    <string name="inspire">激勵</string>
+    <string name="joust">競技</string>
+    <string name="draw">進牌</string>
+    <string name="aoe">範圍</string>
+    <string name="heal">治療</string>
+</resources>
