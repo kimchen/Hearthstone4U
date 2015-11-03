@@ -330,7 +330,7 @@
     <string name="m0005">Arcane Blast</string>
     <string name="m0006">Sorcerer\'s Apprentice</string>
     <string name="m0007">Snowchugger</string>
-    <string name="m0008">Fallen Hero</string>Effigy
+    <string name="m0008">Fallen Hero</string>
     <string name="m0009">Unstable Portal</string>
     <string name="m0010">Frostbolt</string>
     <string name="m0011">Flamecannon</string>
@@ -515,7 +515,6 @@
     <string name="n0098">Demolisher</string>
     <string name="n0099">Coldlight Seer</string>
     <string name="n0100">Coldlight Oracle</string>
-
     <string name="n0101">Blood Knight</string>
     <string name="n0102">Big Game Hunter</string>
     <string name="n0103">Arcane Golem</string>
