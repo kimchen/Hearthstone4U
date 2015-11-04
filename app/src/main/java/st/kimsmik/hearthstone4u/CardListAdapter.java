@@ -58,12 +58,14 @@ public class CardListAdapter extends BaseAdapter {
 
         CardInfo info = mList.get(position);
         lc.name.setText(info.name);
+        lc.name.setTextColor(info.getRarityColor());
         lc.img.setImageDrawable(Utility.getResDrawableByName(context, info.id));
         lc.rarity.setText(Utility.getResStringByName(context, info.rarity.getName()));
-        lc.rarity.setTextColor(info.getRarityColor());
         lc.race.setText(Utility.getResStringByName(context, info.race.getName()));
         if(lc.race.getText().equals(""))
             lc.race.setVisibility(View.GONE);
+        else
+            lc.race.setVisibility(View.VISIBLE);
         lc.type.setText(Utility.getResStringByName(context, info.type.getName()));
         lc.set.setText(Utility.getResStringByName(context, info.set.getName()));
         lc.set.setTextColor(info.getSetColor());
@@ -74,7 +76,7 @@ public class CardListAdapter extends BaseAdapter {
             attributes+= "[" + Utility.getResStringByName(context, attribute.getName()) + "]";
         }
         lc.attribute.setText(attributes);
-
+        convertView.setContentDescription(info.id);
         return convertView;
     }
 

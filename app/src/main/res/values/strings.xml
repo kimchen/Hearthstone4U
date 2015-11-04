@@ -4,11 +4,15 @@
 
     <string name="card_atlas">Card Atlas</string>
     <string name="custom_deck">Custom Deck</string>
+    <string name="recommand_deck">Recommand Deck</string>
     <string name="arena_simulator">Arena Simulator</string>
+
+    <string name="coming_soon">Coming soon...</string>
+    <string name="exit_alert">Exit %s ?</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="filter">Filter  </string>
+    <string name="filter">Advanced\nSearch  </string>
     <string name="addFilter">Add Filter</string>
     <string name="search">Search</string>
     <string name="searchHint">Enter the name</string>
@@ -20,7 +24,8 @@
     <string name="add_deck">(+) Add Deck</string>
     <string name="add_card">(+) Add Card</string>
     <string name="save_deck">Save Deck</string>
-    <string name="cancel_deck">Cancel</string>
+    <string name="cancel">Cancel</string>
+    <string name="done">Done</string>
 
     <string name="cancel_deck_alert">End Editing without Saving?</string>
     <string name="add_deck_card_info">Added Card:%s to the Deck</string>

@@ -40,11 +40,11 @@ public class FilterDialog extends Dialog {
     OnSearchListener searchListener = null;
 
     public enum FILTER_TYPE{
-        COST("cost"),
+        //COST("cost"),
         ATK("attack"),
         HP("hp"),
         TYPE("cardType"),
-        CLASS("cardClass"),
+        //CLASS("cardClass"),
         RACE("cardRace"),
         RARITY("cardRarity"),
         SET("cardSet"),
@@ -217,12 +217,12 @@ public class FilterDialog extends Dialog {
         List<String> spinnerList = new ArrayList<>();
         switch (type)
         {
-            case COST:
-                for(Integer i=0;i<7;i++){
-                    spinnerList.add(i.toString());
-                }
-                spinnerList.add("7+");
-                break;
+//            case COST:
+//                for(Integer i=0;i<7;i++){
+//                    spinnerList.add(i.toString());
+//                }
+//                spinnerList.add("7+");
+//                break;
             case ATK:
                 for(Integer i=0;i<7;i++){
                     spinnerList.add(i.toString());
@@ -240,11 +240,11 @@ public class FilterDialog extends Dialog {
                     spinnerList.add(Utility.getResStringByName(getContext(),temp.getName()));
                 }
                 break;
-            case CLASS:
-                for(CardInfo.CARD_CLASS temp : CardInfo.CARD_CLASS.values()){
-                    spinnerList.add(Utility.getResStringByName(getContext(),temp.getName()));
-                }
-                break;
+//            case CLASS:
+//                for(CardInfo.CARD_CLASS temp : CardInfo.CARD_CLASS.values()){
+//                    spinnerList.add(Utility.getResStringByName(getContext(),temp.getName()));
+//                }
+//                break;
             case RACE:
                 for(CardInfo.CARD_RACE temp : CardInfo.CARD_RACE.values()){
                     spinnerList.add(Utility.getResStringByName(getContext(),temp.getName()));
@@ -275,13 +275,13 @@ public class FilterDialog extends Dialog {
         List<CardInfo> resList = new ArrayList<>();
         switch (type)
         {
-            case COST:
-                for(CardInfo card : oriList){
-                    if((content >=7 && card.cost >= 7) || card.cost == content){
-                        resList.add(card);
-                    }
-                }
-                break;
+//            case COST:
+//                for(CardInfo card : oriList){
+//                    if((content >=7 && card.cost >= 7) || card.cost == content){
+//                        resList.add(card);
+//                    }
+//                }
+//                break;
             case ATK:
                 for(CardInfo card : oriList){
                     if((content >=7 && card.atk >= 7) || card.atk == content){
@@ -303,13 +303,13 @@ public class FilterDialog extends Dialog {
                     }
                 }
                 break;
-            case CLASS:
-                for(CardInfo card : oriList){
-                    if(card.cardClass == CardInfo.CARD_CLASS.values()[content]){
-                        resList.add(card);
-                    }
-                }
-                break;
+//            case CLASS:
+//                for(CardInfo card : oriList){
+//                    if(card.cardClass == CardInfo.CARD_CLASS.values()[content]){
+//                        resList.add(card);
+//                    }
+//                }
+//                break;
             case RACE:
                 for(CardInfo card : oriList){
                     if(card.race == CardInfo.CARD_RACE.values()[content]){

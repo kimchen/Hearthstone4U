@@ -3,11 +3,15 @@
 
     <string name="card_atlas">卡牌資料</string>
     <string name="custom_deck">自訂牌組</string>
+    <string name="recommand_deck">推薦牌組</string>
     <string name="arena_simulator">競技場模擬</string>
+
+    <string name="coming_soon">敬請期待...</string>
+    <string name="exit_alert">確定離開 %s ?</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="filter">過濾搜尋</string>
+    <string name="filter">進階\n搜尋</string>
     <string name="addFilter">新增過濾條件</string>
     <string name="search">搜尋</string>
     <string name="searchHint">輸入名稱</string>
@@ -19,7 +23,8 @@
     <string name="add_deck">(+) 新增牌組</string>
     <string name="add_card">(+) 加入卡牌</string>
     <string name="save_deck">儲存牌組</string>
-    <string name="cancel_deck">取消</string>
+    <string name="cancel">取消</string>
+    <string name="done">完成</string>
 
     <string name="cancel_deck_alert">是否放棄編輯?</string>
     <string name="add_deck_card_info">加入卡牌:%s </string>

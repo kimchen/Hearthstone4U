@@ -1,12 +1,16 @@
 package st.kimsmik.hearthstone4u;
 
 import android.app.Activity;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -38,6 +42,8 @@ public class MainActivity extends ActionBarActivity
         UserData.ins().init(this);
         menuFragments.add(new CardAtlasFragment());
         menuFragments.add(new CustomDeckFragment());
+        menuFragments.add(new RecommandDeckFragment());
+        menuFragments.add(new ArenaFragment());
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
 
@@ -101,5 +107,21 @@ public class MainActivity extends ActionBarActivity
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(title);
         mTitle = title;
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode == KeyEvent.KEYCODE_BACK){
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            String title = String.format(getString(R.string.exit_alert), getString(R.string.app_name));
+            builder.setTitle(title).setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    finish();
+                }
+            }).setNegativeButton(R.string.no, null).show();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

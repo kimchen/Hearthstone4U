@@ -3,38 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/ListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1" />
     <LinearLayout
         android:id="@+id/editDeckSet"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/saveDeckBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:background="#ff009502"
-                android:text="@string/save_deck"
-                android:textColor="#ffffffff" />
-
-            <Button
-                android:id="@+id/cancelDeckBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:background="#ffff0000"
-                android:text="@string/cancel_deck"
-                android:textColor="#ffffffff" />
-        </LinearLayout>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/deck_inifo_border"
+        android:padding="5dp"
+        android:layout_margin="2dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -43,15 +26,16 @@
 
             <ImageView
                 android:id="@+id/imageClass"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:src="@drawable/mage"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -62,12 +46,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="[ 0 ]"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"/>
 
                     <ProgressBar
                         android:id="@+id/manabar0"
-                        style="?android:attr/progressBarStyleHorizontal"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
                         android:layout_width="match_parent"
                         android:layout_weight="1"
                         android:layout_height="match_parent"
@@ -80,8 +63,7 @@
                         android:text="0"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        android:textColor="#ff0000ff"
-                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+                        android:textColor="#ff0000ff"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -93,12 +75,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="[ 1 ]"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"/>
 
                     <ProgressBar
                         android:id="@+id/manabar1"
-                        style="?android:attr/progressBarStyleHorizontal"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
                         android:layout_width="match_parent"
                         android:layout_weight="1"
                         android:layout_height="match_parent"
@@ -111,8 +92,7 @@
                         android:text="0"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        android:textColor="#ff0000ff"
-                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+                        android:textColor="#ff0000ff"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -124,12 +104,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="[ 2 ]"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"/>
 
                     <ProgressBar
                         android:id="@+id/manabar2"
-                        style="?android:attr/progressBarStyleHorizontal"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
                         android:layout_width="match_parent"
                         android:layout_weight="1"
                         android:layout_height="match_parent"
@@ -142,8 +121,7 @@
                         android:text="0"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        android:textColor="#ff0000ff"
-                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+                        android:textColor="#ff0000ff"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -155,12 +133,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="[ 3 ]"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"/>
 
                     <ProgressBar
                         android:id="@+id/manabar3"
-                        style="?android:attr/progressBarStyleHorizontal"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
                         android:layout_width="match_parent"
                         android:layout_weight="1"
                         android:layout_height="match_parent"
@@ -173,8 +150,7 @@
                         android:text="0"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        android:textColor="#ff0000ff"
-                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+                        android:textColor="#ff0000ff"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -186,12 +162,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="[ 4 ]"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"/>
 
                     <ProgressBar
                         android:id="@+id/manabar4"
-                        style="?android:attr/progressBarStyleHorizontal"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
                         android:layout_width="match_parent"
                         android:layout_weight="1"
                         android:layout_height="match_parent"
@@ -204,8 +179,7 @@
                         android:text="0"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        android:textColor="#ff0000ff"
-                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+                        android:textColor="#ff0000ff"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -217,12 +191,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="[ 5 ]"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"/>
 
                     <ProgressBar
                         android:id="@+id/manabar5"
-                        style="?android:attr/progressBarStyleHorizontal"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
                         android:layout_width="match_parent"
                         android:layout_weight="1"
                         android:layout_height="match_parent"
@@ -235,8 +208,7 @@
                         android:text="0"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        android:textColor="#ff0000ff"
-                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+                        android:textColor="#ff0000ff"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -248,12 +220,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="[ 6 ]"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"/>
 
                     <ProgressBar
                         android:id="@+id/manabar6"
-                        style="?android:attr/progressBarStyleHorizontal"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
                         android:layout_width="match_parent"
                         android:layout_weight="1"
                         android:layout_height="match_parent"
@@ -266,8 +237,7 @@
                         android:text="0"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        android:textColor="#ff0000ff"
-                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+                        android:textColor="#ff0000ff"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -279,17 +249,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="[7+]"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"/>
 
                     <ProgressBar
                         android:id="@+id/manabar7"
-                        style="?android:attr/progressBarStyleHorizontal"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
                         android:layout_width="match_parent"
                         android:layout_weight="1"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="5dp"
-                        android:progress="0" />
+                        android:progress="50" />
                     <TextView
                         android:id="@+id/manaNum7"
                         android:layout_width="wrap_content"
@@ -297,19 +266,37 @@
                         android:text="0"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        android:textColor="#ff0000ff"
-                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+                        android:textColor="#ff0000ff"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-    <ListView
-        android:id="@+id/ListView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_weight="1" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/addDeckCardBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="#ff00a0ff"
+                android:text="@string/add_card"
+                android:textColor="#ffffffff" />
+
+            <Button
+                android:id="@+id/doneDeckBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="3"
+                android:background="#ff00ff00"
+                android:text="@string/done"
+                android:textColor="#000000"  />
+        </LinearLayout>
+    </LinearLayout>
     <Button
         android:id="@+id/addDeckBtn"
         android:layout_width="match_parent"

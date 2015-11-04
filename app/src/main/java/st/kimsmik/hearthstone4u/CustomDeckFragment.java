@@ -30,8 +30,8 @@ public class CustomDeckFragment extends Fragment implements IMenuFragment {
 
     ListView listView = null;
     Button addDeckBtn = null;
-    Button saveDeckBtn = null;
-    Button cancelDeckBtn = null;
+    Button addDeckCardBtn = null;
+    Button doneDeckBtn = null;
     List<CustomeDeck> nowDeckList = null;
     LinearLayout editDeckSet = null;
     ImageView imageClass = null;
@@ -48,8 +48,8 @@ public class CustomDeckFragment extends Fragment implements IMenuFragment {
         editDeckSet = (LinearLayout)rootView.findViewById(R.id.editDeckSet);
         listView = (ListView)rootView.findViewById(R.id.ListView);
         addDeckBtn = (Button)rootView.findViewById(R.id.addDeckBtn);
-        saveDeckBtn = (Button)rootView.findViewById(R.id.saveDeckBtn);
-        cancelDeckBtn = (Button)rootView.findViewById(R.id.cancelDeckBtn);
+        addDeckCardBtn = (Button)rootView.findViewById(R.id.addDeckCardBtn);
+        doneDeckBtn = (Button)rootView.findViewById(R.id.doneDeckBtn);
         imageClass = (ImageView)rootView.findViewById(R.id.imageClass);
 
         costBars.add((ProgressBar)rootView.findViewById(R.id.manabar0));
@@ -120,13 +120,14 @@ public class CustomDeckFragment extends Fragment implements IMenuFragment {
             }
         });
         editDeckSet.setVisibility(View.GONE);
+        addDeckBtn.setVisibility(View.VISIBLE);
     }
     private void showDeckCardList(final CustomeDeck deck){
         if(deck == null)
             return;
         int cardNum = deck.getCardNum();
         MainActivity act = (MainActivity)getActivity();
-        act.setTitle(deck.name + "(" + cardNum + ")");
+        act.setTitle(deck.name + "(" + cardNum + "/30)");
 
         DeckCardListAdapter dcla = new DeckCardListAdapter(getActivity(),deck.cardList);
         dcla.setOnDeleteDeckListener(new View.OnClickListener() {
@@ -154,8 +155,13 @@ public class CustomDeckFragment extends Fragment implements IMenuFragment {
                 imgDialog.show();
             }
         });
-        addDeckBtn.setText(R.string.add_card);
-        addDeckBtn.setOnClickListener(new View.OnClickListener() {
+
+
+
+        editDeckSet.setVisibility(View.VISIBLE);
+        addDeckBtn.setVisibility(View.GONE);
+
+        addDeckCardBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AddDeckCardDialog addDialog = new AddDeckCardDialog(getActivity(), deck.deckClass);
@@ -180,29 +186,16 @@ public class CustomDeckFragment extends Fragment implements IMenuFragment {
                 addDialog.show();
             }
         });
-
-        editDeckSet.setVisibility(View.VISIBLE);
-        saveDeckBtn.setOnClickListener(new View.OnClickListener() {
+        doneDeckBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 CustomDeckManager.ins().saveDeck(deck);
                 showDeckList();
             }
         });
-        cancelDeckBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setTitle(R.string.cancel_deck_alert).setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        showDeckList();
-                    }
-                }).setNegativeButton(R.string.no, null).show();
-            }
-        });
-
         imageClass.setImageDrawable(Utility.getResDrawableByName(getActivity(), deck.deckClass.getName()));
+
+        int maxNum = 0;
 
         for(int i=0; i<=7; i++){
             int persent = 0;
@@ -211,6 +204,12 @@ public class CustomDeckFragment extends Fragment implements IMenuFragment {
                 persent = (costCardNum*100)/cardNum;
             costBars.get(i).setProgress(persent);
             costNums.get(i).setText(""+costCardNum);
+            if(costCardNum > maxNum)
+                maxNum = costCardNum;
+        }
+        if(maxNum > 0 && maxNum < cardNum){
+            for(ProgressBar bar : costBars)
+                bar.setProgress(bar.getProgress() * cardNum / maxNum);
         }
     }
     @Override
