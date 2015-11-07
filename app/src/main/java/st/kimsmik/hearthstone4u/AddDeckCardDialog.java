@@ -24,7 +24,7 @@ public class AddDeckCardDialog extends Dialog {
     Spinner filterCostSpinner = null;
     Spinner filterClassSpinner = null;
     int filterCost = -1;
-    int filterClass = -1;
+    String filterClass = "";
 
     interface OnAddDeckCardListener{
         void onAddDeckCard(CardInfo card);
@@ -36,7 +36,7 @@ public class AddDeckCardDialog extends Dialog {
 
     public AddDeckCardDialog(Context context,final CardInfo.CARD_CLASS cardClass) {
         super(context);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.fragment_card_atlas);
 
         listView = (ListView)findViewById(R.id.ListView);
@@ -63,7 +63,7 @@ public class AddDeckCardDialog extends Dialog {
                 if (card == null)
                     return false;
                 CardImgDialog imgDialog = new CardImgDialog(getContext());
-                imgDialog.setImg(Utility.getResDrawableByName(getContext(),card.id));
+                imgDialog.setImg(Utility.getResDrawableByName(getContext(), card.id));
                 imgDialog.show();
                 return true;
             }
@@ -122,6 +122,9 @@ public class AddDeckCardDialog extends Dialog {
         filterStringList2.add(getContext().getString(R.string.cardClass));
         filterStringList2.add(Utility.getResStringByName(getContext(), CardInfo.CARD_CLASS.NORMAL.getName()));
         filterStringList2.add(Utility.getResStringByName(getContext(), cardClass.getName()));
+        final List<CardInfo.CARD_CLASS>nowCardClassList = new ArrayList<>();
+        nowCardClassList.add(CardInfo.CARD_CLASS.NORMAL);
+        nowCardClassList.add(cardClass);
 
         ArrayAdapter sa2 = new ArrayAdapter<>(getContext(),R.layout.support_simple_spinner_dropdown_item, filterStringList2);
         filterClassSpinner.setAdapter(sa2);
@@ -129,7 +132,8 @@ public class AddDeckCardDialog extends Dialog {
         filterClassSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                filterClass = position - 1;
+                if(position > 0)
+                    filterClass = nowCardClassList.get(position - 1).getName();
                 updateCardList();
             }
             @Override
@@ -137,6 +141,10 @@ public class AddDeckCardDialog extends Dialog {
 
             }
         });
+    }
+
+    public void setCardNum(int cardNum){
+        setTitle("("+cardNum+"/30)");
     }
 
     private void updateCardList(){
@@ -152,11 +160,10 @@ public class AddDeckCardDialog extends Dialog {
             tempList = nowCardList;
         }
         List<CardInfo> tempList2;
-        if(filterClass >= 0){
+        if(!filterClass.equals("")){
             tempList2 = new ArrayList<>();
-            CardInfo.CARD_CLASS cardCalss = CardInfo.CARD_CLASS.values()[filterClass];
             for(CardInfo info : tempList){
-                if(info.cardClass.equals(cardCalss)){
+                if(info.cardClass.getName().equals(filterClass)){
                     tempList2.add(info);
                 }
             }

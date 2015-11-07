@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">爐石戰記4U</string>
-
+    <string name="tets_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_ad_unit_id">ca-app-pub-7472786282026789/3952857152</string>
     <string name="card_atlas">卡牌資料</string>
     <string name="custom_deck">自訂牌組</string>
     <string name="recommand_deck">推薦牌組</string>
@@ -8,6 +9,7 @@
 
     <string name="coming_soon">敬請期待...</string>
     <string name="exit_alert">確定離開 %s ?</string>
+    <string name="delte_deck_alert">是否刪除牌組: %s ?</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -29,12 +31,14 @@
     <string name="cancel_deck_alert">是否放棄編輯?</string>
     <string name="add_deck_card_info">加入卡牌:%s </string>
     <string name="add_deck_card_failed">加入卡牌失敗...</string>
+    <string name="delete_deck_card_info">移除卡牌:%s</string>
 
     <string name="yes">是</string>
     <string name="no">否</string>
 
     <string name="action_example">Example action</string>
     <string name="action_settings">設定</string>
+    <string name="report">回報</string>
 
     <string name="cost">花費</string>
     <string name="attack">攻擊</string>

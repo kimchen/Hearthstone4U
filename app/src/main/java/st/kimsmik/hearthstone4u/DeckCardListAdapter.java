@@ -62,6 +62,7 @@ public class DeckCardListAdapter extends BaseAdapter {
         CardInfo cardInfo = CardManager.ins().getCardById(deckCardInfo.id);
         if(cardInfo!=null){
             lc.name.setText(cardInfo.name);
+            lc.name.setTextColor(cardInfo.getRarityColor());
             lc.cost.setText("" + cardInfo.cost);
         }
         lc.num.setText("" + deckCardInfo.num);

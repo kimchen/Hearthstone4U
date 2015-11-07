@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -96,7 +97,10 @@ public class MainActivity extends ActionBarActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_report) {
+            Uri uri = Uri.parse("mailto:ckkimchen@gmail.com");
+            Intent it = new Intent(Intent.ACTION_SENDTO, uri);
+            startActivity(it);
             return true;
         }
 

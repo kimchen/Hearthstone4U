@@ -7,8 +7,11 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Hashtable;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by chenk on 2015/9/23.
@@ -24,7 +27,8 @@ public class CardManager {
         return mIns;
     }
     private Hashtable<String,CardInfo> cardTable = new Hashtable<>();
-    private List<CardInfo>  cardList = new ArrayList<>();
+    //private List<CardInfo>  cardList = new ArrayList<>();
+    private Hashtable<String,List<CardInfo>> classCardTable = new Hashtable<>();
     //private List<CardInfo> cardList = new ArrayList<>();
 
     public void initCards(Context c){
@@ -44,7 +48,7 @@ public class CardManager {
                         String set = parser.getAttributeValue(null, "set");
                         int cost = parser.getAttributeIntValue(null, "cost", 0);
                         int atk = parser.getAttributeIntValue(null,"atk",0);
-                        int hp = parser.getAttributeIntValue(null,"hp",0);
+                        int hp = parser.getAttributeIntValue(null, "hp", 0);
                         String attributes = parser.getAttributeValue(null, "attributes");
 
                         CardInfoBuilder builder = new CardInfoBuilder();
@@ -52,7 +56,14 @@ public class CardManager {
                                 .setCardRace(race).setCardCost(cost).setCardAtk(atk).setCardHp(hp).setCardAttributes(attributes);
                         CardInfo info = builder.build();
                         cardTable.put(id, info);
-                        cardList.add(info);
+                        if(classCardTable.containsKey(cardClass)){
+                            classCardTable.get(cardClass).add(info);
+                        }else{
+                            List<CardInfo> list = new ArrayList<>();
+                            list.add(info);
+                            classCardTable.put(cardClass,list);
+                        }
+                        //cardList.add(info);
                     }
                 }
                 parser.next();
@@ -62,6 +73,12 @@ public class CardManager {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        Collections.sort(classCardTable.get(CardInfo.CARD_CLASS.NORMAL.getName()), new Comparator<CardInfo>() {
+            @Override
+            public int compare(CardInfo lhs, CardInfo rhs) {
+                return lhs.cost - rhs.cost;
+            }
+        });
     }
 
     public CardInfo getCardById(String id){
@@ -70,15 +87,16 @@ public class CardManager {
         return this.cardTable.get(id);
     }
     public List<CardInfo> getAllCards(){
-        List<CardInfo> resList = new ArrayList<CardInfo>(this.cardList);
+        List<CardInfo> resList = new ArrayList<CardInfo>();
+        for(CardInfo.CARD_CLASS cardClass : CardInfo.CARD_CLASS.values()){
+            resList.addAll(classCardTable.get(cardClass.getName()));
+        }
         return resList;
     }
     public List<CardInfo> getCardsByClass(CardInfo.CARD_CLASS cardClass){
         List<CardInfo> resList = new ArrayList<>();
-        for(CardInfo card : this.cardList){
-            if(card.cardClass == CardInfo.CARD_CLASS.NORMAL || card.cardClass == cardClass)
-                resList.add(card);
-        }
+        resList.addAll(classCardTable.get(cardClass.getName()));
+        resList.addAll(classCardTable.get(CardInfo.CARD_CLASS.NORMAL.getName()));
         return resList;
     }
 }

@@ -513,19 +513,6 @@
     <Card id="n0096" cost="3" atk="2" hp="3" type="minion" class="normal" rarity="rare" race="beast" set="classic"/>
     <Card id="n0097" cost="3" atk="3" hp="3" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="battlecry"/>
     <Card id="n0098" cost="3" atk="1" hp="4" type="minion" class="normal" rarity="rare" race="machine" set="classic"/>
-    <Card id="n0086" cost="3" atk="3" hp="3" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="enrage,windfury"/>
-    <Card id="n0087" cost="3" atk="2" hp="2" type="minion" class="normal" rarity="rare" race="none" set="classic"/>
-    <Card id="n0088" cost="3" atk="3" hp="3" type="minion" class="normal" rarity="epic" race="murloc" set="classic"/>
-    <Card id="n0089" cost="3" atk="3" hp="3" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="battlecry"/>
-    <Card id="n0090" cost="3" atk="5" hp="5" type="minion" class="normal" rarity="legendary" race="none" set="classic" attributes="battlecry"/>
-    <Card id="n0091" cost="3" atk="4" hp="2" type="minion" class="normal" rarity="common" race="beast" set="classic" attributes="stealth"/>
-    <Card id="n0092" cost="3" atk="4" hp="7" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="battlecry"/>
-    <Card id="n0093" cost="3" atk="1" hp="5" type="minion" class="normal" rarity="rare" race="none" set="classic" attributes="summon"/>
-    <Card id="n0094" cost="3" atk="2" hp="3" type="minion" class="normal" rarity="common" race="machine" set="classic" attributes="deathrattle,summon"/>
-    <Card id="n0095" cost="3" atk="2" hp="3" type="minion" class="normal" rarity="common" race="none" set="classic"/>
-    <Card id="n0096" cost="3" atk="2" hp="3" type="minion" class="normal" rarity="rare" race="beast" set="classic"/>
-    <Card id="n0097" cost="3" atk="3" hp="3" type="minion" class="normal" rarity="common" race="none" set="classic" attributes="battlecry"/>
-    <Card id="n0098" cost="3" atk="1" hp="4" type="minion" class="normal" rarity="rare" race="machine" set="classic"/>
     <Card id="n0099" cost="3" atk="2" hp="3" type="minion" class="normal" rarity="rare" race="murloc" set="classic" attributes="battlecry"/>
     <Card id="n0100" cost="3" atk="2" hp="2" type="minion" class="normal" rarity="rare" race="murloc" set="classic" attributes="battlecry,draw"/>
     <Card id="n0101" cost="3" atk="3" hp="3" type="minion" class="normal" rarity="epic" race="none" set="classic" attributes="battlecry,divineshield"/>

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Hearthstone4U</string>
-    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
-
+    <string name="tets_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_ad_unit_id">ca-app-pub-7472786282026789/3952857152</string>
     <string name="card_atlas">Card Atlas</string>
     <string name="custom_deck">Custom Deck</string>
     <string name="recommand_deck">Recommand Deck</string>
@@ -9,6 +9,7 @@
 
     <string name="coming_soon">Coming soon...</string>
     <string name="exit_alert">Exit %s ?</string>
+    <string name="delte_deck_alert">Remove Deck: %s ?</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -30,12 +31,14 @@
     <string name="cancel_deck_alert">End Editing without Saving?</string>
     <string name="add_deck_card_info">Added Card:%s to the Deck</string>
     <string name="add_deck_card_failed">Add Card Failed...</string>
+    <string name="delete_deck_card_info">Deleted Card:%s from the Deck</string>
 
     <string name="yes">Yes</string>
     <string name="no">No</string>
 
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
+    <string name="report">Report</string>
 
     <string name="cost">Cost</string>
     <string name="attack">Attack</string>

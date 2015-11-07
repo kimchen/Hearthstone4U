@@ -22,7 +22,7 @@ public class CardInfo {
         }
     }
     public enum CARD_CLASS {
-        NORMAL("normal"),
+
         WARRIOR("warrior"),
         SHAMAN("shaman"),
         ROGUE("rogue"),
@@ -31,7 +31,8 @@ public class CardInfo {
         DRUID("druid"),
         WARLOCK("warlock"),
         MAGE("mage"),
-        PRIEST("priest");
+        PRIEST("priest"),
+        NORMAL("normal");
 
         private String name="";
         CARD_CLASS(String n){

@@ -2,9 +2,13 @@ package st.kimsmik.hearthstone4u;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -23,9 +27,21 @@ public class AddDeckDialog extends Dialog {
         setContentView(R.layout.dialog_add_deck);
 
         nameText = (EditText)findViewById(R.id.editText);
+        nameText.setImeOptions(EditorInfo.IME_ACTION_DONE);
+        nameText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if(actionId == EditorInfo.IME_ACTION_DONE ){
+                    InputMethodManager imm = (InputMethodManager)(getContext().getSystemService(Context.INPUT_METHOD_SERVICE));
+                    imm.hideSoftInputFromWindow(nameText.getWindowToken(), 0);
+                    return true;
+                }
+                return false;
+            }
+        });
         for(int i=0; i<classBtns.length; i++){
             View btn = findViewById(classBtns[i]);
-            btn.setTag(CardInfo.CARD_CLASS.values()[i+1]);
+            btn.setTag(CardInfo.CARD_CLASS.values()[i]);
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

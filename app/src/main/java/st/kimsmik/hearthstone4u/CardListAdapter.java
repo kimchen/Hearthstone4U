@@ -1,6 +1,10 @@
 package st.kimsmik.hearthstone4u;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,7 +63,8 @@ public class CardListAdapter extends BaseAdapter {
         CardInfo info = mList.get(position);
         lc.name.setText(info.name);
         lc.name.setTextColor(info.getRarityColor());
-        lc.img.setImageDrawable(Utility.getResDrawableByName(context, info.id));
+        lc.RunImageTask(info.id);
+
         lc.rarity.setText(Utility.getResStringByName(context, info.rarity.getName()));
         lc.race.setText(Utility.getResStringByName(context, info.race.getName()));
         if(lc.race.getText().equals(""))
@@ -88,6 +93,8 @@ public class CardListAdapter extends BaseAdapter {
         public TextView race = null;
         public TextView set = null;
         public TextView attribute = null;
+        public ImageTask task = null;
+
         public LayoutComponent(ImageView imgV,TextView nameV,TextView rarityV,TextView typeV,TextView raceView,TextView setV,TextView attributeV){
             this.name = nameV;
             this.img = imgV;
@@ -96,6 +103,40 @@ public class CardListAdapter extends BaseAdapter {
             this.race = raceView;
             this.set = setV;
             this.attribute = attributeV;
+        }
+
+        public void RunImageTask(String id){
+            BitmapDrawable drawable = (BitmapDrawable)img.getDrawable();
+            if(drawable != null && drawable.getBitmap() != null)
+                drawable.getBitmap().recycle();
+            img.setImageDrawable(null);
+            if(task != null){
+                task.cancel(true);
+                task = null;
+            }
+            task = new ImageTask(this,id);
+            task.execute();
+        }
+    }
+
+    private class ImageTask extends AsyncTask<Void,Void,Bitmap> {
+
+        private LayoutComponent mLC = null;
+        private String cardId = "";
+        public ImageTask(LayoutComponent lc,String id){
+            mLC = lc;
+            cardId = id;
+        };
+        @Override
+        protected Bitmap doInBackground(Void... params) {
+            Drawable drawable = Utility.getResDrawableByName(context, cardId);
+            Bitmap bmp = ((BitmapDrawable) drawable).getBitmap();
+            return bmp;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bmp) {
+            mLC.img.setImageDrawable(new BitmapDrawable(context.getResources(), Bitmap.createScaledBitmap(bmp, bmp.getWidth() / 4, bmp.getHeight() / 4, true)));
         }
     }
 }

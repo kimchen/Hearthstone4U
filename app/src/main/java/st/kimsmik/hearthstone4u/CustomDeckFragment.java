@@ -84,11 +84,19 @@ public class CustomDeckFragment extends Fragment implements IMenuFragment {
         dla.setOnDeleteDeckListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String deckName = (String)v.getTag();
-                if(deckName == null || deckName.equals(""))
-                    return;
-                CustomDeckManager.ins().deleteDeck(deckName);
-                showDeckList();
+                final String deckName = (String)v.getTag();
+                android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(getActivity());
+                String title = String.format(getString(R.string.delte_deck_alert), deckName);
+                builder.setTitle(title).setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        if(deckName == null || deckName.equals(""))
+                            return;
+                        CustomDeckManager.ins().deleteDeck(deckName);
+                        showDeckList();
+                    }
+                }).setNegativeButton(R.string.no, null).show();
+
             }
         });
 
@@ -137,7 +145,15 @@ public class CustomDeckFragment extends Fragment implements IMenuFragment {
                 if (cardId == null || cardId.equals(""))
                     return;
                 if (deck.deleteCard(cardId)) {
+                    CardInfo card = CardManager.ins().getCardById(cardId);
+                    String msg = String.format(getString(R.string.delete_deck_card_info), card.name);
+                    if (toastMsg != null)
+                        toastMsg.cancel();
+                    toastMsg = Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT);
+                    toastMsg.show();
+
                     showDeckCardList(deck);
+
                 }
             }
         });
@@ -164,7 +180,8 @@ public class CustomDeckFragment extends Fragment implements IMenuFragment {
         addDeckCardBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AddDeckCardDialog addDialog = new AddDeckCardDialog(getActivity(), deck.deckClass);
+                final AddDeckCardDialog addDialog = new AddDeckCardDialog(getActivity(), deck.deckClass);
+                addDialog.setCardNum(deck.getCardNum());
                 addDialog.SetOnAddDeckCardListener(new AddDeckCardDialog.OnAddDeckCardListener() {
                     @Override
                     public void onAddDeckCard(CardInfo card) {
@@ -175,6 +192,7 @@ public class CustomDeckFragment extends Fragment implements IMenuFragment {
                             toastMsg = Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT);
                             toastMsg.show();
                             showDeckCardList(deck);
+                            addDialog.setCardNum(deck.getCardNum());
                         } else {
                             if (toastMsg != null)
                                 toastMsg.cancel();
