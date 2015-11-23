@@ -8,4 +8,21 @@
         android:id="@+id/cardImg"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardDes"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000"
+        android:background="#ffffffff"
+        android:layout_alignLeft="@+id/cardImg"
+        android:layout_alignRight="@+id/cardImg"
+        android:layout_below="@+id/cardImg"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="-95dp"
+        android:layout_alignBottom="@+id/cardImg"
+        android:layout_marginBottom="38dp"
+        android:textSize="12dp" />
 </RelativeLayout>

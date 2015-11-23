@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">爐石戰記4U</string>
+    <string name="app_name">指南:爐石戰記4U</string>
     <string name="tets_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="banner_ad_unit_id">ca-app-pub-7472786282026789/3952857152</string>
     <string name="card_atlas">卡牌資料</string>
@@ -81,10 +81,11 @@
     <string name="cardSet">來源</string>
     <string name="basic">基本</string>
     <string name="classic">經典</string>
-    <string name="naxx">NAXX</string>
-    <string name="brm">BRM</string>
-    <string name="gvg">GVG</string>
-    <string name="tgt">TGT</string>
+    <string name="naxx">納克薩瑪斯</string>
+    <string name="brm">黑石山</string>
+    <string name="gvg">哥哥打地地</string>
+    <string name="tgt">銀白聯賽</string>
+    <string name="loe">探險者協會</string>
 
     <string name="cardTalent">技能</string>
     <string name="battlecry">戰吼</string>
@@ -108,4 +109,5 @@
     <string name="draw">進牌</string>
     <string name="aoe">範圍</string>
     <string name="heal">治療</string>
+    <string name="discover">發現</string>
 </resources>
