@@ -21,7 +21,8 @@ public class RecommandDeckFragment extends CustomDeckFragment implements IMenuFr
 
     @Override
     protected List<CustomeDeck> getDeckList() {
-        return super.getDeckList();
+        CustomDeckManager.ins().loadRecommendedDecks();
+        return CustomDeckManager.ins().getRecommendedDecks();
     }
 
     @Override

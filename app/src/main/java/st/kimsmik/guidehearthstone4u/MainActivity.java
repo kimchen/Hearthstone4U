@@ -50,6 +50,8 @@ public class MainActivity extends ActionBarActivity
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+
+        CustomDeckManager.ins().loadRecommendedDecks();
     }
 
     @Override
@@ -113,6 +115,10 @@ public class MainActivity extends ActionBarActivity
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if(nowFragment != null && nowFragment.onKeyDown(keyCode,event))
             return true;
+        if(!mNavigationDrawerFragment.isDrawerOpen()){
+            mNavigationDrawerFragment.openDrawer();
+            return true;
+        }
         if(keyCode == KeyEvent.KEYCODE_BACK){
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             String title = String.format(getString(R.string.exit_alert), getString(R.string.app_name));

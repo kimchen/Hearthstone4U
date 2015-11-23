@@ -107,6 +107,9 @@ public class NavigationDrawerFragment extends Fragment {
         return mDrawerLayout != null && mDrawerLayout.isDrawerOpen(mFragmentContainerView);
     }
 
+    public void openDrawer(){
+        mDrawerLayout.openDrawer(mFragmentContainerView);
+    }
     /**
      * Users of this fragment must call this method to set up the navigation drawer interactions.
      *

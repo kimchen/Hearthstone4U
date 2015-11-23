@@ -49,6 +49,7 @@ public class CustomDeckFragment extends Fragment implements IMenuFragment {
         doneDeckBtn = (Button)rootView.findViewById(R.id.doneDeckBtn);
         imageClass = (ImageView)rootView.findViewById(R.id.imageClass);
 
+        costBars = new ArrayList<>();
         costBars.add((ProgressBar)rootView.findViewById(R.id.manabar0));
         costBars.add((ProgressBar)rootView.findViewById(R.id.manabar1));
         costBars.add((ProgressBar)rootView.findViewById(R.id.manabar2));
@@ -58,6 +59,7 @@ public class CustomDeckFragment extends Fragment implements IMenuFragment {
         costBars.add((ProgressBar)rootView.findViewById(R.id.manabar6));
         costBars.add((ProgressBar)rootView.findViewById(R.id.manabar7));
 
+        costNums = new ArrayList<>();
         costNums.add((TextView)rootView.findViewById(R.id.manaNum0));
         costNums.add((TextView)rootView.findViewById(R.id.manaNum1));
         costNums.add((TextView)rootView.findViewById(R.id.manaNum2));
