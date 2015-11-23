@@ -62,8 +62,13 @@ public class DeckListAdapter extends BaseAdapter {
         lc.name.setText(info.name);
         lc.img.setImageDrawable(Utility.getResDrawableByName(context, info.deckClass.getName()));
         lc.number.setText("(" + info.getCardNum() + "/30)");
-        lc.deleteView.setTag(info.name);
-        lc.deleteView.setOnClickListener(deleteListener);
+        if(deleteListener != null) {
+            lc.deleteView.setVisibility(View.VISIBLE);
+            lc.deleteView.setTag(info.name);
+            lc.deleteView.setOnClickListener(deleteListener);
+        }else{
+            lc.deleteView.setVisibility(View.GONE);
+        }
 
         return convertView;
     }
