@@ -27,12 +27,14 @@
     <string name="save_deck">儲存牌組</string>
     <string name="cancel">取消</string>
     <string name="done">完成</string>
+    <string name="refresh">更新</string>
 
     <string name="cancel_deck_alert">是否放棄編輯?</string>
     <string name="add_deck_card_info">加入卡牌:%s </string>
     <string name="add_deck_card_failed">加入卡牌失敗...</string>
     <string name="delete_deck_card_info">移除卡牌:%s</string>
-
+	<string name="load_deck_failed">下載牌組失敗... 請重試</string>
+	
     <string name="yes">是</string>
     <string name="no">否</string>
 

@@ -27,11 +27,13 @@
     <string name="save_deck">Save Deck</string>
     <string name="cancel">Cancel</string>
     <string name="done">Done</string>
+    <string name="refresh">Refresh</string>
 
     <string name="cancel_deck_alert">End Editing without Saving?</string>
     <string name="add_deck_card_info">Added Card:%s to the Deck</string>
     <string name="add_deck_card_failed">Add Card Failed...</string>
     <string name="delete_deck_card_info">Deleted Card:%s from the Deck</string>
+    <string name="load_deck_failed">Download Decks Failed... Please Retry</string>
 
     <string name="yes">Yes</string>
     <string name="no">No</string>
