@@ -272,10 +272,10 @@
     <string name="d0039_des">二選一：+5攻擊力，或+5生命值及嘲諷</string>
     <string name="d0040_des">二選一：抽2張牌，或恢復5點生命值</string>
     <string name="d0041_des">嘲諷</string>
-    <string name="d0042_des">將全部角色生命值恢復到全滿</string>
+    <string name="d0042_des">嘲諷 本回合內死亡的每個手下使其消耗減少(1)點</string>
     <string name="d0043_des">二選一：使你其他的手下+2/+2，或召喚兩個有嘲諷的2/2樹人</string>
     <string name="d0044_des">你手下的法力消耗改為(1)</string>
-    <string name="d0045_des">嘲諷 本回合內死亡的每個手下使其消耗減少(1)點</string>
+    <string name="d0045_des">將全部角色生命值恢復到全滿</string>
 
     <string name="wl0001_des">摧毀一個惡魔。使你的英雄恢復5點生命值</string>
     <string name="wl0002_des">嘲諷</string>
