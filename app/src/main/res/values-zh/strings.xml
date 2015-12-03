@@ -21,14 +21,19 @@
     <string name="add_same_filter_error">已存在相同過濾條件</string>
     <string name="empty_deck_name_error">請輸入牌組名稱</string>
     <string name="exist_deck_name_error">已存在相同名稱</string>
-
+	<string name="input_empty_error">名字不可為空</string>
+	
     <string name="add_deck">(+) 新增牌組</string>
     <string name="add_card">(+) 加入卡牌</string>
+	<string name="new_simulate">新的競技場模擬</string>
     <string name="save_deck">儲存牌組</string>
     <string name="cancel">取消</string>
     <string name="done">完成</string>
     <string name="refresh">更新</string>
-
+	<string name="pick_card">選牌</string>
+	<string name="rename">重新命名</string>
+	
+	<string name="cancel_arena_alert">是否放棄此次競技場?</string>
     <string name="cancel_deck_alert">是否放棄編輯?</string>
     <string name="add_deck_card_info">加入卡牌:%s </string>
     <string name="add_deck_card_failed">加入卡牌失敗...</string>

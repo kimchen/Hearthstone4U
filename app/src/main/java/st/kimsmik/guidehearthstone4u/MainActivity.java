@@ -39,7 +39,7 @@ public class MainActivity extends ActionBarActivity
         menuFragments.add(new CardAtlasFragment());
         menuFragments.add(new CustomDeckFragment());
         menuFragments.add(new RecommandDeckFragment());
-        menuFragments.add(new ArenaFragment());
+        menuFragments.add(new ArenaDeckFragment());
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
 

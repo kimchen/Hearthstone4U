@@ -1,18 +1,12 @@
 package st.kimsmik.guidehearthstone4u;
 
 import android.os.AsyncTask;
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Random;
 
 /**
  * Created by chenk on 2015/11/4.
@@ -58,6 +52,10 @@ public class RecommandDeckFragment extends CustomDeckFragment implements IMenuFr
 
     @Override
     protected View.OnClickListener getOnDeleteDeckListener() {
+        return null;
+    }
+    @Override
+    protected View.OnClickListener getOnRenameDeckListener() {
         return null;
     }
 

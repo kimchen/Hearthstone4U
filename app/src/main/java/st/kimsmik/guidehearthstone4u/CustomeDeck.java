@@ -86,4 +86,32 @@ public class CustomeDeck {
         }
         return false;
     }
+
+    public void forceAddCard(CardInfo card){
+        if(card == null)
+            return;
+        DeckCardInfo target = null;
+        for(DeckCardInfo cardInfo : this.cardList){
+            if(cardInfo.id.equals(card.id)){
+                target = cardInfo;
+                break;
+            }
+        }
+        if(target == null){
+            target = new DeckCardInfo();
+            target.id = card.id;
+            target.num = 1;
+            target.cost = card.cost;
+            this.cardList.add(target);
+            Collections.sort(this.cardList, new Comparator<DeckCardInfo>() {
+                @Override
+                public int compare(DeckCardInfo lhs, DeckCardInfo rhs) {
+                    return lhs.cost - rhs.cost;
+                }
+            });
+        }else{
+            target.num++;
+        }
+
+    }
 }

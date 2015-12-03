@@ -3,12 +3,14 @@ package st.kimsmik.guidehearthstone4u;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -35,7 +37,7 @@ public class CustomDeckFragment extends Fragment implements IMenuFragment {
     protected List<TextView> costNums = new ArrayList<>();
 
     private Toast toastMsg = null;
-    private boolean showingDeckCards = false;
+    protected boolean showingDeckCards = false;
     public CustomDeckFragment(){}
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -80,6 +82,7 @@ public class CustomDeckFragment extends Fragment implements IMenuFragment {
         nowDeckList = getDeckList();
         DeckListAdapter dla = new DeckListAdapter(getActivity(),nowDeckList);
         dla.setOnDeleteDeckListener(getOnDeleteDeckListener());
+        dla.setOnRenameDeckListener(getOnRenameDeckListener());
 
         listView.setAdapter(dla);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -137,6 +140,43 @@ public class CustomDeckFragment extends Fragment implements IMenuFragment {
                         showDeckList();
                     }
                 }).setNegativeButton(R.string.no, null).show();
+            }
+        };
+    }
+
+    protected View.OnClickListener getOnRenameDeckListener(){
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final String deckName = (String)v.getTag();
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                final EditText input = new EditText(getActivity());
+                input.setText(deckName);
+                builder.setTitle(R.string.rename).setView(input);
+                builder.setPositiveButton(R.string.done, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String newName = input.getText().toString();
+                        if(newName.equals("")) {
+                            Toast.makeText(getActivity(), R.string.input_empty_error, Toast.LENGTH_LONG).show();
+                            return;
+                        }else if(newName.equals(deckName)){
+                            return;
+                        }else if(CustomDeckManager.ins().checkNameExisted(newName)){
+                            Toast.makeText(getActivity(), R.string.exist_deck_name_error, Toast.LENGTH_LONG).show();
+                            return;
+                        }
+                        CustomeDeck deck = CustomDeckManager.ins().getDeckByName(deckName);
+                        deck.name = newName;
+                        CustomDeckManager.ins().deleteDeck(deckName);
+                        CustomDeckManager.ins().saveDeck(deck);
+                        showDeckList();
+                        dialog.dismiss();
+                    }
+                });
+                builder.setNegativeButton(R.string.cancel,null);
+                builder.show();
             }
         };
     }

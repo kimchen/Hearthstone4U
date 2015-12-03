@@ -41,6 +41,9 @@ public class CustomDeckManager {
     private final String DECK_DATA_KEY = "CustomDeck";
     private final String DECK_NAME_LIST_KEY = "DeckList";
 
+    private final String ARENA_DECK_DATA_KEY = "ArenaCustomDeck";
+    private final String ARENA_DECK_NAME_LIST_KEY = "ArenaDeckList";
+
     public List<CustomeDeck> getList(){
         List<CustomeDeck> resList = new ArrayList<>();
         SharedPreferences sp = UserData.ins().getData(DECK_DATA_KEY);
@@ -51,6 +54,24 @@ public class CustomDeckManager {
             resList.add(deck);
         }
         return resList;
+    }
+
+    public List<CustomeDeck> getArenaList(){
+        List<CustomeDeck> resList = new ArrayList<>();
+        SharedPreferences sp = UserData.ins().getData(ARENA_DECK_DATA_KEY);
+        Set<String> deckList = sp.getStringSet(ARENA_DECK_NAME_LIST_KEY, new HashSet<String>());
+        for(String deckName : deckList ){
+            String info = sp.getString(deckName,"");
+            CustomeDeck deck = parseDeck(deckName,info);
+            resList.add(deck);
+        }
+        return resList;
+    }
+
+    public int getArenaDeckCount(){
+        SharedPreferences sp = UserData.ins().getData(ARENA_DECK_DATA_KEY);
+        Set<String> deckList = sp.getStringSet(ARENA_DECK_NAME_LIST_KEY, new HashSet<String>());
+        return deckList.size();
     }
 
     private CustomeDeck parseDeck(String deckName,String data){
@@ -135,6 +156,14 @@ public class CustomDeckManager {
         return false;
     }
 
+    public boolean checkArenaNameExisted(String name){
+        SharedPreferences sp = UserData.ins().getData(ARENA_DECK_DATA_KEY);
+        Set<String> deckList = sp.getStringSet(ARENA_DECK_NAME_LIST_KEY, new HashSet<String>());
+        if(deckList.contains(name))
+            return true;
+        return false;
+    }
+
     public CustomeDeck addNewDeck(CardInfo.CARD_CLASS deckClass,String name){
         SharedPreferences sp = UserData.ins().getData(DECK_DATA_KEY);
         Set<String> deckList = sp.getStringSet(DECK_NAME_LIST_KEY, new HashSet<String>());
@@ -157,8 +186,20 @@ public class CustomDeckManager {
         for(DeckCardInfo cardInfo : deck.cardList) {
             info += "," + cardInfo.id + ";" + cardInfo.cost + ";" + cardInfo.num;
         }
-
         sp.edit().putStringSet(DECK_NAME_LIST_KEY,deckList).putString(deck.name,info).commit();
+        return true;
+    }
+
+    public boolean saveArenaDeck(CustomeDeck deck){
+        SharedPreferences sp = UserData.ins().getData(ARENA_DECK_DATA_KEY);
+        Set<String> deckList = sp.getStringSet(ARENA_DECK_NAME_LIST_KEY, new HashSet<String>());
+        if(!deckList.contains(deck.name))
+            deckList.add(deck.name);
+        String info = deck.deckClass.ordinal()+"";
+        for(DeckCardInfo cardInfo : deck.cardList) {
+            info += "," + cardInfo.id + ";" + cardInfo.cost + ";" + cardInfo.num;
+        }
+        sp.edit().putStringSet(ARENA_DECK_NAME_LIST_KEY,deckList).putString(deck.name,info).commit();
         return true;
     }
 
@@ -169,5 +210,14 @@ public class CustomDeckManager {
             return;
         deckList.remove(name);
         sp.edit().putStringSet(DECK_NAME_LIST_KEY,deckList).remove(name).commit();
+    }
+
+    public void deleteArenaDeck(String name){
+        SharedPreferences sp = UserData.ins().getData(ARENA_DECK_DATA_KEY);
+        Set<String> deckList = sp.getStringSet(ARENA_DECK_NAME_LIST_KEY, new HashSet<String>());
+        if(!deckList.contains(name))
+            return;
+        deckList.remove(name);
+        sp.edit().putStringSet(ARENA_DECK_NAME_LIST_KEY,deckList).remove(name).commit();
     }
 }

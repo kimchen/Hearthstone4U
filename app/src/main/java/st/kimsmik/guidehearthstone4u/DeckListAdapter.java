@@ -19,6 +19,7 @@ public class DeckListAdapter extends BaseAdapter {
     private LayoutInflater mInflater = null;
     List<CustomeDeck> mList = new ArrayList<>();
     private View.OnClickListener deleteListener = null;
+    private View.OnClickListener renameListener = null;
 
     public DeckListAdapter(Context c, List<CustomeDeck> list){
         context = c;
@@ -28,6 +29,9 @@ public class DeckListAdapter extends BaseAdapter {
 
     public void setOnDeleteDeckListener(View.OnClickListener l){
         deleteListener = l;
+    }
+    public void setOnRenameDeckListener(View.OnClickListener l){
+        renameListener = l;
     }
     @Override
     public int getCount() {
@@ -52,7 +56,8 @@ public class DeckListAdapter extends BaseAdapter {
             lc = new LayoutComponent((ImageView)convertView.findViewById(R.id.imageView),
                     (TextView)convertView.findViewById(R.id.nameView),
                     (TextView)convertView.findViewById(R.id.numberView),
-                    (ImageView)convertView.findViewById(R.id.cancelBtn));
+                    (ImageView)convertView.findViewById(R.id.cancelBtn),
+                    (ImageView)convertView.findViewById(R.id.renameBtn));
             convertView.setTag(lc);
         }else{
             lc = (LayoutComponent)convertView.getTag();
@@ -69,6 +74,13 @@ public class DeckListAdapter extends BaseAdapter {
         }else{
             lc.deleteView.setVisibility(View.GONE);
         }
+        if(renameListener != null){
+            lc.renameView.setVisibility(View.VISIBLE);
+            lc.renameView.setTag(info.name);
+            lc.renameView.setOnClickListener(renameListener);
+        }else{
+            lc.renameView.setVisibility(View.GONE);
+        }
 
         return convertView;
     }
@@ -78,11 +90,13 @@ public class DeckListAdapter extends BaseAdapter {
         public TextView name = null;
         public TextView number = null;
         public ImageView deleteView = null;
-        public LayoutComponent(ImageView imgV,TextView nameV,TextView numberV,ImageView deleteV){
+        public ImageView renameView = null;
+        public LayoutComponent(ImageView imgV,TextView nameV,TextView numberV,ImageView deleteV,ImageView renameV){
             this.name = nameV;
             this.img = imgV;
             this.number = numberV;
             this.deleteView = deleteV;
+            this.renameView = renameV;
         }
     }
 }

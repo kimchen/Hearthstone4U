@@ -38,6 +38,14 @@
         android:layout_alignParentRight="true"
         android:layout_below="@id/cancelBtn"/>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/renameBtn"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/cancelBtn"
+        android:layout_toStartOf="@+id/cancelBtn"
+        android:src="@drawable/rename" />
 
 
 </RelativeLayout>
