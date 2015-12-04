@@ -85,6 +85,20 @@ public class CardListAdapter extends BaseAdapter {
         return convertView;
     }
 
+    public void releaseImgView(ViewGroup parent){
+        for(int i=0; i<parent.getChildCount();i++){
+            View view = parent.getChildAt(i);
+            if(view == null)
+                continue;
+            LayoutComponent lc = (LayoutComponent)view.getTag();
+            if(lc == null)
+                continue;
+            BitmapDrawable drawable = (BitmapDrawable)lc.img.getDrawable();
+            if(drawable != null && drawable.getBitmap() != null)
+                drawable.getBitmap().recycle();
+        }
+    }
+
     class LayoutComponent{
         public ImageView img = null;
         public TextView name = null;
@@ -129,9 +143,9 @@ public class CardListAdapter extends BaseAdapter {
         };
         @Override
         protected Bitmap doInBackground(Void... params) {
-            Drawable drawable = Utility.getResDrawableByName(context, cardId);
-            Bitmap bmp = ((BitmapDrawable) drawable).getBitmap();
-            return bmp;
+//            Drawable drawable = Utility.getResDrawableByName(context, cardId);
+//            Bitmap bmp = ((BitmapDrawable) drawable).getBitmap();
+            return Utility.getBitmapByName(context, cardId);
         }
 
         @Override

@@ -1,5 +1,6 @@
 package st.kimsmik.guidehearthstone4u;
 
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.view.View;
 import android.widget.Toast;
@@ -80,6 +81,16 @@ public class RecommandDeckFragment extends CustomDeckFragment implements IMenuFr
     }
 
     private class LoadDeckTask extends AsyncTask<Void,Void,List<CustomeDeck>> {
+        ProgressDialog progress = null;
+        @Override
+        protected void onPreExecute() {
+            progress = new ProgressDialog(getActivity());
+            progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+            progress.setTitle("Loading");
+            progress.show();
+
+        }
+
         @Override
         protected List<CustomeDeck> doInBackground(Void... params) {
             List<CustomeDeck> resList = CustomDeckManager.ins().loadRecommendedDecks();
@@ -94,6 +105,8 @@ public class RecommandDeckFragment extends CustomDeckFragment implements IMenuFr
             }else{
                 Toast.makeText(getActivity(),R.string.load_deck_failed,Toast.LENGTH_LONG).show();
             }
+            if(progress!=null)
+                progress.dismiss();
             showDeckListNow();
         }
     }

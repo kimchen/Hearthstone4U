@@ -1,6 +1,8 @@
 package st.kimsmik.guidehearthstone4u;
 
 import android.content.DialogInterface;
+import android.os.Handler;
+import android.os.Looper;
 import android.support.v7.app.AlertDialog;
 import android.view.KeyEvent;
 import android.view.View;
@@ -8,6 +10,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
+
 /**
  * Created by chenk on 2015/11/4.
  */
@@ -69,7 +74,12 @@ public class ArenaDeckFragment extends CustomDeckFragment implements IMenuFragme
         return null;
     }
 
+    Handler addCardHandler = new Handler();
+    private boolean isAddingCard = false;
     private void ArenaAddCard(final CustomeDeck deck){
+        if(isAddingCard)
+            return;
+        isAddingCard = true;
         final ArenaAddCardDialog addDialog = new ArenaAddCardDialog(getActivity(), deck.deckClass,lastRandomedCards);
         lastRandomedCards = addDialog.randomedCards;
         addDialog.setCardNum(deck.getCardNum());
@@ -83,12 +93,24 @@ public class ArenaDeckFragment extends CustomDeckFragment implements IMenuFragme
                 addDialog.setCardNum(deck.getCardNum());
                 addDialog.dismiss();
                 lastRandomedCards = null;
-                if(deck.getCardNum()>=30){
+                if (deck.getCardNum() >= 30) {
                     addDeckCardBtn.setVisibility(View.GONE);
                     doneDeckBtn.setVisibility(View.VISIBLE);
-                }else{
-                    ArenaAddCard(deck);
+                } else {
+                    addCardHandler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            ArenaAddCard(deck);
+                        }
+                    }, 500);
                 }
+            }
+        });
+        addDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialog) {
+                addDialog.release();
+                isAddingCard = false;
             }
         });
         addDialog.show();
@@ -104,12 +126,6 @@ public class ArenaDeckFragment extends CustomDeckFragment implements IMenuFragme
         if(cardNum>=30){
             addDeckCardBtn.setVisibility(View.GONE);
             doneDeckBtn.setVisibility(View.VISIBLE);
-            doneDeckBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    showDeckList();
-                }
-            });
         }else{
             addDeckCardBtn.setVisibility(View.VISIBLE);
             doneDeckBtn.setVisibility(View.GONE);
@@ -120,15 +136,14 @@ public class ArenaDeckFragment extends CustomDeckFragment implements IMenuFragme
                     ArenaAddCard(deck);
                 }
             });
-            doneDeckBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    CustomDeckManager.ins().saveArenaDeck(deck);
-                    showDeckList();
-                }
-            });
         }
-
+        doneDeckBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CustomDeckManager.ins().saveArenaDeck(deck);
+                showDeckList();
+            }
+        });
     }
 
     @Override

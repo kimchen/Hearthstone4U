@@ -80,6 +80,13 @@ public class ArenaAddCardDialog extends Dialog {
         filterClassSpinner.setVisibility(View.GONE);
     }
 
+    public void release(){
+        CardListAdapter cla = (CardListAdapter)listView.getAdapter();
+        if(cla == null)
+            return;
+        cla.releaseImgView(listView);
+    }
+
     public void setCardNum(int cardNum){
         setTitle("(" + cardNum + "/30)");
     }
@@ -88,19 +95,34 @@ public class ArenaAddCardDialog extends Dialog {
         List<CardInfo> cardList = CardManager.ins().getCardsByClass(cardClass);
         List<CardInfo> resCards = new ArrayList<>();
 
-        CardInfo firstCard = null;
-        while(firstCard == null){
-            firstCard = randomOneCard(cardList);
+//        CardInfo firstCard = null;
+//        while(firstCard == null){
+//            firstCard = randomOneCard(cardList);
+//        }
+//        resCards.add(firstCard);
+        CardInfo.CARD_RARITY rarity = null;
+        Random random = new Random();
+        int tempInt = Math.abs(random.nextInt())%30;
+        if(tempInt == 0)
+            rarity = CardInfo.CARD_RARITY.LEGENDARY;
+        else if(tempInt <5)
+            rarity = CardInfo.CARD_RARITY.EPIC;
+        else if(tempInt <15)
+            rarity = CardInfo.CARD_RARITY.RARE;
+        else if(tempInt <25)
+            rarity = CardInfo.CARD_RARITY.COMMON;
+        else{
+            rarity = CardInfo.CARD_RARITY.FREE;
         }
-        resCards.add(firstCard);
+
         List<CardInfo> newCardList = new ArrayList<>();
         for(CardInfo card : cardList){
-            if(card.rarity.equals(firstCard.rarity))
+            if(card.rarity.equals(rarity))
                 newCardList.add(card);
         }
 
         while(resCards.size()<3){
-            CardInfo card = randomOneCard(newCardList);
+            CardInfo card = randomOneCard(random,newCardList);
             if(!resCards.contains(card)){
                 resCards.add(card);
             }
@@ -108,8 +130,7 @@ public class ArenaAddCardDialog extends Dialog {
         return resCards;
     }
 
-    private CardInfo randomOneCard(List<CardInfo> cardList){
-        Random random = new Random();
+    private CardInfo randomOneCard(Random random,List<CardInfo> cardList){
         int index = Math.abs(random.nextInt())%cardList.size();
         CardInfo cardInfo =  cardList.get(index);
         return cardInfo;
